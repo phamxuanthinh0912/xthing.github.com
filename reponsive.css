@@ -1,0 +1,164 @@
+/* ===== Responsive Design: Mobile (<576px) ===== */
+@media (max-width: 575.98px) {
+  .u-top-bar {
+    display: none !important;
+  }
+
+  .u-header__bottom .container {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  .u-logo {
+    margin-bottom: 0.5rem;
+  }
+
+  .u-search-bar-wrapper {
+    order: 3;
+    width: 100%;
+    margin: 0;
+  }
+
+  .u-header-icons {
+    justify-content: center;
+    gap: 0.75rem;
+    order: 2;
+  }
+
+  .u-icon-label-top,
+  .u-icon-label-bottom {
+    font-size: 0.75rem;
+  }
+
+  .u-icon-img {
+    width: 24px;
+    height: 20px;
+  }
+}
+
+/* ===== Responsive Design: Tablet Small (576px - 767.98px) ===== */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .u-top-bar {
+    display: none !important;
+  }
+  .u-header__bottom .container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .u-search-bar-wrapper {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .u-header-icons {
+    gap: 1rem;
+  }
+
+  .u-icon-img {
+    width: 26px;
+    height: 22px;
+  }
+
+  .u-icon-label-bottom {
+    font-size: 0.8125rem;
+  }
+}
+
+/* ===== Responsive Design: Tablet (768px - 1024px) ===== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .u-search-bar-wrapper {
+    max-width: 400px;
+    margin: 0 1rem;
+  }
+
+  .u-header__bottom .container {
+    flex-wrap: nowrap !important;
+  }
+
+  .u-header-icons {
+    gap: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  .u-logo {
+    flex-shrink: 0;
+  }
+
+  .u-search-bar__input {
+    font-size: 0.8125rem;
+  }
+
+  .u-search-button {
+    padding: 0 0.75rem;
+    font-size: 0.8125rem;
+  }
+
+  .u-top-bar {
+    display: none !important;
+  }
+}
+
+/* ===== Responsive Design: Desktop Small (>1025px) ===== */
+@media (min-width: 1025px) and (max-width: 1199.98px) {
+  .u-header__bottom .container {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 1rem;
+  }
+
+  .u-logo {
+    flex: 0 0 auto;
+    max-width: 140px;
+  }
+
+  .u-search-bar-wrapper {
+    flex: 1 1 100%;
+    min-width: 0;
+    margin: 0 1rem;
+  }
+
+  .u-header-icons {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    gap: 1rem;
+  }
+
+  .u-search-bar__input {
+    font-size: 0.8125rem;
+  }
+
+  .u-search-button {
+    font-size: 0.8125rem;
+    padding: 0 0.75rem;
+  }
+}
+
+
+/* ===== Responsive Design: Desktop (>1200px) ===== */
+@media (min-width: 1200px) {
+  .u-search-bar-wrapper {
+    max-width: 600px;
+  }
+
+  .u-icon-img {
+    width: 32px;
+    height: 28px;
+  }
+
+  .u-icon-label-top {
+    font-size: var(--font-size-small);
+  }
+
+  .u-icon-label-bottom {
+    font-size: var(--font-size-large);
+  }
+}
+/* nav bar */
+
+
+/* slider  */
