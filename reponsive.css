@@ -155,7 +155,7 @@
   }
 
   .u-icon-label-bottom {
-    font-size: var(--font-size-large);
+    /* font-size: var(--font-size-large); */
   }
 }
 /* nav bar */
