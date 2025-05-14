@@ -102,7 +102,7 @@
 }
 
 /* ===== Responsive Design: Desktop Small (>1025px) ===== */
-@media (min-width: 1025px) and (max-width: 1199.98px) {
+@media (min-width: 1025px) and (max-width: 1199px) {
   .u-header__bottom .container {
     display: flex !important;
     flex-wrap: nowrap !important;
@@ -154,10 +154,9 @@
     font-size: var(--font-size-small);
   }
 
-  .u-icon-label-bottom {
-    /* font-size: var(--font-size-large); */
+ 
   }
-}
+
 /* nav bar */
 
 

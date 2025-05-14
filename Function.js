@@ -26,4 +26,25 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
   
-//  product 
+
+// loader
+window.onload = function() {
+
+  document.querySelector('.loader').style.display = 'none';
+  
+  document.querySelector('.content').style.display = 'block';
+};
+
+// Smooth Scrolling
+const elements = document.querySelectorAll('.u-fade-in, .u-slide-in-left');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    }
+  });
+}, { threshold: 0.1 });
+
+elements.forEach(el => observer.observe(el));
+// 

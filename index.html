@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UmiLux - Your one-stop shop for all your needs.">
     <title>UMILUX</title>
     <!-- Bootstrap & Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
@@ -15,6 +16,7 @@
 </head>
 
 <body>
+    <div class="loader"></div>
     <header class="u-header">
         <!-- Top Bar -->
         <div class="u-top-bar d-flex align-items-center">
@@ -24,7 +26,7 @@
                     <span class="u-top-bar__text">blueskytechcompany@gmail.com</span>
                 </div>
                 <div class="u-top-bar__right d-flex align-items-center gap-3 flex-wrap text-white small">
-                    <a href="#" class="u-top-bar__link">Our Stores</a>
+                    <a href="./loading.html" class="u-top-bar__link">Our Stores</a>
 
                     <!-- Language -->
                     <div class="dropdown">
@@ -33,9 +35,9 @@
                             English
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                            <li><a class="dropdown-item" href="#">English</a></li>
-                            <li><a class="dropdown-item" href="#">Vietnamese</a></li>
-                            <li><a class="dropdown-item" href="#">French</a></li>
+                            <li><a class="dropdown-item" href="./loading.html">English</a></li>
+                            <li><a class="dropdown-item" href="./loading.html">Vietnamese</a></li>
+                            <li><a class="dropdown-item" href="./loading.html">French</a></li>
                         </ul>
                     </div>
 
@@ -46,9 +48,9 @@
                             United States (USD $)
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="currencyDropdown">
-                            <li><a class="dropdown-item" href="#">United States (USD $)</a></li>
-                            <li><a class="dropdown-item" href="#">VND</a></li>
-                            <li><a class="dropdown-item" href="#">EUR</a></li>
+                            <li><a class="dropdown-item" href="./loading.html">United States (USD $)</a></li>
+                            <li><a class="dropdown-item" href="./loading.html">VND</a></li>
+                            <li><a class="dropdown-item" href="./loading.html">EUR</a></li>
                         </ul>
                     </div>
                 </div>
@@ -56,12 +58,12 @@
         </div>
 
         <!-- Header Bottom -->
-        <div class="u-header__bottom">
+        <div class="u-header__bottom ">
             <div class="container d-flex flex-wrap align-items-center justify-content-between py-3">
 
                 <!-- Logo -->
                 <a href="/" class="u-logo d-inline-block mb-2 mb-md-0">
-                    <img src="./img/Logo.png" alt="UMILUX Logo" height="40" loading="lazy" />
+                    <img src="./img/Logo.png" alt="UMILUX Logo" width="144" height="37" loading="lazy" />
                 </a>
 
                 <!-- Search Bar -->
@@ -76,16 +78,17 @@
                         </span>
                         <label for="search-input" class="visually-hidden">Search products</label>
                         <input id="search-input" class="u-search-bar__input" type="search"
-                            placeholder="I'm looking for..." />
+                            placeholder="I'm looking for..."  autocomplete="off" required />
                         <button class="u-search-button" type="submit" aria-label="Search">Search</button>
                     </form>
                 </div>
 
                 <!-- Header Icons -->
+                
                 <nav class="u-header-icons d-flex align-items-center gap-3 order-2 order-md-3 text-white"
                     aria-label="Header Tools">
                     <!-- Account -->
-                    <a href="#" class="u-header-icon d-flex align-items-center gap-2 position-relative">
+                    <a href="./loading.html" class="u-header-icon d-flex align-items-center gap-2 position-relative">
                         <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M22.8548 21.3334C21.6915 19.3656 20.0317 17.7341 18.0398 16.6006C16.0478 15.467 13.7928 14.8708 11.4979 14.8708C9.20304 14.8708 6.94798 15.467 4.95601 16.6006C2.96405 17.7341 1.30427 19.3656 0.141025 21.3334C-0.00138538 21.5886 -0.0376415 21.8892 0.0400248 22.1707C0.0766559 22.314 0.143667 22.448 0.236568 22.5635C0.329469 22.679 0.446115 22.7735 0.578691 22.8405C0.74972 22.9369 0.943214 22.987 1.1398 22.9856C1.33475 22.9938 1.52817 22.9481 1.69855 22.8535C1.86893 22.7589 2.0096 22.6191 2.10491 22.4498C3.06783 20.8199 4.44211 19.4685 6.09163 18.5296C7.74115 17.5906 9.60864 17.0967 11.5091 17.0967C13.4096 17.0967 15.2771 17.5906 16.9266 18.5296C18.5761 19.4685 19.9504 20.8199 20.9133 22.4498C21.0632 22.7032 21.3076 22.8876 21.5934 22.9628C21.8792 23.0381 22.1832 22.9981 22.4396 22.8516C22.5672 22.7839 22.6791 22.6903 22.768 22.5769C22.8569 22.4634 22.9209 22.3326 22.9558 22.193C22.9973 22.0502 23.0098 21.9007 22.9924 21.7531C22.9751 21.6055 22.9283 21.4628 22.8548 21.3334Z"
@@ -103,7 +106,7 @@
                     </a>
 
                     <!-- Wishlist -->
-                    <a href="#" class="u-header-icon d-flex align-items-center position-relative" aria-label="Wishlist">
+                    <a href="./loading.html" class="u-header-icon d-flex align-items-center position-relative" aria-label="Wishlist">
                         <svg width="28" height="23" viewBox="0 0 28 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M25.7442 2.10275C24.2909 0.752316 22.3676 0 20.3687 0C18.3697 0 16.4465 0.752316 14.9931 2.10275L14 3.0345L13.0069 2.10275C11.5572 0.743159 9.62821 -0.0103607 7.62554 0.000636744C5.62664 -0.00860296 3.7019 0.744876 2.25576 2.10275C1.54386 2.75756 0.976298 3.54931 0.588263 4.42889C0.200228 5.30847 0 6.25712 0 7.216C0 8.17488 0.200228 9.12353 0.588263 10.0031C0.976298 10.8827 1.54386 11.6744 2.25576 12.3293L13.2147 22.6921C13.3222 22.7846 13.4428 22.8612 13.5727 22.9194C13.8471 23.0269 14.1529 23.0269 14.4273 22.9194C14.5572 22.8612 14.6778 22.7846 14.7853 22.6921L25.7442 12.3293C26.4561 11.6744 27.0237 10.8827 27.4117 10.0031C27.7998 9.12353 28 8.17488 28 7.216C28 6.25712 27.7998 5.30847 27.4117 4.42889C27.0237 3.54931 26.4561 2.75756 25.7442 2.10275ZM25.7442 7.19327C25.7475 7.86547 25.6121 8.53132 25.3461 9.15048C25.0801 9.76963 24.6891 10.3292 24.1968 10.7953L14 20.4536L3.81473 10.7953C3.31485 10.3331 2.91647 9.77502 2.64415 9.15553C2.37183 8.53604 2.23134 7.86823 2.23134 7.19327C2.23134 6.51832 2.37183 5.85051 2.64415 5.23102C2.91647 4.61153 3.31485 4.05348 3.81473 3.59127C4.84037 2.62701 6.20703 2.09319 7.62554 2.10275C9.05112 2.09206 10.4254 2.62562 11.4595 3.59127L13.2147 5.2616C13.3222 5.3541 13.4428 5.43066 13.5727 5.48886C13.8471 5.59638 14.1529 5.59638 14.4273 5.48886C14.5572 5.43066 14.6778 5.3541 14.7853 5.2616L16.5521 3.59127C17.5777 2.62701 18.9444 2.09319 20.3629 2.10275C21.7885 2.09206 23.1628 2.62562 24.1968 3.59127C24.6933 4.0554 25.0886 4.6141 25.3586 5.23335C25.6286 5.8526 25.7676 6.51944 25.7673 7.19327H25.7442Z"
@@ -113,7 +116,7 @@
                     </a>
 
                     <!-- Cart -->
-                    <a href="#" class="u-header-icon d-flex align-items-center gap-2 position-relative"
+                    <a href="./loading.html" class="u-header-icon d-flex align-items-center gap-2 position-relative"
                         aria-label="Cart">
                         <svg width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -133,82 +136,84 @@
                         </div>
                     </a>
                 </nav>
+            
             </div>
         </div>
     </header>
+
     <!-- Main Navigation -->
 
-    <nav class="u-main-nav border-top border-bottom" aria-label="Main Navigation">
-        <div class="container d-flex align-items-center py-2" style="flex-wrap: nowrap; overflow: visible;">
+    <nav class="u-main-nav border-top border-bottom u-fade-in" aria-label="Main Navigation">
+        <div class="container d-flex align-items-center py-2 " style="flex-wrap: nowrap; overflow: visible;">
 
             <!-- Left side: Menu items (All menu, Sale + Buy Umino) -->
             <div class="d-flex align-items-center gap-lg-3 u-main-nav__left">
                 <!-- Main navigation list -->
                 <ul class="nav align-items-center gap-3 mb-0">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="#"
+                        <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href=""
                             id="departmentsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-list"></i>
                             All Departments
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="departmentsDropdown">
-                            <li><a class="dropdown-item" href="#">Electronics</a></li>
-                            <li><a class="dropdown-item" href="#">Clothing</a></li>
-                            <li><a class="dropdown-item" href="#">Home & Kitchen</a></li>
+                            <li><a class="dropdown-item" href="./loading.html">Electronics</a></li>
+                            <li><a class="dropdown-item" href="./loading.html">Clothing</a></li>
+                            <li><a class="dropdown-item" href="./loading.html">Home & Kitchen</a></li>
                         </ul>
                     </li>
 
                     <!-- Other dropdown menus -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle" href="./loading.html" id="homeDropdown" data-bs-toggle="dropdown"
                             aria-expanded="false">Home</a>
                         <ul class="dropdown-menu" aria-labelledby="homeDropdown">
-                            <li><a class="dropdown-item" href="#">Home 1</a></li>
-                            <li><a class="dropdown-item" href="#">Home 2</a></li>
+                            <li><a class="dropdown-item" href="./loading.html">Home 1</a></li>
+                            <li><a class="dropdown-item" href="./loading.html">Home 2</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="shopDropdown" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle" href="./loading.html" id="shopDropdown" data-bs-toggle="dropdown"
                             aria-expanded="false">Shop</a>
                         <ul class="dropdown-menu" aria-labelledby="shopDropdown">
-                            <li><a class="dropdown-item" href="#">Shop Grid</a></li>
-                            <li><a class="dropdown-item" href="#">Shop List</a></li>
-                            <li><a class="dropdown-item" href="#">Categories</a></li>
+                            <li><a class="dropdown-item" href="./loading.html">Shop Grid</a></li>
+                            <li><a class="dropdown-item" href="./loading.html">Shop List</a></li>
+                            <li><a class="dropdown-item" href="./loading.html">Categories</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="productDropdown" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle" href="./loading.html" id="productDropdown" data-bs-toggle="dropdown"
                             aria-expanded="false">Product</a>
                         <ul class="dropdown-menu" aria-labelledby="productDropdown">
-                            <li><a class="dropdown-item" href="#">Single Product</a></li>
-                            <li><a class="dropdown-item" href="#">Product Reviews</a></li>
+                            <li><a class="dropdown-item" href="./loading.html">Single Product</a></li>
+                            <li><a class="dropdown-item" href="./loading.html">Product Reviews</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="pageDropdown" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle" href="./loading.html" id="pageDropdown" data-bs-toggle="dropdown"
                             aria-expanded="false">Page</a>
                         <ul class="dropdown-menu" aria-labelledby="pageDropdown">
-                            <li><a class="dropdown-item" href="#">About Us</a></li>
-                            <li><a class="dropdown-item" href="#">Contact</a></li>
-                            <li><a class="dropdown-item" href="#">FAQ</a></li>
+                            <li><a class="dropdown-item" href="./loading.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="./loading.html">Contact</a></li>
+                            <li><a class="dropdown-item" href="./loading.html">FAQ</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle" href="./loading.html" id="blogDropdown" data-bs-toggle="dropdown"
                             aria-expanded="false">Blog</a>
                         <ul class="dropdown-menu" aria-labelledby="blogDropdown">
-                            <li><a class="dropdown-item" href="#">Blog List</a></li>
-                            <li><a class="dropdown-item" href="#">Blog Post</a></li>
+                            <li><a class="dropdown-item" href="./loading.html">Blog List</a></li>
+                            <li><a class="dropdown-item" href="./loading.html">Blog Post</a></li>
                         </ul>
                     </li>
 
                     <!-- Static Links -->
-                    <li class="nav-item"><a class="nav-link" href="#">Sale</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Buy Umino!</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./loading.html">Sale</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./loading.html">Buy Umino!</a></li>
                 </ul>
             </div>
 
@@ -220,103 +225,110 @@
         </div>
     </nav>
 
-    <div class="container-xl my-4">
+    <div class="container-xl my-4 u-slide-in-left">
         <div id="u-hero-slider" class="carousel slide rounded-4 overflow-hidden position-relative"
             data-bs-ride="carousel" data-bs-interval="5000">
 
             <!-- Slides -->
-            <div class="carousel-inner">
-                <!-- Slide 1 -->
-                <div class="carousel-item active">
-                    <div class="u-hero-slide d-flex flex-column flex-md-row">
-                        <div class="u-hero-slide__left position-relative">
-                            <img src="./img/sld1.png" alt="Background Left" class="u-hero-slide__left-img" />
-                            <div class="u-hero-slide__content text-white">
-                                <h2 class="fw-bold mb-1">Speaker</h2>
-                                <h2 class="fw-bold">Bluetooth SoundCore</h2>
-                                <p class="text-white-50 mt-2 mb-4">Limited Time: Online Only!</p>
-                                <a href="#" class="btn btn-light rounded-pill px-4 py-2 fw-semibold">Shop Now</a>
-                            </div>
-                        </div>
-                        <div class="u-hero-slide__right d-flex align-items-center justify-content-center">
-                            <img src="./img/sld2.png" alt="Product"
-                                class="u-hero-slide__product img-fluid w-100 h-100 object-fit-cover" />
-                        </div>
-                    </div>
-                </div>
+            <div class="u-hero-wrapper">
+                <div id="u-hero-carousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
 
-                <!-- Slide 2 -->
-                <div class="carousel-item">
-                    <div class="u-hero-slide d-flex flex-column flex-md-row">
-                        <div class="u-hero-slide__left position-relative">
-                            <img src="./img/sld1.png" alt="Background Left" class="u-hero-slide__left-img" />
-                            <div class="u-hero-slide__content text-white">
-                                <h2 class="fw-bold mb-1">Speaker</h2>
-                                <h2 class="fw-bold">Bluetooth SoundCore</h2>
-                                <p class="text-white-50 mt-2 mb-4">Limited Time: Online Only!</p>
-                                <a href="#" class="btn btn-light rounded-pill px-4 py-2 fw-semibold">Shop Now</a>
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <div class="u-hero-slide">
+                                <div class="u-hero-slide__left">
+                                    <img src="./img/sld1.png" alt="Background Left" class="u-hero-slide__left-img" />
+                                    <div class="u-hero-slide__content">
+                                        <h2 class="fw-bold mb-1">Speaker</h2>
+                                        <h2 class="fw-bold">Bluetooth SoundCore</h2>
+                                        <p class="text-white-50 mt-2 mb-4">Limited Time: Online Only!</p>
+                                        <a href="./loading.html" class="btn btn-light rounded-pill px-4 py-2 fw-semibold">Shop
+                                            Now</a>
+                                    </div>
+                                </div>
+                                <div class="u-hero-slide__right">
+                                    <img src="./img/sld2.png" alt="Product" class="u-hero-slide__product" />
+                                </div>
                             </div>
                         </div>
-                        <div class="u-hero-slide__right d-flex align-items-center justify-content-center">
-                            <img src="./img/sld2.png" alt="Product"
-                                class="u-hero-slide__product img-fluid w-100 h-100 object-fit-cover" />
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Slide 3 -->
-                <div class="carousel-item">
-                    <div class="u-hero-slide d-flex flex-column flex-md-row">
-                        <div class="u-hero-slide__left position-relative">
-                            <img src="./img/sld1.png" alt="Background Left" class="u-hero-slide__left-img" />
-                            <div class="u-hero-slide__content text-white">
-                                <h2 class="fw-bold mb-1">Speaker</h2>
-                                <h2 class="fw-bold">Bluetooth SoundCore</h2>
-                                <p class="text-white-50 mt-2 mb-4">Limited Time: Online Only!</p>
-                                <a href="#" class="btn btn-light rounded-pill px-4 py-2 fw-semibold">Shop Now</a>
+                        <!-- Slide 2 -->
+                        <div class="carousel-item">
+                            <div class="u-hero-slide">
+                                <div class="u-hero-slide__left">
+                                    <img src="./img/sld1.png" alt="Background Left" class="u-hero-slide__left-img" />
+                                    <div class="u-hero-slide__content">
+                                        <h2 class="fw-bold mb-1">Speaker</h2>
+                                        <h2 class="fw-bold">Bluetooth SoundCore</h2>
+                                        <p class="text-white-50 mt-2 mb-4">Limited Time: Online Only!</p>
+                                        <a href="./loading.html" class="btn btn-light rounded-pill px-4 py-2 fw-semibold">Shop
+                                            Now</a>
+                                    </div>
+                                </div>
+                                <div class="u-hero-slide__right">
+                                    <img src="./img/sld2.png" alt="Product" class="u-hero-slide__product" />
+                                </div>
                             </div>
                         </div>
-                        <div class="u-hero-slide__right d-flex align-items-center justify-content-center">
-                            <img src="./img/sld2.png" alt="Product"
-                                class="u-hero-slide__product img-fluid w-100 h-100 object-fit-cover" />
+
+                        <!-- Slide 3 -->
+                        <div class="carousel-item">
+                            <div class="u-hero-slide">
+                                <div class="u-hero-slide__left">
+                                    <img src="./img/sld1.png" alt="Background Left" class="u-hero-slide__left-img" />
+                                    <div class="u-hero-slide__content">
+                                        <h2 class="fw-bold mb-1">Speaker</h2>
+                                        <h2 class="fw-bold">Bluetooth SoundCore</h2>
+                                        <p class="text-white-50 mt-2 mb-4">Limited Time: Online Only!</p>
+                                        <a href="./loading.html" class="btn btn-light rounded-pill px-4 py-2 fw-semibold">Shop
+                                            Now</a>
+                                    </div>
+                                </div>
+                                <div class="u-hero-slide__right">
+                                    <img src="./img/sld2.png" alt="Product" class="u-hero-slide__product" />
+                                </div>
+                            </div>
                         </div>
+
                     </div>
+
+                    <!-- Custom Indicators -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#u-hero-slider" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#u-hero-slider" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#u-hero-slider" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <!-- Prev/Next Buttons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#u-hero-slider"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#u-hero-slider"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
-
-            <!-- Custom Indicators -->
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#u-hero-slider" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#u-hero-slider" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#u-hero-slider" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-
-
-            <!-- Prev/Next Buttons -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#u-hero-slider" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#u-hero-slider" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+        
         </div>
     </div>
 
     <!-- Categories Section -->
     <section class="u-category py-5 bg-white">
-        <div class="container">
+        <div class="container u-fade-in">
             <div class="row row-cols-auto justify-content-center text-center g-4">
 
                 <!-- Category Item -->
                 <div class="col">
                     <a href="#macbook" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                            <img src="./img/Category1.png" alt="Macbook/PCs" class="img-fluid">
+                            <img src="./img/Category1.png" alt="Macbook/PCs" class="img-fluid" loading="lazy">
                         </div>
                         <p class="u-category__title mb-0 fw-semibold mt-2">Macbook/PCs</p>
                         <small class="u-category__count text-muted">16 Products</small>
@@ -326,7 +338,7 @@
                 <div class="col">
                     <a href="#QledsmartTv" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                            <img src="./img/Category2.png" alt="Macbook/PCs" class="img-fluid">
+                            <img src="./img/Category2.png" alt="Macbook/PCs" class="img-fluid" loading="lazy">
                         </div>
                         <p class="u-category__title mb-0 fw-semibold mt-2">OLED/Smart TVs</p>
                         <small class="u-category__count text-muted">06 Products</small>
@@ -336,7 +348,7 @@
                 <div class="col">
                     <a href="#phone" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                            <img src="./img/Category3.png" alt="Phone/Mobile" class="img-fluid">
+                            <img src="./img/Category3.png" alt="Phone/Mobile" class="img-fluid" loading="lazy">
                         </div>
                         <p class="u-category__title mb-0 fw-semibold mt-2">Phone/Mobile</p>
                         <small class="u-category__count text-muted">18 Products</small>
@@ -345,7 +357,7 @@
                 <div class="col">
                     <a href="#tablets" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                            <img src="./img/Category4.png" alt="Phone/Mobile" class="img-fluid">
+                            <img src="./img/Category4.png" alt="Phone/Mobile" class="img-fluid" loading="lazy">
                         </div>
                         <p class="u-category__title mb-0 fw-semibold mt-2">Tablets/Ipad Pro</p>
                         <small class="u-category__count text-muted">09 Products</small>
@@ -354,7 +366,7 @@
                 <div class="col">
                     <a href="#gamepad" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                            <img src="./img/Category5.png" alt="Phone/Mobile" class="img-fluid">
+                            <img src="./img/Category5.png" alt="Phone/Mobile" class="img-fluid" loading="lazy">
                         </div>
                         <p class="u-category__title mb-0 fw-semibold mt-2">Gamepad/Console</p>
                         <small class="u-category__count text-muted">20 Products</small>
@@ -363,7 +375,7 @@
                 <div class="col">
                     <a href="#camera" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                            <img src="./img/Category6.png" alt="Phone/Mobile" class="img-fluid">
+                            <img src="./img/Category6.png" alt="Phone/Mobile" class="img-fluid" loading="lazy">
                         </div>
                         <p class="u-category__title mb-0 fw-semibold mt-2">Camera/Photo</p>
                         <small class="u-category__count text-muted">13 Products</small>
@@ -372,7 +384,7 @@
                 <div class="col">
                     <a href="#heatsink" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                            <img src="./img/Category7.png" alt="Phone/Mobile" class="img-fluid">
+                            <img src="./img/Category7.png" alt="Phone/Mobile" class="img-fluid" loading="lazy">
                         </div>
                         <p class="u-category__title mb-0 fw-semibold mt-2">Heatsink PC</p>
                         <small class="u-category__count text-muted">07 Products</small>
@@ -381,7 +393,7 @@
                 <div class="col">
                     <a href="#electronics" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                            <img src="./img/Category8.png" alt="Phone/Mobile" class="img-fluid">
+                            <img src="./img/Category8.png" alt="Phone/Mobile" class="img-fluid" loading="lazy">
                         </div>
                         <p class="u-category__title mb-0 fw-semibold mt-2">Home/Electronics</p>
                         <small class="u-category__count text-muted">12 Products</small>
@@ -395,10 +407,10 @@
     <!-- Trending Products Section -->
 
     <section class="u-top-trending">
-        <div class="container">
+        <div class="container u-fade-in">
             <div class="u-top-trending__header d-flex justify-content-between align-items-center">
                 <h2 class="u-top-trending__title fw-bold" style="font-size: 28px;">Top Trending This Week</h2>
-                <a href="#" class="u-top-trending__view-all">View All <span>&raquo;</span></a>
+                <a href="./loading.html" class="u-top-trending__view-all">View All <span>&raquo;</span></a>
             </div>
 
             <hr class="section-divider">
@@ -409,8 +421,8 @@
                 <div class="col-6 col-sm-4 col-md-3 col-lg-2">
                     <article class="u-product-card">
                         <figure class="u-product-card__image-wrapper">
-                            <img class="u-product-card__image img-fluid" src="./img/prd1.png" alt="Galaxy S21 Ultra 5G"
-                                loading="lazy" />
+                            <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/prd1.png" alt="Galaxy S21 Ultra 5G"
+                                loading="lazy" /></a>
                         </figure>
                         <div class="u-product-card__info">
                             <div class="u-product-card__brand">TOSHIBA</div>
@@ -502,7 +514,7 @@
 
     <!-- Section: promotional-banners - includes cellphone and headphone promo cards -->
     <section class="promo-banners container py-5">
-        <div class="row gx-4 gy-4">
+        <div class="row gx-4 gy-4 u-fade-in">
             <!-- Banner: Cellphone -->
             <article class="promo-banners__item col-12 col-md-6">
                 <div class="promo-banners__card promo-banners__card--cellphone d-flex flex-column flex-md-row align-items-center justify-content-between p-4 h-100 rounded-4"
@@ -510,7 +522,7 @@
                     <div class="promo-banners__content text-start">
                         <h2 class="promo-banners__title h5 fw-bold mb-2">Super Sale</h2>
                         <p class="promo-banners__subtitle mb-3">Cellphone Ultra. Save $199.00</p>
-                        <a href="#"
+                        <a href="./loading.html"
                             class="promo-banners__link text-decoration-none border-bottom border-dark pb-1 fw-bold">Shop
                             Cellphone</a>
                     </div>
@@ -528,7 +540,7 @@
                     <div class="promo-banners__content text-start">
                         <h2 class="promo-banners__title h5 fw-bold mb-2">Deals Good</h2>
                         <p class="promo-banners__subtitle mb-3">Headphone Bluetooth 5.0</p>
-                        <a href="#"
+                        <a href="./loading.html"
                             class="promo-banners__link text-decoration-none border-bottom border-dark pb-1 fw-bold">Shop
                             Headphone</a>
                     </div>
@@ -542,15 +554,15 @@
     </section>
 
     <!-- Top Selling Products Section -->
-    <section class="container py-5">
+    <section class="container py-5 u-fade-in">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h4 class="u-top-selling__titte fw-bold mb-3 " style="font-size: 28px;">Top Selling Products</h4>
-            <a href="#" class=" u-top-selling__view-all text-decoration-none text-muted small mt-5">View All &raquo;</a>
+            <a href="./loading.html" class=" u-top-selling__view-all text-decoration-none text-muted small mt-5">View All &raquo;</a>
         </div>
 
         <hr class="section-divider">
 
-        <div class="row g-4">
+        <div class="row g-4 ">
             <!-- banerbaner -->
             <div class="col-lg-3 col-md-12 position-relative section-bn-wrap">
                 <div class="rounded-4 h-100 d-flex flex-column justify-content-between position-relative bg-light">
@@ -561,10 +573,10 @@
                             <span class="fw-bold">Intel Core i5 D6520U</span>
                         </h5>
                         <p class="text-muted mb-3">Just from: <strong class="text-dark">$919.99</strong></p>
-                        <a href="#" class="btn btn-dark btn-shop-now">Shop Now</a>
+                        <a href="./loading.html" class="btn btn-dark btn-shop-now">Shop Now</a>
                     </div>
                     <div class="section-bn-img">
-                        <img src="./img/tsp1.png" alt="Laptop" class="img-fluid w-100" loading="lazy" />
+                        <a href="./loading.html"><img src="./img/tsp1.png" alt="Laptop" class="img-fluid w-100" loading="lazy" /></a>
                     </div>
                 </div>
             </div>
@@ -572,11 +584,11 @@
 
             <!-- Product Items -->
             <div class="col-lg-9 col-md-12">
-                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4 product-mgr">
                     <!-- Product card 1 -->
                     <div class="col">
                         <div class="card product-card h-100 border-0 shadow-sm">
-                            <img src="./img/tsp2.png" class="card-img-top" alt="Product" loading="lazy">
+                            <a href="./loading.html"><img src="./img/tsp2.png" class="card-img-top" alt="Product" loading="lazy"></a>
                             <div class="card-body p-2">
                                 <p class="text-muted small mb-1">Toshiba</p>
                                 <h6 class="card-title small">Galaxy S21 Ultra 5G 128GB Unlocked International Version
@@ -592,7 +604,7 @@
                     <!-- /Product card 2 -->
                     <div class="col">
                         <div class="card product-card h-100 border-0 shadow-sm">
-                            <img src="./img/tsp3.png" class="card-img-top" alt="Product" loading="lazy">
+                            <a href="./loading.html"><img src="./img/tsp3.png" class="card-img-top" alt="Product" loading="lazy"></a>
                             <div class="card-body p-2">
                                 <p class="text-muted small mb-1">Toshiba</p>
                                 <h6 class="card-title small">Galaxy S21 Ultra 5G 128GB Unlocked International Version
@@ -608,7 +620,7 @@
                     <!-- /Product card 3 -->
                     <div class="col">
                         <div class="card product-card h-100 border-0 shadow-sm">
-                            <img src="./img/tsp4.png" class="card-img-top" alt="Product" loading="lazy">
+                            <a href="./loading.html"><img src="./img/tsp4.png" class="card-img-top" alt="Product" loading="lazy"></a>
                             <div class="card-body p-2">
                                 <p class="text-muted small mb-1">Toshiba</p>
                                 <h6 class="card-title small">Galaxy S21 Ultra 5G 128GB Unlocked International Version
@@ -624,7 +636,7 @@
                     <!-- /Product card 4 -->
                     <div class="col">
                         <div class="card product-card h-100 border-0 shadow-sm">
-                            <img src="./img/tsp5.png" class="card-img-top" alt="Product" loading="lazy">
+                            <a href="./loading.html"><img src="./img/tsp5.png" class="card-img-top" alt="Product" loading="lazy"></a>
                             <div class="card-body p-2">
                                 <p class="text-muted small mb-1">Toshiba</p>
                                 <h6 class="card-title small">Galaxy S21 Ultra 5G 128GB Unlocked International Version
@@ -640,7 +652,7 @@
                     <!-- /Product card 5 -->
                     <div class="col">
                         <div class="card product-card h-100 border-0 shadow-sm">
-                            <img src="./img/tsp6.png" class="card-img-top" alt="Product" loading="lazy">
+                            <a href="./loading.html"><img src="./img/tsp6.png" class="card-img-top" alt="Product" loading="lazy"></a>
                             <div class="card-body p-2">
                                 <p class="text-muted small mb-1">Toshiba</p>
                                 <h6 class="card-title small">Galaxy S21 Ultra 5G 128GB Unlocked International Version
@@ -656,7 +668,7 @@
                     <!-- /Product card 6 -->
                     <div class="col">
                         <div class="card product-card h-100 border-0 shadow-sm">
-                            <img src="./img/tsp7.png" class="card-img-top" alt="Product" loading="lazy">
+                            <a href="./loading.html"><img src="./img/tsp7.png" class="card-img-top" alt="Product" loading="lazy"></a>
                             <div class="card-body p-2">
                                 <p class="text-muted small mb-1">Toshiba</p>
                                 <h6 class="card-title small">Galaxy S21 Ultra 5G 128GB Unlocked International Version
@@ -672,7 +684,7 @@
                     <!-- /Product card 7 -->
                     <div class="col">
                         <div class="card product-card h-100 border-0 shadow-sm">
-                            <img src="./img/tsp8.png" class="card-img-top" alt="Product" loading="lazy">
+                            <a href="./loading.html"><img src="./img/tsp8.png" class="card-img-top" alt="Product" loading="lazy"></a>
                             <div class="card-body p-2">
                                 <p class="text-muted small mb-1">Toshiba</p>
                                 <h6 class="card-title small">Galaxy S21 Ultra 5G 128GB Unlocked International Version
@@ -688,7 +700,7 @@
                     <!-- /Product card 8 -->
                     <div class="col">
                         <div class="card product-card h-100 border-0 shadow-sm">
-                            <img src="./img/tsp9.png" class="card-img-top" alt="Product" loading="lazy">
+                            <a href="./loading.html"><img src="./img/tsp9.png" class="card-img-top" alt="Product" loading="lazy"></a>
                             <div class="card-body p-2">
                                 <p class="text-muted small mb-1">Toshiba</p>
                                 <h6 class="card-title small">Galaxy S21 Ultra 5G 128GB Unlocked International Version
@@ -708,11 +720,11 @@
 
     <!-- Recommended For You -->
 
-    <section class="u-recommended">
+    <section class="u-recommended u-fade-in">
         <div class="container">
             <div class="u-recommended__header d-flex justify-content-between align-items-center">
                 <h2 class="u-recommended__title fw-bold" style="font-size: 28px;">Recommended For You</h2>
-                <a href="#" class="u-recommended__view-all">View All <span>&raquo;</span></a>
+                <a href="./loading.html" class="u-recommended__view-all">View All <span>&raquo;</span></a>
             </div>
 
             <hr class="section-divider">
@@ -815,10 +827,10 @@
 
     <!-- Deals & Promotions -->
 
-    <section class="deals-promotions container mt-5 ">
+    <section class="deals-promotions container mt-5 u-fade-in ">
         <div class="d-flex justify-content-between align-items-center deals-promotions__header">
             <h2 class="deals-promotions__title">Deals & Promotions</h2>
-            <a href="#" class="deals-promotions__viewall">View All »</a>
+            <a href="./loading.html" class="deals-promotions__viewall">View All »</a>
         </div>
 
         <hr class="section-divider">
@@ -883,7 +895,7 @@
     <hr class="section-divider">
 
     <!-- Info-section -->
-    <section class="u-service-highlights">
+    <section class="u-service-highlights u-fade-in">
         <div class="container">
             <div class="row gx-0 gy-4 justify-content-center u-service-highlights__wrapper">
 
@@ -921,7 +933,7 @@
 
     <!--  suport-->
 
-    <footer class="footer mt-5">
+    <footer class="footer mt-5 u-fade-in">
         <section class="footer__top container">
             <div class="footer__support-heading">
                 <span class="footer__support-subtitle">HELP CENTER</span>
@@ -971,10 +983,19 @@
                 </div>
                 <div class="footer__contact-item">
                     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M26.0032 12.2353V18.1176C26.0032 22.2353 23.6032 24 20.0032 24H8.00317C4.40317 24 2.00317 22.2353 2.00317 18.1176V9.88235C2.00317 5.76471 4.40317 4 8.00317 4H16.4032" stroke="#111111" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M7.99854 10L11.8819 13.2103C13.1598 14.2632 15.2566 14.2632 16.5345 13.2103L17.9985 12.0032" stroke="#111111" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M23.0015 9C24.6583 9 26.0015 7.65685 26.0015 6C26.0015 4.34315 24.6583 3 23.0015 3C21.3446 3 20.0015 4.34315 20.0015 6C20.0015 7.65685 21.3446 9 23.0015 9Z" stroke="#00A2C2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                        <path
+                            d="M26.0032 12.2353V18.1176C26.0032 22.2353 23.6032 24 20.0032 24H8.00317C4.40317 24 2.00317 22.2353 2.00317 18.1176V9.88235C2.00317 5.76471 4.40317 4 8.00317 4H16.4032"
+                            stroke="#111111" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path
+                            d="M7.99854 10L11.8819 13.2103C13.1598 14.2632 15.2566 14.2632 16.5345 13.2103L17.9985 12.0032"
+                            stroke="#111111" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path
+                            d="M23.0015 9C24.6583 9 26.0015 7.65685 26.0015 6C26.0015 4.34315 24.6583 3 23.0015 3C21.3446 3 20.0015 4.34315 20.0015 6C20.0015 7.65685 21.3446 9 23.0015 9Z"
+                            stroke="#00A2C2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
 
                     <div class="footer__contact-content">
                         <div class="footer__contact-label">Email Us</div>
@@ -998,7 +1019,7 @@
                 <p class="footer__desc">Established with a passion for innovation and a commitment to providing
                     top-notch technology solutions.</p>
                 <div class="footer__socials">
-                    <a href="#" aria-label="Facebook" class="footer__icon-circle">
+                    <a href="./loading.html" aria-label="Facebook" class="footer__icon-circle">
                         <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="18" cy="18" r="17.5" stroke="#555555" />
                             <path
@@ -1007,7 +1028,7 @@
                         </svg>
 
                     </a>
-                    <a href="#" aria-label="Twitter" class="footer__icon-circle">
+                    <a href="./loading.html" aria-label="Twitter" class="footer__icon-circle">
                         <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="18" cy="18" r="17.5" stroke="#555555" />
                             <path
@@ -1015,7 +1036,7 @@
                                 fill="#555555" />
                         </svg>
                     </a>
-                    <a href="#" aria-label="YouTube" class="footer__icon-circle">
+                    <a href="./loading.html" aria-label="YouTube" class="footer__icon-circle">
                         <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="18" cy="18" r="17.5" stroke="#555555" />
                             <path
@@ -1025,7 +1046,7 @@
 
 
                     </a>
-                    <a href="#" aria-label="Instagram" class="footer__icon-circle">
+                    <a href="./loading.html" aria-label="Instagram" class="footer__icon-circle">
                         <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="18" cy="18" r="17.5" stroke="#555555" />
                             <path
@@ -1035,7 +1056,7 @@
 
 
                     </a>
-                    <a href="#" aria-label="Pinterest" class="footer__icon-circle">
+                    <a href="./loading.html" aria-label="Pinterest" class="footer__icon-circle">
                         <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="18" cy="18" r="17.5" stroke="#555555" />
                             <path
@@ -1051,22 +1072,22 @@
             <div class="footer__column">
                 <h4 class="footer__title">Customer Service</h4>
                 <ul class="footer__list">
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Refund Policy</a></li>
-                    <li><a href="#">Shipping & Return</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li><a href="#">Store Locations</a></li>
+                    <li><a href="./loading.html">Privacy Policy</a></li>
+                    <li><a href="./loading.html">Refund Policy</a></li>
+                    <li><a href="./loading.html">Shipping & Return</a></li>
+                    <li><a href="./loading.html">Terms & Conditions</a></li>
+                    <li><a href="./loading.html">Store Locations</a></li>
                 </ul>
             </div>
 
             <div class="footer__column">
                 <h4 class="footer__title">Shop By Categories</h4>
                 <ul class="footer__list">
-                    <li><a href="#">Smartphone</a></li>
-                    <li><a href="#">Headphones</a></li>
-                    <li><a href="#">Computer & Desktop</a></li>
-                    <li><a href="#">Cameras & Photos</a></li>
-                    <li><a href="#">Laptop & Ipad</a></li>
+                    <li><a href="./loading.html">Smartphone</a></li>
+                    <li><a href="./loading.html">Headphones</a></li>
+                    <li><a href="./loading.html">Computer & Desktop</a></li>
+                    <li><a href="./loading.html">Cameras & Photos</a></li>
+                    <li><a href="./loading.html">Laptop & Ipad</a></li>
                 </ul>
             </div>
 
@@ -1091,9 +1112,9 @@
                         English
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                        <li><a class="dropdown-item" href="#">English</a></li>
-                        <li><a class="dropdown-item" href="#">Vietnamese</a></li>
-                        <li><a class="dropdown-item" href="#">French</a></li>
+                        <li><a class="dropdown-item" href="./loading.html">English</a></li>
+                        <li><a class="dropdown-item" href="./loading.html">Vietnamese</a></li>
+                        <li><a class="dropdown-item" href="./loading.html">French</a></li>
                     </ul>
                 </div>
 
@@ -1104,9 +1125,9 @@
                         United States (USD $)
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="currencyDropdown">
-                        <li><a class="dropdown-item" href="#">United States (USD $)</a></li>
-                        <li><a class="dropdown-item" href="#">VND</a></li>
-                        <li><a class="dropdown-item" href="#">EUR</a></li>
+                        <li><a class="dropdown-item" href="./loading.html">United States (USD $)</a></li>
+                        <li><a class="dropdown-item" href="./loading.html">VND</a></li>
+                        <li><a class="dropdown-item" href="./loading.html">EUR</a></li>
                     </ul>
                 </div>
             </div>
