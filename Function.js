@@ -61,3 +61,12 @@ elements.forEach(el => observer.observe(el));
     document.body.classList.remove('u-mobile-menu-active');
   });
 
+// top selling
+ const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 16,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
