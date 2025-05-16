@@ -1,5 +1,4 @@
 /* header */
-
 /* ===== Responsive Design: Mobile (<576px) ===== */
 @media (max-width: 575px) {
   .u-top-bar {
@@ -39,7 +38,7 @@
 }
 
 /* ===== Responsive Design: Tablet Small (576px - 767px) ===== */
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media (min-width: 576px) and (max-width: 767px) {
   .u-top-bar {
     display: none !important;
   }
@@ -138,7 +137,41 @@
     padding: 0 0.75rem;
   }
 }
+/* slide */
+@media (max-width: 575px){
 
+  .u-hero-slide__content{
+  font-size: 12px;
+}
+
+.u-hero-slide__left{
+ display: none;
+}
+.u-hero-slide__right{
+  width: 100%;
+}
+.u-hero-slide__content{
+  z-index: 2000;
+  left: 150px;
+}
+.carousel-control-prev{
+  left: 30px;
+}
+}
+@media (min-width:576px) and (max-width: 767px){
+  .u-hero-slide__content{
+    font-size: 10px !important;
+    font-weight: bold;
+    left: 50px ;
+  }
+}
+
+@media (max-width: 1200px){
+  .u-hero-slide__content h2{
+  /* font-size: 22px;
+  font-weight: bold; */
+}
+}
 
 /* ===== Responsive Design: Desktop (>1200px) ===== */
 @media (min-width: 1200px) {
@@ -170,7 +203,7 @@
 }
 
 /* ===== Responsive: Mobile (<576px) ===== */
-@media (max-width: 575.98px) {
+@media (max-width: 575px) {
 
   .u-category__icon {
     width: 80px;
@@ -187,7 +220,7 @@
 }
 
 /* Trending Products Section */
-@media (max-width: 991.98px) {
+@media (max-width: 991px) {
   .u-product-card__image{
     width: 100%;
   }
@@ -216,7 +249,7 @@
   }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 575px) {
   .u-product-card__image{
     width: 100%;
   }
@@ -271,7 +304,7 @@
   }
 
   /* Mobile */
-  @media (max-width: 767.98px) {
+  @media (max-width: 767px) {
     .u-recommended__list .col {
       width: calc((100% - 1rem) / 2);
     }
@@ -338,7 +371,7 @@
 }
 
 /* Mobile: 2 sản phẩm mỗi lần */
-@media (max-width: 767.98px) {
+@media (max-width: 767px) {
   .u-product-card {
     width: calc((100% - 1rem) / 2);
   }
@@ -348,15 +381,12 @@
 /* Tablet */
 @media (max-width: 991px) {
   .u-service-highlights__wrapper {
-    flex-direction: column !important;
     align-items: stretch;
     
   }
 
   .u-service-highlights__item {
-    flex: 0 0 100%;
-    max-width: 100%;
-    width: 100%;
+   
     margin-bottom: var(--space-md);
   }
 
@@ -367,7 +397,7 @@
 
 
 /* Mobile */
-@media (max-width: 575.98px) {
+@media (max-width: 575px) {
   .u-service-highlights__wrapper {
     flex-direction: column;
     align-items: stretch;
