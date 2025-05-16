@@ -47,4 +47,17 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 elements.forEach(el => observer.observe(el));
-// 
+// menu 
+
+  document.querySelector('.u-main-nav__toggle').addEventListener('click', function () {
+    document.body.classList.add('u-mobile-menu-active');
+  });
+
+  document.querySelector('.u-main-nav__close').addEventListener('click', function () {
+    document.body.classList.remove('u-mobile-menu-active');
+  });
+
+  document.querySelector('.u-main-nav__overlay').addEventListener('click', function () {
+    document.body.classList.remove('u-mobile-menu-active');
+  });
+

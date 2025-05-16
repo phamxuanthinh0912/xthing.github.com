@@ -1,3 +1,4 @@
+/* header */
 /* ===== Responsive Design: Mobile (<576px) ===== */
 @media (max-width: 575px) {
   .u-top-bar {
@@ -152,6 +153,253 @@
   .u-icon-label-top {
     font-size: var(--font-size-small);
   }
+}
+/* Categories Section */
 
- 
+/* ===== Responsive: Tablet (768px - 1024px) & Tablet small (576px - 767px) ===== */
+@media (max-width: 1024px) {
+  .u-category .row {
+    justify-content: center !important;
   }
+
+  .u-category .col {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+/* ===== Responsive: Mobile (<576px) ===== */
+@media (max-width: 575.98px) {
+
+  .u-category__icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .u-category__title {
+    font-size: 0.875rem;
+  }
+
+  .u-category__count {
+    font-size: 0.75rem;
+  }
+}
+
+/* Trending Products Section */
+@media (max-width: 991.98px) {
+  .u-top-trending__list {
+    display: flex !important;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+
+  .u-top-trending__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .u-top-trending__list > .col-6 {
+    flex: 0 0 auto;
+    width: calc(100% / 3 - 1rem); /* 3 sản phẩm trên tablet */
+    scroll-snap-align: start;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .u-top-trending__list > .col-6 {
+    width: calc(100% / 2 - 1rem); /* 2 sản phẩm trên mobile */
+  }
+}
+
+/* Section: promotional-banners - includes cellphone and headphone promo cards */
+@media (max-width: 991.98px) {
+  .promo-banners__card {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .promo-banners__content {
+    text-align: center !important;
+  }
+
+  .promo-banners__image-wrapper {
+    margin: 1rem 0 0 0 !important;
+  }
+}
+/* === Recommended Section Slider Responsive === */
+.u-recommended__carousel-wrapper {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.u-recommended__list {
+  flex-wrap: nowrap;
+  width: max-content;
+}
+
+@media (max-width: 991.98px) {
+  .u-recommended__list {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .u-recommended__list .col {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  /* Tablet */
+  @media (min-width: 768px) {
+    .u-recommended__list .col {
+      width: calc((100% - 2rem) / 3);
+    }
+  }
+
+  /* Mobile */
+  @media (max-width: 767.98px) {
+    .u-recommended__list .col {
+      width: calc((100% - 1rem) / 2);
+    }
+  }
+}
+
+/* === Recommended Responsive Slider === */
+/* === Recommended Responsive Slider === */
+.u-recommended__slider-wrapper {
+  position: relative;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 1rem;
+}
+
+.u-recommended__slider {
+  display: flex;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.u-recommended__slider::-webkit-scrollbar {
+  display: none;
+}
+
+.u-product-card {
+  scroll-snap-align: start;
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease;
+  flex: 0 0 auto;
+  width: 100%; /* fallback */
+}
+
+.u-product-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Desktop: grid layout */
+@media (min-width: 992px) {
+  .u-recommended__slider-wrapper {
+    overflow: visible;
+  }
+
+  .u-recommended__slider {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+  }
+
+  .u-product-card {
+    width: 100%;
+  }
+}
+
+/* Tablet: 3 sản phẩm mỗi lần */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .u-product-card {
+    width: calc((100% - 2rem) / 3);
+  }
+}
+
+/* Mobile: 2 sản phẩm mỗi lần */
+@media (max-width: 767.98px) {
+  .u-product-card {
+    width: calc((100% - 1rem) / 2);
+  }
+}
+
+/* Deals & Promotions */
+/* Tablet */
+@media (max-width: 991px) {
+  .u-service-highlights__wrapper {
+    flex-direction: column !important;
+    align-items: stretch;
+    
+  }
+
+  .u-service-highlights__item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: var(--space-md);
+  }
+
+  .u-service-highlights__item::after {
+    display: none;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 575.98px) {
+  .u-service-highlights__wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .u-service-highlights__item {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: var(--space-md);
+  }
+
+  .u-service-highlights__item::after {
+    display: none;
+  }
+}
+/* Info-section  */
+/* Tablet small, Mobile: */
+@media (max-width: 1024px) {
+  .u-service-highlights__wrapper {
+    justify-content: center;
+  }
+
+  .u-service-highlights__item {
+    border-right: none !important;
+  }
+  .u-service-highlights__item:nth-child(odd)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+/* Tablet và mobile: ẩn gạch dọc ngăn các item */
+@media (max-width: 1024px) {
+  .u-service-highlights__item:not(:last-child)::after {
+    display: none;
+  }
+}
