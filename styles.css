@@ -491,9 +491,9 @@ body {
   }
 
   .navbar-toggler-icon {
-    width: 24px;
-    height: 2px;
-    background-color: #333;
+    width: 33px;
+    height: 3px;
+    background-color: var(--color-white);
     display: block;
     position: relative;
   }
@@ -502,9 +502,9 @@ body {
   .navbar-toggler-icon::after {
     content: '';
     position: absolute;
-    width: 24px;
-    height: 2px;
-    background-color: #333;
+    width: 33px;
+    height: 3px;
+    background-color: var(--color-white);
     left: 0;
   }
 
@@ -557,10 +557,12 @@ body {
 
   .u-mobile-menu__nav a {
     text-decoration: none;
-    color: #333;
+    color: var(--color-text);
     font-weight: 500;
   }
-
+.u-main-nav li a {
+  color: var(--color-text);
+}
   /* Overlay */
   .u-overlay {
     position: fixed;
@@ -1496,7 +1498,7 @@ a {
 }
 
 .footer__list a:hover {
-  color: var(--u-color-gray);
+  color: var(--color-badge);
 }
 
 .footer__form {

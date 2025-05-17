@@ -6,275 +6,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>test menu</title>
   <!-- Bootstrap 5 -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css" integrity="sha512-v8QQ0YQ3H4K6Ic3PJkym91KoeNT5S3PnDKvqnwqFD1oiqIl653crGZplPdU5KKtHjO0QKcQ2aUlQZYjHczkmGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <link rel="stylesheet" href="styles.css">
 
 </head>
 <style>
-  /* General Styles */
-  .u-navbar {
-    background: #fff;
-    border-bottom: 1px solid #ddd;
-    position: relative;
-    z-index: 1001;
-  }
+  /* Mobile accordion hidden list */
+  @media (max-width: 575.98px) {
+    .footer__list {
+      display: none;
+      padding-left: 1rem;
+      transition: max-height 0.3s ease;
+    }
 
-  /* Hamburger Icon */
-  .u-hamburger {
-    border: none;
-    background: transparent;
-    z-index: 1002;
-    display: none;
-  }
-
-  .navbar-toggler-icon {
-    width: 24px;
-    height: 2px;
-    background-color: #333;
-    display: block;
-    position: relative;
-  }
-
-  .navbar-toggler-icon::before,
-  .navbar-toggler-icon::after {
-    content: '';
-    position: absolute;
-    width: 24px;
-    height: 2px;
-    background-color: #333;
-    left: 0;
-  }
-
-  .navbar-toggler-icon::before {
-    top: -7px;
-  }
-
-  .navbar-toggler-icon::after {
-    top: 7px;
-  }
-
-  /* Mobile Sidebar */
-  .u-mobile-menu {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 280px;
-    height: 100%;
-    background: #fff;
-    z-index: 1003;
-    transition: left 0.3s ease;
-    overflow-y: auto;
-  }
-
-  .u-mobile-menu.open {
-    left: 0;
-  }
-
-  .u-mobile-menu__content {
-    padding: 1rem;
-  }
-
-  .u-mobile-menu__close {
-    font-size: 2rem;
-    background: none;
-    border: none;
-    display: block;
-    margin-left: auto;
-  }
-
-  .u-mobile-menu__nav {
-    list-style: none;
-    padding: 0;
-    margin-top: 1rem;
-  }
-
-  .u-mobile-menu__nav li {
-    margin-bottom: 1rem;
-  }
-
-  .u-mobile-menu__nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-  }
-
-  /* Overlay */
-  .u-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1002;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease;
-  }
-
-  .u-overlay.active {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  /* Responsive */
-  @media (max-width: 1024px) {
-    .u-hamburger {
+    .footer__column.active .footer__list {
       display: block;
     }
-
-    .u-main-nav {
-      display: none !important;
-    }
-    .u-main-nav__right{
-      display: none !important;
+    .open-children-toggle{
+      color: black !important;
     }
 
+    .footer__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .footer__icon {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 1.25rem;
+      line-height: 1;
+      color: var(--color-dark, #333);
+      transition: transform 0.3s ease;
+    }
+
+    .footer__column.active .footer__icon {
+      transform: rotate(45deg);
+      /* chuyển từ + thành x */
+    }
   }
 </style>
 
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg u-navbar">
-    <div class="container">
-      <!-- Hamburger button (Mobile/Tablet only) -->
-      <button class="navbar-toggler u-hamburger" type="button">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Desktop Menu -->
-      <div class="collapse navbar-collapse u-main-nav d-flex align-items-center gap-lg-3 u-main-nav__left">
-        <ul class="nav align-items-center gap-3 mb-0">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="" id="departmentsDropdown"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="bi bi-list"></i>
-              All Departments
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="departmentsDropdown">
-              <li><a class="dropdown-item" href="./loading.html">Electronics</a></li>
-              <li><a class="dropdown-item" href="./loading.html">Clothing</a></li>
-              <li><a class="dropdown-item" href="./loading.html">Home & Kitchen</a></li>
-            </ul>
-          </li>
-
-          <!-- Other dropdown menus -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="./loading.html" id="homeDropdown" data-bs-toggle="dropdown"
-              aria-expanded="false">Home</a>
-            <ul class="dropdown-menu" aria-labelledby="homeDropdown">
-              <li><a class="dropdown-item" href="./loading.html">Home 1</a></li>
-              <li><a class="dropdown-item" href="./loading.html">Home 2</a></li>
-            </ul>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="./loading.html" id="shopDropdown" data-bs-toggle="dropdown"
-              aria-expanded="false">Shop</a>
-            <ul class="dropdown-menu" aria-labelledby="shopDropdown">
-              <li><a class="dropdown-item" href="./loading.html">Shop Grid</a></li>
-              <li><a class="dropdown-item" href="./loading.html">Shop List</a></li>
-              <li><a class="dropdown-item" href="./loading.html">Categories</a></li>
-            </ul>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="./loading.html" id="productDropdown" data-bs-toggle="dropdown"
-              aria-expanded="false">Product</a>
-            <ul class="dropdown-menu" aria-labelledby="productDropdown">
-              <li><a class="dropdown-item" href="./loading.html">Single Product</a></li>
-              <li><a class="dropdown-item" href="./loading.html">Product Reviews</a></li>
-            </ul>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="./loading.html" id="pageDropdown" data-bs-toggle="dropdown"
-              aria-expanded="false">Page</a>
-            <ul class="dropdown-menu" aria-labelledby="pageDropdown">
-              <li><a class="dropdown-item" href="./loading.html">About Us</a></li>
-              <li><a class="dropdown-item" href="./loading.html">Contact</a></li>
-              <li><a class="dropdown-item" href="./loading.html">FAQ</a></li>
-            </ul>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="./loading.html" id="blogDropdown" data-bs-toggle="dropdown"
-              aria-expanded="false">Blog</a>
-            <ul class="dropdown-menu" aria-labelledby="blogDropdown">
-              <li><a class="dropdown-item" href="./loading.html">Blog List</a></li>
-              <li><a class="dropdown-item" href="./loading.html">Blog Post</a></li>
-            </ul>
-          </li>
-
-          <!-- Static Links -->
-          <li class="nav-item"><a class="nav-link" href="./loading.html">Sale</a></li>
-          <li class="nav-item"><a class="nav-link" href="./loading.html">Buy Umino!</a></li>
-        </ul>
-      </div>
-      <!-- Right side: Recently Viewed -->
-      <div class="u-main-nav__right d-flex align-items-center gap-2 mt-2 mt-lg-0">
-        <i class="bi bi-clock"></i>
-        <span class="u-main-nav__recent-text">Recently Viewed Products</span>
-      </div>
+  <div class="footer__column js-footer-column">
+    <div class="footer__header js-footer-toggle">
+      <h4 class="footer__title">Customer Service</h4>
+      <i class="fa-solid fa-plus fa-2xl"></i>
     </div>
-  </nav>
-
-  <!-- Mobile Sidebar -->
-  <div class="u-mobile-menu">
-    <div class="u-mobile-menu__content">
-      <button class="u-mobile-menu__close">&times;</button>
-      <ul class="nav align-items-center gap-3 mb-0">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="" id="departmentsDropdown"
-            data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="bi bi-list"></i>
-            All Departments
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="departmentsDropdown">
-            <li><a class="dropdown-item" href="./loading.html">Electronics</a></li>
-            <li><a class="dropdown-item" href="./loading.html">Clothing</a></li>
-            <li><a class="dropdown-item" href="./loading.html">Home & Kitchen</a></li>
-          </ul>
-        </li>
-
-        <!-- Other dropdown menus -->
-        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Product</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Page</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-        <!-- Static Links -->
-        <li class="nav-item"><a class="nav-link" href="./loading.html">Sale</a></li>
-        <li class="nav-item"><a class="nav-link" href="./loading.html">Buy Umino!</a></li>
-      </ul>
-    </div>
+    <ul class="footer__list">
+      <li><a href="./loading.html">Privacy Policy</a></li>
+      <li><a href="./loading.html">Refund Policy</a></li>
+      <li><a href="./loading.html">Shipping & Return</a></li>
+      <li><a href="./loading.html">Terms & Conditions</a></li>
+      <li><a href="./loading.html">Store Locations</a></li>
+    </ul>
   </div>
 
-  <!-- Overlay -->
-  <div class="u-overlay"></div>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    const hamburger = document.querySelector('.u-hamburger');
-    const mobileMenu = document.querySelector('.u-mobile-menu');
-    const closeBtn = document.querySelector('.u-mobile-menu__close');
-    const overlay = document.querySelector('.u-overlay');
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggles = document.querySelectorAll(".js-footer-toggle");
 
-    function openMenu() {
-      mobileMenu.classList.add('open');
-      overlay.classList.add('active');
-    }
-
-    function closeMenu() {
-      mobileMenu.classList.remove('open');
-      overlay.classList.remove('active');
-    }
-
-    hamburger.addEventListener('click', openMenu);
-    closeBtn.addEventListener('click', closeMenu);
-    overlay.addEventListener('click', closeMenu);
+      toggles.forEach((toggle) => {
+        toggle.addEventListener("click", function () {
+          const column = this.closest(".js-footer-column");
+          column.classList.toggle("active");
+        });
+      });
+    });
   </script>
 
 </body>

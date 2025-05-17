@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="UmiLux - Your one-stop shop for all your needs.">
     <title>UMILUX</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css" 
+    integrity="sha512-v8QQ0YQ3H4K6Ic3PJkym91KoeNT5S3PnDKvqnwqFD1oiqIl653crGZplPdU5KKtHjO0QKcQ2aUlQZYjHczkmGw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Bootstrap & Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./asset/bootstrap.min.css">
@@ -60,7 +63,10 @@
         <!-- Header Bottom -->
         <div class="u-header__bottom ">
             <div class="container d-flex flex-wrap align-items-center justify-content-between py-3">
-
+                <!-- Hamburger button (Mobile/Tablet only) -->
+                <button class="navbar-toggler u-hamburger" type="button" style="color: white;">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <!-- Logo -->
                 <a href="/" class="u-logo d-inline-block mb-2 mb-md-0">
                     <img src="./img/Logo.png" alt="UMILUX Logo" width="144" height="37" loading="lazy" />
@@ -142,14 +148,9 @@
         </div>
     </header>
 
-     <!-- Navbar  -->
+    <!-- Navbar  -->
     <nav class="navbar navbar-expand-lg u-navbar">
         <div class="container">
-            <!-- Hamburger button (Mobile/Tablet only) -->
-            <button class="navbar-toggler u-hamburger" type="button">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
             <!-- Desktop Menu -->
             <div class="collapse navbar-collapse u-main-nav d-flex align-items-center gap-lg-3 u-main-nav__left">
                 <ul class="nav align-items-center gap-3 mb-0">
@@ -246,11 +247,11 @@
                 </li>
 
                 <!-- Other dropdown menus -->
-                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Product</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Page</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="./loading.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="./loading.html">Shop</a></li>
+                <li class="nav-item"><a class="nav-link" href="./loading.html">Product</a></li>
+                <li class="nav-item"><a class="nav-link" href="./loading.html">Page</a></li>
+                <li class="nav-item"><a class="nav-link" href="./loading.html">Blog</a></li>
                 <!-- Static Links -->
                 <li class="nav-item"><a class="nav-link" href="./loading.html">Sale</a></li>
                 <li class="nav-item"><a class="nav-link" href="./loading.html">Buy Umino!</a></li>
@@ -1000,7 +1001,7 @@
     <!--  suport-->
 
     <footer class="footer mt-5 u-fade-in">
-        <section class="footer__top container">
+        <section class="footer__top container d-none">
             <div class="footer__support-heading">
                 <span class="footer__support-subtitle">HELP CENTER</span>
                 <h2 class="footer__support-title">Online Suport 24/7</h2>
@@ -1078,9 +1079,9 @@
 
         <hr class="section-divider">
 
-        <!-- foter -->
+        <!-- footer -->
         <section class="footer__bottom container">
-            <div class="footer__column">
+            <div class="footer__column ">
                 <h4 class="footer__title">About The Store</h4>
                 <p class="footer__desc">Established with a passion for innovation and a commitment to providing
                     top-notch technology solutions.</p>
@@ -1129,14 +1130,15 @@
                                 d="M16.3334 14.6667V16H15V18H16.3334V24H19V18H20.7734L21 16H19V14.8334C19 14.2934 19.0533 14.0067 19.8866 14.0067H21V12H19.2134C17.08 12.0001 16.3334 13 16.3334 14.6667Z"
                                 fill="#555555" />
                         </svg>
-
-
                     </a>
                 </div>
             </div>
 
-            <div class="footer__column">
-                <h4 class="footer__title">Customer Service</h4>
+            <div class="footer__column js-footer-column">
+                <div class="footer__header js-footer-toggle">
+                    <h4 class="footer__title">Customer Service</h4>
+                    <i class="fa-solid fa-plus fa-2xl d-none"></i>
+                </div>
                 <ul class="footer__list">
                     <li><a href="./loading.html">Privacy Policy</a></li>
                     <li><a href="./loading.html">Refund Policy</a></li>
@@ -1146,8 +1148,11 @@
                 </ul>
             </div>
 
-            <div class="footer__column">
-                <h4 class="footer__title">Shop By Categories</h4>
+            <div class="footer__column js-footer-column">
+                <div class="footer__header js-footer-toggle">
+                    <h4 class="footer__title">Shop By Categories</h4>
+                    <i class="fa-solid fa-plus fa-2xl d-none "></i>
+                </div>
                 <ul class="footer__list">
                     <li><a href="./loading.html">Smartphone</a></li>
                     <li><a href="./loading.html">Headphones</a></li>
@@ -1169,8 +1174,8 @@
 
         <hr class="section-divider">
 
-        <section class="footer__base container">
-            <div class="footer__locale">
+        <section class="footer__base container flex-column flex-lg-row">
+            <div class="footer__locale d-none">
                 <!-- Language -->
                 <div class="dropdown">
                     <button class="btn dropdown-toggle" id="languageDropdown" data-bs-toggle="dropdown"
@@ -1201,7 +1206,7 @@
             <div class="footer__copyright">
                 © 2023 Umino Store. All Rights Reserved.
             </div>
-
+            
             <div class="footer__payments">
                 <svg width="35" height="18" viewBox="0 0 35 18" fill="none" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink">
