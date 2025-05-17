@@ -142,14 +142,16 @@
         </div>
     </header>
 
-    <!-- Main Navigation -->
+     <!-- Navbar  -->
+    <nav class="navbar navbar-expand-lg u-navbar">
+        <div class="container">
+            <!-- Hamburger button (Mobile/Tablet only) -->
+            <button class="navbar-toggler u-hamburger" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <nav class="u-main-nav border-top border-bottom u-fade-in" aria-label="Main Navigation">
-        <div class="container d-flex align-items-center py-2 " style="flex-wrap: nowrap; overflow: visible;">
-
-            <!-- Left side: Menu items (All menu, Sale + Buy Umino) -->
-            <div class="d-flex align-items-center gap-lg-3 u-main-nav__left">
-                <!-- Main navigation list -->
+            <!-- Desktop Menu -->
+            <div class="collapse navbar-collapse u-main-nav d-flex align-items-center gap-lg-3 u-main-nav__left">
                 <ul class="nav align-items-center gap-3 mb-0">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href=""
@@ -217,7 +219,6 @@
                     <li class="nav-item"><a class="nav-link" href="./loading.html">Buy Umino!</a></li>
                 </ul>
             </div>
-
             <!-- Right side: Recently Viewed -->
             <div class="u-main-nav__right d-flex align-items-center gap-2 mt-2 mt-lg-0">
                 <i class="bi bi-clock"></i>
@@ -225,6 +226,40 @@
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="u-mobile-menu">
+        <div class="u-mobile-menu__content">
+            <button class="u-mobile-menu__close">&times;</button>
+            <ul class="nav align-items-center gap-3 mb-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="" id="departmentsDropdown"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-list"></i>
+                        All Departments
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="departmentsDropdown">
+                        <li><a class="dropdown-item" href="./loading.html">Electronics</a></li>
+                        <li><a class="dropdown-item" href="./loading.html">Clothing</a></li>
+                        <li><a class="dropdown-item" href="./loading.html">Home & Kitchen</a></li>
+                    </ul>
+                </li>
+
+                <!-- Other dropdown menus -->
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Product</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Page</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                <!-- Static Links -->
+                <li class="nav-item"><a class="nav-link" href="./loading.html">Sale</a></li>
+                <li class="nav-item"><a class="nav-link" href="./loading.html">Buy Umino!</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="u-overlay"></div>
 
     <div class="container-xl my-4 u-slide-in-left">
         <div id="u-hero-slider" class="carousel slide rounded-4 overflow-hidden position-relative"
@@ -242,12 +277,12 @@
                                     <img src="./img/sld1.png" alt="Background Left" class="u-hero-slide__left-img" />
                                 </div>
                                 <div class="u-hero-slide__content">
-                                        <h2 class="fw-bold mb-1">Speaker<br>Bluetooth SoundCore</h2>
-                                        <p class="text-white-50 mt-2 mb-4">Limited Time: Online Only!</p>
-                                        <a href="./loading.html"
-                                            class="btn btn-light rounded-pill px-4 py-2 fw-semibold">Shop
-                                            Now</a>
-                                    </div>
+                                    <h2 class="fw-bold mb-1">Speaker<br>Bluetooth SoundCore</h2>
+                                    <p class="text-white-50 mt-2 mb-4">Limited Time: Online Only!</p>
+                                    <a href="./loading.html"
+                                        class="btn btn-light rounded-pill px-4 py-2 fw-semibold">Shop
+                                        Now</a>
+                                </div>
                                 <div class="u-hero-slide__right">
                                     <img src="./img/sld2.png" alt="Product" class="u-hero-slide__product" />
                                 </div>
@@ -261,13 +296,13 @@
                                     <img src="./img/sld1.png" alt="Background Left" class="u-hero-slide__left-img" />
                                 </div>
                                 <div class="u-hero-slide__content">
-                                        <h2 class="fw-bold mb-1">Speaker</h2>
-                                        <h2 class="fw-bold">Bluetooth SoundCore</h2>
-                                        <p class="text-white-50 mt-2 mb-4">Limited Time: Online Only!</p>
-                                        <a href="./loading.html"
-                                            class="btn btn-light rounded-pill px-4 py-2 fw-semibold">Shop
-                                            Now</a>
-                                    </div>
+                                    <h2 class="fw-bold mb-1">Speaker</h2>
+                                    <h2 class="fw-bold">Bluetooth SoundCore</h2>
+                                    <p class="text-white-50 mt-2 mb-4">Limited Time: Online Only!</p>
+                                    <a href="./loading.html"
+                                        class="btn btn-light rounded-pill px-4 py-2 fw-semibold">Shop
+                                        Now</a>
+                                </div>
                                 <div class="u-hero-slide__right">
                                     <img src="./img/sld2.png" alt="Product" class="u-hero-slide__product" />
                                 </div>
@@ -281,12 +316,12 @@
                                     <img src="./img/sld1.png" alt="Background Left" class="u-hero-slide__left-img" />
                                 </div>
                                 <div class="u-hero-slide__content">
-                                        <h2 class="fw-bold mb-1">Speaker</h2>
-                                        <h2 class="fw-bold">Bluetooth SoundCore</h2>
-                                        <p class="text-white-50 mt-2 mb-4">Limited Time: Online Only!</p>
-                                        <a href="./loading.html"
-                                            class="btn btn-light rounded-pill px-4 py-2 fw-semibold">Shop
-                                            Now</a>
+                                    <h2 class="fw-bold mb-1">Speaker</h2>
+                                    <h2 class="fw-bold">Bluetooth SoundCore</h2>
+                                    <p class="text-white-50 mt-2 mb-4">Limited Time: Online Only!</p>
+                                    <a href="./loading.html"
+                                        class="btn btn-light rounded-pill px-4 py-2 fw-semibold">Shop
+                                        Now</a>
                                 </div>
                                 <div class="u-hero-slide__right">
                                     <img src="./img/sld2.png" alt="Product" class="u-hero-slide__product" />
@@ -447,7 +482,8 @@
                             <h3 class="u-product-card__name mt-3">Galaxy S21 Ultra 5G 128GB<br />Unlocked International
                                 Version</h3>
                             <div class="u-product-card__rating">★★★★★</div>
-                            <p class="u-product-card__price">$569.00<s class="u-product-card__price--old">$169.000</s></p>
+                            <p class="u-product-card__price">$569.00<s class="u-product-card__price--old">$169.000</s>
+                            </p>
                         </div>
                     </article>
 
@@ -477,7 +513,8 @@
                             <h3 class="u-product-card__name mt-3">Galaxy S21 Ultra 5G 128GB<br />Unlocked International
                                 Version</h3>
                             <div class="u-product-card__rating">★★★★★</div>
-                            <p class="u-product-card__price">$569.00<s class="u-product-card__price--old">$169.000</s></p>
+                            <p class="u-product-card__price">$569.00<s class="u-product-card__price--old">$169.000</s>
+                            </p>
                         </div>
                     </article>
 
@@ -507,7 +544,8 @@
                             <h3 class="u-product-card__name mt-3">Galaxy S21 Ultra 5G 128GB<br />Unlocked International
                                 Version</h3>
                             <div class="u-product-card__rating">★★★★★</div>
-                            <p class="u-product-card__price">$569.00<s class="u-product-card__price--old">$169.000</s></p>
+                            <p class="u-product-card__price">$569.00<s class="u-product-card__price--old">$169.000</s>
+                            </p>
                         </div>
                     </article>
 
@@ -604,7 +642,7 @@
                                 <div class="mb-1 text-warning small">
                                     ★★★★★
                                 </div>
-                               <p class="u-product-card__price">$569.00</p>
+                                <p class="u-product-card__price">$569.00</p>
                             </div>
                         </div>
                     </div>
@@ -621,7 +659,8 @@
                                 <div class="mb-1 text-warning small">
                                     ★★★★★
                                 </div>
-                                <p class="u-product-card__price">$569.00 <s class="u-product-card__price--old">$169.000</s></p>
+                                <p class="u-product-card__price">$569.00 <s
+                                        class="u-product-card__price--old">$169.000</s></p>
                             </div>
                         </div>
                     </div>
@@ -655,7 +694,8 @@
                                 <div class="mb-1 text-warning small">
                                     ★★★★★
                                 </div>
-                                <p class="u-product-card__price">$569.00<s class="u-product-card__price--old">$169.000</s></p>
+                                <p class="u-product-card__price">$569.00<s
+                                        class="u-product-card__price--old">$169.000</s></p>
                             </div>
                         </div>
                     </div>
@@ -689,7 +729,8 @@
                                 <div class="mb-1 text-warning small">
                                     ★★★★★
                                 </div>
-                                <p class="u-product-card__price">$569.00<s class="u-product-card__price--old">$169.000</s></p>
+                                <p class="u-product-card__price">$569.00<s
+                                        class="u-product-card__price--old">$169.000</s></p>
                             </div>
                         </div>
                     </div>
@@ -723,7 +764,8 @@
                                 <div class="mb-1 text-warning small">
                                     ★★★★★
                                 </div>
-                                <p class="u-product-card__price">$569.00<s class="u-product-card__price--old">$169.000</s></p>
+                                <p class="u-product-card__price">$569.00<s
+                                        class="u-product-card__price--old">$169.000</s></p>
                             </div>
                         </div>
                     </div>
@@ -758,7 +800,8 @@
                             <h3 class="u-product-card__name mt-3">Galaxy S21 Ultra 5G 128GB<br />Unlocked International
                                 Version</h3>
                             <div class="u-product-card__rating">★★★★★</div>
-                            <p class="u-product-card__price">$569.00<s class="u-product-card__price--old">$169.000</s></p>
+                            <p class="u-product-card__price">$569.00<s class="u-product-card__price--old">$169.000</s>
+                            </p>
                         </div>
                     </article>
 
@@ -788,7 +831,8 @@
                             <h3 class="u-product-card__name mt-3">Galaxy S21 Ultra 5G 128GB<br />Unlocked International
                                 Version</h3>
                             <div class="u-product-card__rating">★★★★★</div>
-                            <p class="u-product-card__price">$569.00<s class="u-product-card__price--old">$169.000</s></p>
+                            <p class="u-product-card__price">$569.00<s class="u-product-card__price--old">$169.000</s>
+                            </p>
                         </div>
                     </article>
 
@@ -818,7 +862,8 @@
                             <h3 class="u-product-card__name mt-3">Galaxy S21 Ultra 5G 128GB<br />Unlocked International
                                 Version</h3>
                             <div class="u-product-card__rating">★★★★★</div>
-                            <p class="u-product-card__price">$569.00<s class="u-product-card__price--old">$169.000</s></p>
+                            <p class="u-product-card__price">$569.00<s class="u-product-card__price--old">$169.000</s>
+                            </p>
                         </div>
                     </article>
 
@@ -833,7 +878,8 @@
                             <h3 class="u-product-card__name mt-3">Galaxy S21 Ultra 5G 128GB<br />Unlocked International
                                 Version</h3>
                             <div class="u-product-card__rating">★★★★★</div>
-                            <p class="u-product-card__price">$569.00<s class="u-product-card__price--old">$169.000</s></p>
+                            <p class="u-product-card__price">$569.00<s class="u-product-card__price--old">$169.000</s>
+                            </p>
                         </div>
                     </article>
 

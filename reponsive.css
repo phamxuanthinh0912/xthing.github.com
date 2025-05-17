@@ -100,7 +100,21 @@
     display: none !important;
   }
 }
+/* ===== Responsive Design: Desktop (>1200px) ===== */
+@media (min-width: 1200px) {
+  .u-search-bar-wrapper {
+    max-width: 600px;
+  }
 
+  .u-icon-img {
+    width: 32px;
+    height: 28px;
+  }
+
+  .u-icon-label-top {
+    font-size: var(--font-size-small);
+  }
+}
 /* ===== Responsive Design: Desktop Small (>1025px) ===== */
 @media (min-width: 1025px) and (max-width: 1199px) {
   .u-header__bottom .container {
@@ -141,7 +155,7 @@
 @media (max-width: 575px){
 
   .u-hero-slide__content{
-  font-size: 12px;
+  font-size: 12px !important;
 }
 
 .u-hero-slide__left{
@@ -152,42 +166,73 @@
 }
 .u-hero-slide__content{
   z-index: 2000;
-  left: 150px;
+  left: 100px !important;
 }
 .carousel-control-prev{
-  left: 30px;
+  left: 20px !important;
+}
+.carousel-control-prev, .carousel-control-next{
+  display: none;
 }
 }
+
+
 @media (min-width:576px) and (max-width: 767px){
-  .u-hero-slide__content{
-    font-size: 10px !important;
+  .u-hero-slide__content h2{
+    font-size: 14px !important;
     font-weight: bold;
-    left: 50px ;
+  }
+   .u-hero-slide__content{
+    left: 108px !important;
+   }
+}
+@media(min-width:767px) and (max-width:1025px){
+  .u-hero-slide__content h2{
+    font-size: 22px !important;
+    font-weight: 600;
+  }
+  .u-hero-slide__content{
+    left: 120px;
   }
 }
+
 
 @media (max-width: 1200px){
   .u-hero-slide__content h2{
-  /* font-size: 22px;
-  font-weight: bold; */
+  font-size: 30px;
+  font-weight: bold; 
 }
-}
-
-/* ===== Responsive Design: Desktop (>1200px) ===== */
-@media (min-width: 1200px) {
-  .u-search-bar-wrapper {
-    max-width: 600px;
-  }
-
-  .u-icon-img {
-    width: 32px;
-    height: 28px;
-  }
-
-  .u-icon-label-top {
-    font-size: var(--font-size-small);
+  .u-hero-slide__content{
+    left: 130px;
   }
 }
+
+
+@media(min-width:1200px){
+  .u-hero-slide__content h2{
+  font-size: 32px;
+  font-weight: bold; 
+}
+ .u-hero-slide__content{
+    left: 170px;
+  }
+
+}
+/* Responsive navbar*/
+  @media (max-width: 1024px) {
+    .u-hamburger {
+      display: block;
+    }
+
+    .u-main-nav {
+      display: none !important;
+    }
+    .u-main-nav__right{
+      display: none !important;
+    }
+
+  }
+
 /* Categories Section */
 
 /* ===== Responsive: Tablet (768px - 1024px) & Tablet small (576px - 767px) ===== */
@@ -363,14 +408,14 @@
   }
 }
 
-/* Tablet: 3 sản phẩm mỗi lần */
+/* Tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .u-product-card {
     width: calc((100% - 2rem) / 3);
   }
 }
 
-/* Mobile: 2 sản phẩm mỗi lần */
+/* Mobile */
 @media (max-width: 767px) {
   .u-product-card {
     width: calc((100% - 1rem) / 2);
@@ -412,6 +457,7 @@
   .u-service-highlights__item::after {
     display: none;
   }
+ 
 }
 /* Info-section  */
 /* Tablet small, Mobile: */

@@ -474,7 +474,111 @@ body {
 .u-main-nav__left .nav-item .dropdown-menu {
   padding: var(--space-xs) var(--space-sm);
 }
+/* General Styles */
+  .u-navbar {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    z-index: 1001;
+  }
 
+  /* Hamburger Icon */
+  .u-hamburger {
+    border: none;
+    background: transparent;
+    z-index: 1002;
+    display: none;
+  }
+
+  .navbar-toggler-icon {
+    width: 24px;
+    height: 2px;
+    background-color: #333;
+    display: block;
+    position: relative;
+  }
+
+  .navbar-toggler-icon::before,
+  .navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: #333;
+    left: 0;
+  }
+
+  .navbar-toggler-icon::before {
+    top: -7px;
+  }
+
+  .navbar-toggler-icon::after {
+    top: 7px;
+  }
+
+  /* Mobile Sidebar */
+  .u-mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 280px;
+    height: 100%;
+    background: #fff;
+    z-index: 1003;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+  }
+
+  .u-mobile-menu.open {
+    left: 0;
+  }
+
+  .u-mobile-menu__content {
+    padding: 1rem;
+  }
+
+  .u-mobile-menu__close {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    display: block;
+    margin-left: auto;
+  }
+
+  .u-mobile-menu__nav {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+  }
+
+  .u-mobile-menu__nav li {
+    margin-bottom: 1rem;
+  }
+
+  .u-mobile-menu__nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+
+  /* Overlay */
+  .u-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1002;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+  }
+
+  .u-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
 
 
 
@@ -888,8 +992,8 @@ a {
 
 .u-product-card__price {
   font-size: var(--font-size-small);
-  font-weight: var(--u-font-weight-bold);
-  color: var(--color-muted);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-black);
 }
 
 .u-product-card__price--old {
