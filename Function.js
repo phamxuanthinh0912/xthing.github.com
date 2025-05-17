@@ -48,7 +48,24 @@ const observer = new IntersectionObserver((entries) => {
 
 elements.forEach(el => observer.observe(el));
 // menu 
+const hamburger = document.querySelector('.u-hamburger');
+    const mobileMenu = document.querySelector('.u-mobile-menu');
+    const closeBtn = document.querySelector('.u-mobile-menu__close');
+    const overlay = document.querySelector('.u-overlay');
 
+    function openMenu() {
+      mobileMenu.classList.add('open');
+      overlay.classList.add('active');
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.remove('open');
+      overlay.classList.remove('active');
+    }
+
+    hamburger.addEventListener('click', openMenu);
+    closeBtn.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', closeMenu);
 
 // top selling
 
