@@ -17,7 +17,7 @@
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
-    <!-- Preload LCP + logo (Không dùng lazy cho ảnh này) -->
+    <!-- Preload hình ảnh LCP và logo -->
     <link rel="preload" as="image" href="./img/Logo.webp" type="image/webp">
     <link rel="preload" as="image" href="./img/sld1.webp" type="image/webp" fetchpriority="high">
     <link rel="preload" as="image" href="./img/sld2.webp" type="image/webp" fetchpriority="high">
@@ -26,33 +26,47 @@
     <link rel="preload" as="image" href="./img/hp.webp" type="image/webp">
     <link rel="preload" as="image" href="./img/tsp1.webp" type="image/webp">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css"
-        integrity="sha512-v8QQ0YQ3H4K6Ic3PJkym91KoeNT5S3PnDKvqnwqFD1oiqIl653crGZplPdU5KKtHjO0QKcQ2aUlQZYjHczkmGw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Font Awesome (tối ưu async) -->
+    <link rel="preload" as="style"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css">
+    </noscript>
 
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!-- Bootstrap Icons (tối ưu async) -->
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    </noscript>
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="./asset/bootstrap.min.css">
+    <!-- Bootstrap Core CSS (tối ưu preload vì layout chính) -->
+    <link rel="preload" as="style" href="./asset/bootstrap.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="./asset/bootstrap.min.css">
+    </noscript>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Geostar+Fill&display=swap" rel="stylesheet">
+    <!-- Google Fonts (tối ưu preload và async) -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geostar+Fill&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geostar+Fill&display=swap">
+    </noscript>
 
-    <!-- Tối ưu: Lazy load main CSS -->
+    <!-- Main CSS -->
     <link rel="preload" as="style" href="styles.css" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="styles.css">
     </noscript>
 
-    <!-- Tối ưu: Lazy load responsive CSS -->
+    <!-- Responsive CSS -->
     <link rel="stylesheet" href="reponsive.css" media="print" onload="this.onload=null;this.media='all'">
     <noscript>
         <link rel="stylesheet" href="reponsive.css">
     </noscript>
-
 </head>
+
 
 
 <body>
@@ -1028,8 +1042,7 @@
                                 <strong class="deal-card__black-text">Black</strong>
                                 <strong class="deal-card__friday-text">Friday</strong>
                                 <span>FROM SEPTEMBER 08/28/2023</span>
-                                <img src="./img/Vector.webp" alt="icon_vector" loading="lazy" width="42"
-                                    height="49">
+                                <img src="./img/Vector.webp" alt="icon_vector" loading="lazy" width="42" height="49">
                             </div>
                         </div>
                         <div class="deal-card__content text-center">
