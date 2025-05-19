@@ -95,9 +95,9 @@ html {
 .u-fade-in,
 .u-slide-in-left {
   opacity: 0;
-  transform: translateY(30px);
-  /* hoặc translateX */
+  transform: translateY(30px); /* hoặc translateX */
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
 }
 
 .u-fade-in.active,
