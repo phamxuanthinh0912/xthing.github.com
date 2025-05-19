@@ -18,12 +18,13 @@
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     <!-- Preload LCP + logo (Không dùng lazy cho ảnh này) -->
-    <link rel="preload" as="image" href="./img/sld1.png" type="image/png" fetchpriority="high">
-    <link rel="preload" as="image" href="./img/Logo.png" type="image/png">
-    <link rel="preload" as="image" href="./img/sld2.png" type="image/png">
-    <link rel="preload" as="image" href="./img/cp.png" type="image/png">
-    <link rel="preload" as="image" href="./img/hp.png" type="image/png">
-    <link rel="preload" as="image" href="./img/tsp1.png" type="image/png">
+    <link rel="preload" as="image" href="./img/Logo.webp" type="image/webp">
+    <link rel="preload" as="image" href="./img/sld1.webp" type="image/webp" fetchpriority="high">
+    <link rel="preload" as="image" href="./img/sld2.webp" type="image/webp" fetchpriority="high">
+    <link rel="preload" as="image" href="./img/sld3.webp" type="image/webp" fetchpriority="high">
+    <link rel="preload" as="image" href="./img/cp.webp" type="image/webp">
+    <link rel="preload" as="image" href="./img/hp.webp" type="image/webp">
+    <link rel="preload" as="image" href="./img/tsp1.webp" type="image/webp">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css"
@@ -101,9 +102,11 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!-- Logo -->
-            <a href="/" class="u-logo d-inline-block mb-2 mb-md-0">
-                <img src="./img/Logo.png" alt="UMILUX Logo" width="144" height="37" loading="lazy" />
-            </a>
+            <picture>
+                <source srcset="./img/Logo.webp" type="image/webp">
+                <img src="./img/Logo.png" alt="UMILUX Logo" width="144" height="37" loading="lazy">
+            </picture>
+
 
             <!-- Search Bar -->
             <div class="u-search-bar-wrapper flex-grow-1 d-flex mx-md-4 order-3 order-md-2 w-100 w-md-auto">
@@ -308,8 +311,11 @@
                         <div class="carousel-item active">
                             <div class="u-hero-slide">
                                 <div class="u-hero-slide__left">
-                                    <img src="./img/sld1.png" alt="Background Left" class="u-hero-slide__left-img"
-                                        width="705px" height="450px" />
+                                    <picture>
+                                        <source srcset="./img/sld1.webp" type="image/webp">
+                                        <img src="./img/sld1.webp" alt="Background Left" class="u-hero-slide__left-img"
+                                            width="705px" height="450px" />
+                                    </picture>
                                 </div>
                                 <div class="u-hero-slide__content">
                                     <h2 class="fw-bold mb-1">Speaker<br>Bluetooth SoundCore</h2>
@@ -319,8 +325,11 @@
                                         Now</a>
                                 </div>
                                 <div class="u-hero-slide__right">
-                                    <img src="./img/sld2.png" alt="Product" class="u-hero-slide__product" width="705px"
-                                        height="450px" />
+                                    <picture>
+                                        <source srcset="./img/sld2.webp" type="image/webp">
+                                        <img src="./img/sld2.webp" alt="Product" class="u-hero-slide__product"
+                                            width="705px" height="450px" />
+                                    </picture>
                                 </div>
                             </div>
                         </div>
@@ -329,8 +338,11 @@
                         <div class="carousel-item">
                             <div class="u-hero-slide">
                                 <div class="u-hero-slide__left">
-                                    <img src="./img/sld1.png" alt="Background Left" class="u-hero-slide__left-img"
-                                        width="705px" height="450px" />
+                                    <picture>
+                                        <source srcset="./img/sld1.webp" type="image/webp">
+                                        <img src="./img/sld1.webp" alt="Background Left" class="u-hero-slide__left-img"
+                                            width="705px" height="450px" />
+                                    </picture>
                                 </div>
                                 <div class="u-hero-slide__content">
                                     <h2 class="fw-bold mb-1">Speaker</h2>
@@ -341,8 +353,11 @@
                                         Now</a>
                                 </div>
                                 <div class="u-hero-slide__right">
-                                    <img src="./img/sld2.png" alt="Product" class="u-hero-slide__product" width="705px"
-                                        height="450px" />
+                                    <picture>
+                                        <source srcset="./img/sld2.webp" type="image/webp">
+                                        <img src="./img/sld2.webp" alt="Product" class="u-hero-slide__product"
+                                            width="705px" height="450px" />
+                                    </picture>
                                 </div>
                             </div>
                         </div>
@@ -351,8 +366,11 @@
                         <div class="carousel-item">
                             <div class="u-hero-slide">
                                 <div class="u-hero-slide__left">
-                                    <img src="./img/sld1.png" alt="Background Left" class="u-hero-slide__left-img"
-                                        width="705px" height="450px" />
+                                    <picture>
+                                        <source srcset="./img/sld1.webp" type="image/webp">
+                                        <img src="./img/sld1.webp" alt="Background Left" class="u-hero-slide__left-img"
+                                            width="705px" height="450px" />
+                                    </picture>
                                 </div>
                                 <div class="u-hero-slide__content">
                                     <h2 class="fw-bold mb-1">Speaker</h2>
@@ -363,8 +381,11 @@
                                         Now</a>
                                 </div>
                                 <div class="u-hero-slide__right">
-                                    <img src="./img/sld2.png" alt="Product" class="u-hero-slide__product" width="705px"
-                                        height="450px" />
+                                    <picture>
+                                        <source srcset="./img/sld2.webp" type="image/webp">
+                                        <img src="./img/sld2.webp" alt="Product" class="u-hero-slide__product"
+                                            width="705px" height="450px" />
+                                    </picture>
                                 </div>
                             </div>
                         </div>
@@ -406,8 +427,11 @@
                 <div class="col">
                     <a href="./loading.html" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                            <img src="./img/Category1.png" alt="Macbook/PCs" class="img-fluid" loading="lazy"
-                                width="110px" height="110px">
+                            <picture>
+                                <source srcset="./img/Category1.webp" type="image/webp">
+                                <img src="./img/category1.webp" alt="Macbook/PCs" class="img-fluid" loading="lazy"
+                                    width="110px" height="110px">
+                            </picture>
                         </div>
                         <p class="u-category__title mb-0 fw-semibold mt-2">Macbook/PCs</p>
                         <small class="u-category__count text-muted">16 Products</small>
@@ -417,8 +441,11 @@
                 <div class="col">
                     <a href="./loading.html" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                            <img src="./img/Category2.png" alt="Macbook/PCs" class="img-fluid" loading="lazy"
-                                width="110px" height="110px">
+                            <picture>
+                                <source srcset="./img/Category2.webp" type="image/webp">
+                                <img src="./img/category2.webp" alt="Macbook/PCs" class="img-fluid" loading="lazy"
+                                    width="110px" height="110px">
+                            </picture>
                         </div>
                         <p class="u-category__title mb-0 fw-semibold mt-2">OLED/Smart TVs</p>
                         <small class="u-category__count text-muted">06 Products</small>
@@ -428,8 +455,11 @@
                 <div class="col">
                     <a href="./loading.html" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                            <img src="./img/Category3.png" alt="Phone/Mobile" class="img-fluid" loading="lazy"
-                                width="110px" height="110px">
+                            <picture>
+                                <source srcset="./img/Category3.webp" type="image/webp">
+                                <img src="./img/category3.webp" alt="Macbook/PCs" class="img-fluid" loading="lazy"
+                                    width="110px" height="110px">
+                            </picture>
                         </div>
                         <p class="u-category__title mb-0 fw-semibold mt-2">Phone/Mobile</p>
                         <small class="u-category__count text-muted">18 Products</small>
@@ -438,8 +468,11 @@
                 <div class="col">
                     <a href="./loading.html" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                            <img src="./img/Category4.png" alt="Phone/Mobile" class="img-fluid" loading="lazy"
-                                width="110px" height="110px">
+                            <picture>
+                                <source srcset="./img/Category4.webp" type="image/webp">
+                                <img src="./img/category4.webp" alt="Macbook/PCs" class="img-fluid" loading="lazy"
+                                    width="110px" height="110px">
+                            </picture>
                         </div>
                         <p class="u-category__title mb-0 fw-semibold mt-2">Tablets/Ipad Pro</p>
                         <small class="u-category__count text-muted">09 Products</small>
@@ -448,8 +481,11 @@
                 <div class="col">
                     <a href="./loading.html" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                            <img src="./img/Category5.png" alt="Phone/Mobile" class="img-fluid" loading="lazy"
-                                width="110px" height="110px">
+                            <picture>
+                                <source srcset="./img/Category5.webp" type="image/webp">
+                                <img src="./img/category5.webp" alt="Macbook/PCs" class="img-fluid" loading="lazy"
+                                    width="110px" height="110px">
+                            </picture>
                         </div>
                         <p class="u-category__title mb-0 fw-semibold mt-2">Gamepad/Console</p>
                         <small class="u-category__count text-muted">20 Products</small>
@@ -458,8 +494,11 @@
                 <div class="col">
                     <a href="./loading.html" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                            <img src="./img/Category6.png" alt="Phone/Mobile" class="img-fluid" loading="lazy"
-                                width="110px" height="110px">
+                            <picture>
+                                <source srcset="./img/Category6.webp" type="image/webp">
+                                <img src="./img/category6.webp" alt="Macbook/PCs" class="img-fluid" loading="lazy"
+                                    width="110px" height="110px">
+                            </picture>
                         </div>
                         <p class="u-category__title mb-0 fw-semibold mt-2">Camera/Photo</p>
                         <small class="u-category__count text-muted">13 Products</small>
@@ -468,8 +507,11 @@
                 <div class="col">
                     <a href="./loading.html" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                            <img src="./img/Category7.png" alt="Phone/Mobile" class="img-fluid" loading="lazy"
-                                width="110px" height="110px">
+                            <picture>
+                                <source srcset="./img/category7.webp" type="image/webp">
+                                <img src="./img/category7.webp" alt="Macbook/PCs" class="img-fluid" loading="lazy"
+                                    width="110px" height="110px">
+                            </picture>
                         </div>
                         <p class="u-category__title mb-0 fw-semibold mt-2">Heatsink PC</p>
                         <small class="u-category__count text-muted">07 Products</small>
@@ -478,8 +520,11 @@
                 <div class="col">
                     <a href="./loading.html" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                            <img src="./img/Category8.png" alt="Phone/Mobile" class="img-fluid" loading="lazy"
-                                width="110px" height="110px">
+                            <picture>
+                                <source srcset="./img/Category8.webp" type="image/webp">
+                                <img src="./img/category8.webp" alt="Macbook/PCs" class="img-fluid" loading="lazy"
+                                    width="110px" height="110px">
+                            </picture>
                         </div>
                         <p class="u-category__title mb-0 fw-semibold mt-2">Home/Electronics</p>
                         <small class="u-category__count text-muted">12 Products</small>
@@ -507,13 +552,16 @@
                     <!-- Product Item 1 -->
                     <article class="u-product-card">
                         <figure class="u-product-card__image-wrapper">
-                            <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/prd1.png"
-                                    alt="Galaxy S21 Ultra 5G" loading="lazy" width="210px" height="210px" /></a>
+                            <a href="./loading.html">
+                                <img class="u-product-card__image img-fluid" src="./img/prd1.webp"
+                                    alt="Galaxy S21 Ultra 5G" loading="lazy" width="210" height="210" />
+                            </a>
                         </figure>
                         <div class="u-product-card__info">
                             <div class="u-product-card__brand">TOSHIBA</div>
-                            <h3 class="u-product-card__name mt-3">Galaxy S21 Ultra 5G 128GB<br />Unlocked International
-                                Version</h3>
+                            <h3 class="u-product-card__name mt-3">
+                                Galaxy S21 Ultra 5G 128GB<br />Unlocked International Version
+                            </h3>
                             <div class="u-product-card__rating">★★★★★</div>
                             <p class="u-product-card__price">$569.00</p>
                         </div>
@@ -522,7 +570,7 @@
                     <!-- Product Item 2-->
                     <article class="u-product-card">
                         <figure class="u-product-card__image-wrapper">
-                            <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/prd2.png"
+                            <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/prd2.webp"
                                     alt="Galaxy S21 Ultra 5G" loading="lazy" width="210px" height="210px" /></a>
                         </figure>
                         <div class="u-product-card__info">
@@ -538,7 +586,7 @@
                     <!-- Product Item 3-->
                     <article class="u-product-card">
                         <figure class="u-product-card__image-wrapper">
-                            <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/prd3.png"
+                            <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/prd3.webp"
                                     alt="Galaxy S21 Ultra 5G" loading="lazy" width="210px" height="210px" /></a>
                         </figure>
                         <div class="u-product-card__info">
@@ -553,7 +601,7 @@
                     <!-- Product Item 4-->
                     <article class="u-product-card">
                         <figure class="u-product-card__image-wrapper">
-                            <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/prd4.png"
+                            <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/prd4.webp"
                                     alt="Galaxy S21 Ultra 5G" loading="lazy" width="210px" height="210px" /></a>
                         </figure>
                         <div class="u-product-card__info">
@@ -569,7 +617,7 @@
                     <!-- Product Item 5-->
                     <article class="u-product-card">
                         <figure class="u-product-card__image-wrapper">
-                            <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/prd5.png"
+                            <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/prd5.webp"
                                     alt="Galaxy S21 Ultra 5G" loading="lazy" width="210px" height="210px" /></a>
                         </figure>
                         <div class="u-product-card__info">
@@ -584,7 +632,7 @@
                     <!-- Product Item 6-->
                     <article class="u-product-card">
                         <figure class="u-product-card__image-wrapper">
-                            <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/prd6.png"
+                            <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/prd6.webp"
                                     alt="Galaxy S21 Ultra 5G" loading="lazy" width="210px" height="210px" /></a>
                         </figure>
                         <div class="u-product-card__info">
@@ -618,7 +666,7 @@
                             Cellphone</a>
                     </div>
                     <figure class="promo-banners__image-wrapper ms-md-4 mt-4 mt-md-0 mb-0">
-                        <img src="./img/cp.png" alt="Cellphone Promo" class="promo-banners__image img-fluid"
+                        <img src="./img/cp.webp" alt="Cellphone Promo" class="promo-banners__image img-fluid"
                             loading="lazy" width="220" height="auto">
                     </figure>
                 </div>
@@ -636,7 +684,7 @@
                             Headphone</a>
                     </div>
                     <figure class="promo-banners__image-wrapper ms-md-4 mt-4 mt-md-0 mb-0">
-                        <img src="./img/hp.png" alt="Headphone Promo" class="promo-banners__image img-fluid"
+                        <img src="./img/hp.web" alt="Headphone Promo" class="promo-banners__image img-fluid"
                             loading="lazy" width="220" height="auto">
                     </figure>
                 </div>
@@ -668,7 +716,7 @@
                         <a href="./loading.html" class="btn btn-dark btn-shop-now">Shop Now</a>
                     </div>
                     <div class="section-bn-img">
-                        <a href="./loading.html"><img src="./img/tsp1.png" alt="Laptop" class="img-fluid w-100"
+                        <a href="./loading.html"><img src="./img/tsp1.webp" alt="Laptop" class="img-fluid w-100"
                                 loading="lazy" width="603px" height="477px" /></a>
                     </div>
                 </div>
@@ -681,7 +729,7 @@
                     <!-- Product card 1 -->
                     <div class="col">
                         <div class="card product-card h-100 border-0 shadow-sm">
-                            <a href="./loading.html"><img src="./img/tsp2.png" class="card-img-top" alt="Product"
+                            <a href="./loading.html"><img src="./img/tsp2.webp" class="card-img-top" alt="Product"
                                     loading="lazy" width="210px" height="210px"></a>
                             <div class="card-body p-2">
                                 <p class="text-muted small mb-1">Toshiba</p>
@@ -698,7 +746,7 @@
                     <!-- /Product card 2 -->
                     <div class="col">
                         <div class="card product-card h-100 border-0 shadow-sm">
-                            <a href="./loading.html"><img src="./img/tsp3.png" class="card-img-top" alt="Product"
+                            <a href="./loading.html"><img src="./img/tsp3.webp" class="card-img-top" alt="Product"
                                     loading="lazy" width="210px" height="210px"></a>
                             <div class="card-body p-2">
                                 <p class="text-muted small mb-1">Toshiba</p>
@@ -716,7 +764,7 @@
                     <!-- /Product card 3 -->
                     <div class="col">
                         <div class="card product-card h-100 border-0 shadow-sm">
-                            <a href="./loading.html"><img src="./img/tsp4.png" class="card-img-top" alt="Product"
+                            <a href="./loading.html"><img src="./img/tsp4.webp" class="card-img-top" alt="Product"
                                     loading="lazy" width="210px" height="210px"></a>
                             <div class="card-body p-2">
                                 <p class="text-muted small mb-1">Toshiba</p>
@@ -733,7 +781,7 @@
                     <!-- /Product card 4 -->
                     <div class="col">
                         <div class="card product-card h-100 border-0 shadow-sm">
-                            <a href="./loading.html"><img src="./img/tsp5.png" class="card-img-top" alt="Product"
+                            <a href="./loading.html"><img src="./img/tsp5.webp" class="card-img-top" alt="Product"
                                     loading="lazy" width="210px" height="210px"></a>
                             <div class="card-body p-2">
                                 <p class="text-muted small mb-1">Toshiba</p>
@@ -751,7 +799,7 @@
                     <!-- /Product card 5 -->
                     <div class="col">
                         <div class="card product-card h-100 border-0 shadow-sm">
-                            <a href="./loading.html"><img src="./img/tsp6.png" class="card-img-top" alt="Product"
+                            <a href="./loading.html"><img src="./img/tsp6.webp" class="card-img-top" alt="Product"
                                     loading="lazy" width="210px" height="210px"></a>
                             <div class="card-body p-2">
                                 <p class="text-muted small mb-1">Toshiba</p>
@@ -768,7 +816,7 @@
                     <!-- /Product card 6 -->
                     <div class="col">
                         <div class="card product-card h-100 border-0 shadow-sm">
-                            <a href="./loading.html"><img src="./img/tsp7.png" class="card-img-top" alt="Product"
+                            <a href="./loading.html"><img src="./img/tsp7.webp" class="card-img-top" alt="Product"
                                     loading="lazy" width="210px" height="210px"></a>
                             <div class="card-body p-2">
                                 <p class="text-muted small mb-1">Toshiba</p>
@@ -786,7 +834,7 @@
                     <!-- /Product card 7 -->
                     <div class="col">
                         <div class="card product-card h-100 border-0 shadow-sm">
-                            <a href="./loading.html"><img src="./img/tsp8.png" class="card-img-top" alt="Product"
+                            <a href="./loading.html"><img src="./img/tsp8.webp" class="card-img-top" alt="Product"
                                     loading="lazy" width="210px" height="210px"></a>
                             <div class="card-body p-2">
                                 <p class="text-muted small mb-1">Toshiba</p>
@@ -803,7 +851,7 @@
                     <!-- /Product card 8 -->
                     <div class="col">
                         <div class="card product-card h-100 border-0 shadow-sm">
-                            <a href="./loading.html"><img src="./img/tsp9.png" class="card-img-top" alt="Product"
+                            <a href="./loading.html"><img src="./img/tsp9.webp" class="card-img-top" alt="Product"
                                     loading="lazy" width="210px" height="210px"></a>
                             <div class="card-body p-2">
                                 <p class="text-muted small mb-1">Toshiba</p>
@@ -840,7 +888,7 @@
                     <!-- Product Item 1 -->
                     <article class="u-product-card">
                         <figure class="u-product-card__image-wrapper">
-                            <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/rfy1.jpg"
+                            <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/rfy1.webp"
                                     alt="Galaxy S21 Ultra 5G" loading="lazy" width="210px" height="210px" /></a>
                         </figure>
                         <div class="u-product-card__info">
@@ -856,7 +904,7 @@
                     <!-- Product Item 2-->
                     <article class="u-product-card">
                         <figure class="u-product-card__image-wrapper">
-                            <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/rfy2.jpg"
+                            <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/rfy2.webp"
                                     alt="Galaxy S21 Ultra 5G" loading="lazy" width="210px" height="210px" /></a>
                         </figure>
                         <div class="u-product-card__info">
@@ -871,7 +919,7 @@
                     <!-- Product Item 3-->
                     <article class="u-product-card">
                         <figure class="u-product-card__image-wrapper">
-                            <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/rfy3.jpg"
+                            <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/rfy3.webp"
                                     alt="Galaxy S21 Ultra 5G" loading="lazy" width="210px" height="210px" /></a>
                         </figure>
                         <div class="u-product-card__info">
@@ -887,7 +935,7 @@
                     <!-- Product Item 4-->
                     <article class="u-product-card">
                         <figure class="u-product-card__image-wrapper">
-                            <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/rfy4.jpg"
+                            <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/rfy4.webp"
                                     alt="Galaxy S21 Ultra 5G" loading="lazy" width="210px" height="210px" /></a>
                         </figure>
                         <div class="u-product-card__info">
@@ -902,7 +950,7 @@
                     <!-- Product Item 5-->
                     <article class="u-product-card">
                         <figure class="u-product-card__image-wrapper">
-                            <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/rfy5.jpg"
+                            <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/rfy5.webp"
                                     alt="Galaxy S21 Ultra 5G" loading="lazy" width="210px" height="210px" /></a>
                         </figure>
                         <div class="u-product-card__info">
@@ -918,7 +966,7 @@
                     <!-- Product Item 6-->
                     <article class="u-product-card">
                         <figure class="u-product-card__image-wrapper">
-                            <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/rfy6.jpg"
+                            <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/rfy6.webp"
                                     alt="Galaxy S21 Ultra 5G" loading="lazy" width="210px" height="210px" /></a>
                         </figure>
                         <div class="u-product-card__info">
@@ -952,7 +1000,7 @@
                 <div class="deal-card w-100">
                     <div class="deal-card__inner">
                         <div class="deal-card__image-wrapper">
-                            <a href="./loading.html"><img src="./img/cyber.png" alt="Cyber Monday Speaker Deal"
+                            <a href="./loading.html"><img src="./img/cryber.webp" alt="Cyber Monday Speaker Deal"
                                     class="deal-card__image" loading="lazy" width="405px" height="250px">
                         </div></a>
                         <div class="deal-card__content text-center">
@@ -969,13 +1017,13 @@
                 <div class="deal-card">
                     <div class="deal-card__inner position-relative">
                         <div class="deal-card__image-wrapper">
-                            <a href="./loading.html"><img src="./img/bgsaleoff.png" alt="Black Friday Sale Banner"
+                            <a href="./loading.html"><img src="./img/bgrsaleoff.webp" alt="Black Friday Sale Banner"
                                     class="deal-card__image" loading="lazy" width="450px" height="450px"></a>
                             <div class="deal-card__banner-text ">
                                 <strong class="deal-card__black-text">Black</strong>
                                 <strong class="deal-card__friday-text">Friday</strong>
                                 <span>FROM SEPTEMBER 08/28/2023</span>
-                                <img src="./img/Vector.png" alt="icon_vector" loading="lazy" width="42px" height="49px">
+                                <img src="./img/Vector.webp" alt="icon_vector" loading="lazy" width="42px" height="49px">
                             </div>
                         </div>
                         <div class="deal-card__content text-center">
@@ -992,8 +1040,8 @@
                 <div class="deal-card">
                     <div class="deal-card__inner">
                         <div class="deal-card__image-wrapper">
-                            <a href="./loading.html"><img src="./img/smartphone.png" alt="Smartphone Deal"
-                                    class="deal-card__image" loading="lazy" width="450px" height="450px" ></a>
+                            <a href="./loading.html"><img src="./img/smp.webp" alt="Smartphone Deal"
+                                    class="deal-card__image" loading="lazy" width="450px" height="450px"></a>
                         </div>
                         <div class="deal-card__content text-center">
                             <h3 class="deal-card__title">Hurry Up - Smartphone Only $299</h3>
@@ -1014,28 +1062,28 @@
             <div class="row gx-0 gy-4 justify-content-center u-service-highlights__wrapper">
 
                 <div class="col-6 col-lg-3 u-service-highlights__item text-center">
-                    <a href="./loading.html"><img src="./img/icon1.png" alt="Fast Delivery"
+                    <a href="./loading.html"><img src="./img/icon1.webp" alt="Fast Delivery"
                             class="u-service-highlights__icon" loading="lazy" width="40" height="40" /></a>
                     <h3 class="u-service-highlights__title">Fast Delivery</h3>
                     <p class="u-service-highlights__desc">Deliver in 24 hours max!</p>
                 </div>
 
                 <div class="col-6 col-lg-3 u-service-highlights__item text-center">
-                    <a href="./loading.html"><img src="./img/icon2.png" alt="Safe Payment"
+                    <a href="./loading.html"><img src="./img/icon2.webp" alt="Safe Payment"
                             class="u-service-highlights__icon" loading="lazy" width="40" height="40" /></a>
                     <h3 class="u-service-highlights__title">Safe Payment</h3>
                     <p class="u-service-highlights__desc">Visa, Mastercard, PayPal…</p>
                 </div>
 
                 <div class="col-6 col-lg-3 u-service-highlights__item text-center">
-                    <a href="./loading.html"><img src="./img/icon3.png" alt="Free Returns"
+                    <a href="./loading.html"><img src="./img/icon3.webp" alt="Free Returns"
                             class="u-service-highlights__icon" loading="lazy" width="40" height="40" /></a>
                     <h3 class="u-service-highlights__title">Free Returns</h3>
                     <p class="u-service-highlights__desc">Free returns within 15 days</p>
                 </div>
 
                 <div class="col-6 col-lg-3 u-service-highlights__item text-center">
-                    <a href="./loading.html"><img src="./img/icon4.png" alt="Help Center"
+                    <a href="./loading.html"><img src="./img/icon4.webp" alt="Help Center"
                             class="u-service-highlights__icon" loading="lazy" width="40" height="40" /></a>
                     <h3 class="u-service-highlights__title">Help Center</h3>
                     <p class="u-service-highlights__desc">Dedicated 24/7 support</p>
