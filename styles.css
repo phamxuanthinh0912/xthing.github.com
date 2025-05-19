@@ -1301,6 +1301,8 @@ a {
   position: absolute;
   left: 170px;
   bottom: 130px;
+  width: 42px;
+  height: 49px;
 }
 
 .deal-card__black-text {

@@ -6,17 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="UmiLux - Your one-stop shop for all your needs.">
     <title>UMILUX</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css" 
-    integrity="sha512-v8QQ0YQ3H4K6Ic3PJkym91KoeNT5S3PnDKvqnwqFD1oiqIl653crGZplPdU5KKtHjO0QKcQ2aUlQZYjHczkmGw==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Bootstrap & Icons -->
+
+    <!-- Preconnect & Prefetch -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+    <!-- Preload LCP + logo (Không dùng lazy cho ảnh này) -->
+    <link rel="preload" as="image" href="./img/sld1.png" type="image/png" fetchpriority="high">
+    <link rel="preload" as="image" href="./img/Logo.png" type="image/png">
+    <link rel="preload" as="image" href="./img/sld2.png" type="image/png">
+    <link rel="preload" as="image" href="./img/cp.png" type="image/png">
+    <link rel="preload" as="image" href="./img/hp.png" type="image/png">
+    <link rel="preload" as="image" href="./img/tsp1.png" type="image/png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css"
+        integrity="sha512-v8QQ0YQ3H4K6Ic3PJkym91KoeNT5S3PnDKvqnwqFD1oiqIl653crGZplPdU5KKtHjO0QKcQ2aUlQZYjHczkmGw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="./asset/bootstrap.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="reponsive.css">
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Geostar+Fill&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS (Lazy-loaded) -->
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="reponsive.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="reponsive.css">
+    </noscript>
 </head>
+
 
 <body>
     <div class="loader"></div>
@@ -32,9 +63,9 @@
                     <a href="./loading.html" class="u-top-bar__link">Our Stores</a>
 
                     <!-- Language -->
-                    <div class="dropdown">
-                        <button class="btn dropdown-toggle" id="languageDropdown" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                    <div class="u-top-bar__dropdown dropdown">
+                        <button type="button" class="btn dropdown-toggle" id="languageDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false" aria-label="Select language">
                             English
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="languageDropdown">
@@ -45,9 +76,9 @@
                     </div>
 
                     <!-- Currency -->
-                    <div class="dropdown">
-                        <button class="btn dropdown-toggle" id="currencyDropdown" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                    <div class="u-top-bar__dropdown dropdown">
+                        <button type="button" class="btn dropdown-toggle" id="currencyDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false" aria-label="Select currency">
                             United States (USD $)
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="currencyDropdown">
@@ -59,106 +90,107 @@
                 </div>
             </div>
         </div>
-
-        <!-- Header Bottom -->
-        <div class="u-header__bottom ">
-            <div class="container d-flex flex-wrap align-items-center justify-content-between py-3">
-                <!-- Hamburger button (Mobile/Tablet only) -->
-                <button class="navbar-toggler u-hamburger" type="button" style="color: white;">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- Logo -->
-                <a href="/" class="u-logo d-inline-block mb-2 mb-md-0">
-                    <img src="./img/Logo.png" alt="UMILUX Logo" width="144" height="37" loading="lazy" />
-                </a>
-
-                <!-- Search Bar -->
-                <div class="u-search-bar-wrapper flex-grow-1 d-flex mx-md-4 order-3 order-md-2 w-100 w-md-auto">
-                    <form class="u-search-bar d-flex flex-grow-1" role="search" aria-label="Site Search">
-                        <span class="u-search-bar__icon d-flex align-items-center" aria-hidden="true">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                viewBox="0 0 16 16">
-                                <path
-                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398l3.85 3.85a1 1 0 0 0 1.415-1.415l-3.85-3.85zm-5.242 1.156a5 5 0 1 1 0-10 5 5 0 0 1 0 10z" />
-                            </svg>
-                        </span>
-                        <label for="search-input" class="visually-hidden">Search products</label>
-                        <input id="search-input" class="u-search-bar__input" type="search"
-                            placeholder="I'm looking for..." autocomplete="off" required />
-                        <button class="u-search-button" type="submit" aria-label="Search">Search</button>
-                    </form>
-                </div>
-
-                <!-- Header Icons -->
-
-                <nav class="u-header-icons d-flex align-items-center gap-3 order-2 order-md-3 text-white"
-                    aria-label="Header Tools">
-                    <!-- Account -->
-                    <a href="./loading.html" class="u-header-icon d-flex align-items-center gap-2 position-relative">
-                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M22.8548 21.3334C21.6915 19.3656 20.0317 17.7341 18.0398 16.6006C16.0478 15.467 13.7928 14.8708 11.4979 14.8708C9.20304 14.8708 6.94798 15.467 4.95601 16.6006C2.96405 17.7341 1.30427 19.3656 0.141025 21.3334C-0.00138538 21.5886 -0.0376415 21.8892 0.0400248 22.1707C0.0766559 22.314 0.143667 22.448 0.236568 22.5635C0.329469 22.679 0.446115 22.7735 0.578691 22.8405C0.74972 22.9369 0.943214 22.987 1.1398 22.9856C1.33475 22.9938 1.52817 22.9481 1.69855 22.8535C1.86893 22.7589 2.0096 22.6191 2.10491 22.4498C3.06783 20.8199 4.44211 19.4685 6.09163 18.5296C7.74115 17.5906 9.60864 17.0967 11.5091 17.0967C13.4096 17.0967 15.2771 17.5906 16.9266 18.5296C18.5761 19.4685 19.9504 20.8199 20.9133 22.4498C21.0632 22.7032 21.3076 22.8876 21.5934 22.9628C21.8792 23.0381 22.1832 22.9981 22.4396 22.8516C22.5672 22.7839 22.6791 22.6903 22.768 22.5769C22.8569 22.4634 22.9209 22.3326 22.9558 22.193C22.9973 22.0502 23.0098 21.9007 22.9924 21.7531C22.9751 21.6055 22.9283 21.4628 22.8548 21.3334Z"
-                                fill="white" />
-                            <path
-                                d="M11.5 13.8C13.3083 13.8003 15.0444 13.0842 16.3348 11.8057C17.6253 10.5272 18.3668 8.78854 18.4 6.96384C18.4 5.11691 17.673 3.34563 16.379 2.03966C15.085 0.733688 13.33 0 11.5 0C9.66998 0 7.91494 0.733688 6.62094 2.03966C5.32694 3.34563 4.59998 5.11691 4.59998 6.96384C4.63313 8.78854 5.3747 10.5272 6.66512 11.8057C7.95555 13.0842 9.69169 13.8003 11.5 13.8ZM6.89998 6.96384C6.89998 5.73255 7.38462 4.5517 8.24728 3.68105C9.10995 2.8104 10.28 2.32128 11.5 2.32128C12.72 2.32128 13.89 2.8104 14.7527 3.68105C15.6153 4.5517 16.1 5.73255 16.1 6.96384C16.1 8.19512 15.6153 9.37597 14.7527 10.2466C13.89 11.1173 12.72 11.6064 11.5 11.6064C10.28 11.6064 9.10995 11.1173 8.24728 10.2466C7.38462 9.37597 6.89998 8.19512 6.89998 6.96384Z"
-                                fill="white" />
-                        </svg>
-
-                        <span class="visually-hidden">Account</span>
-                        <div class="d-flex flex-column justify-content-center lh-1">
-                            <span class="u-icon-label-top">Login</span>
-                            <span class="u-icon-label-bottom">Account</span>
-                        </div>
-                    </a>
-
-                    <!-- Wishlist -->
-                    <a href="./loading.html" class="u-header-icon d-flex align-items-center position-relative"
-                        aria-label="Wishlist">
-                        <svg width="28" height="23" viewBox="0 0 28 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M25.7442 2.10275C24.2909 0.752316 22.3676 0 20.3687 0C18.3697 0 16.4465 0.752316 14.9931 2.10275L14 3.0345L13.0069 2.10275C11.5572 0.743159 9.62821 -0.0103607 7.62554 0.000636744C5.62664 -0.00860296 3.7019 0.744876 2.25576 2.10275C1.54386 2.75756 0.976298 3.54931 0.588263 4.42889C0.200228 5.30847 0 6.25712 0 7.216C0 8.17488 0.200228 9.12353 0.588263 10.0031C0.976298 10.8827 1.54386 11.6744 2.25576 12.3293L13.2147 22.6921C13.3222 22.7846 13.4428 22.8612 13.5727 22.9194C13.8471 23.0269 14.1529 23.0269 14.4273 22.9194C14.5572 22.8612 14.6778 22.7846 14.7853 22.6921L25.7442 12.3293C26.4561 11.6744 27.0237 10.8827 27.4117 10.0031C27.7998 9.12353 28 8.17488 28 7.216C28 6.25712 27.7998 5.30847 27.4117 4.42889C27.0237 3.54931 26.4561 2.75756 25.7442 2.10275ZM25.7442 7.19327C25.7475 7.86547 25.6121 8.53132 25.3461 9.15048C25.0801 9.76963 24.6891 10.3292 24.1968 10.7953L14 20.4536L3.81473 10.7953C3.31485 10.3331 2.91647 9.77502 2.64415 9.15553C2.37183 8.53604 2.23134 7.86823 2.23134 7.19327C2.23134 6.51832 2.37183 5.85051 2.64415 5.23102C2.91647 4.61153 3.31485 4.05348 3.81473 3.59127C4.84037 2.62701 6.20703 2.09319 7.62554 2.10275C9.05112 2.09206 10.4254 2.62562 11.4595 3.59127L13.2147 5.2616C13.3222 5.3541 13.4428 5.43066 13.5727 5.48886C13.8471 5.59638 14.1529 5.59638 14.4273 5.48886C14.5572 5.43066 14.6778 5.3541 14.7853 5.2616L16.5521 3.59127C17.5777 2.62701 18.9444 2.09319 20.3629 2.10275C21.7885 2.09206 23.1628 2.62562 24.1968 3.59127C24.6933 4.0554 25.0886 4.6141 25.3586 5.23335C25.6286 5.8526 25.7676 6.51944 25.7673 7.19327H25.7442Z"
-                                fill="white" />
-                        </svg>
-
-                    </a>
-
-                    <!-- Cart -->
-                    <a href="./loading.html" class="u-header-icon d-flex align-items-center gap-2 position-relative"
-                        aria-label="Cart">
-                        <svg width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M19.3593 20.7193C19.064 20.7193 18.7807 20.6017 18.5719 20.3925C18.3631 20.1832 18.2458 19.8995 18.2458 19.6036H16.0187C16.0187 20.4913 16.3706 21.3426 16.9971 21.9703C17.6236 22.598 18.4733 22.9506 19.3593 22.9506C20.2453 22.9506 21.095 22.598 21.7215 21.9703C22.348 21.3426 22.7 20.4913 22.7 19.6036H20.4729C20.4729 19.8995 20.3555 20.1832 20.1467 20.3925C19.9379 20.6017 19.6546 20.7193 19.3593 20.7193Z"
-                                fill="white" />
-                            <path
-                                d="M11.5234 20.7193C11.2281 20.7193 10.9449 20.6017 10.736 20.3925C10.5272 20.1832 10.4099 19.8995 10.4099 19.6036H8.17236C8.17236 20.0437 8.2589 20.4796 8.42702 20.8863C8.59515 21.293 8.84158 21.6625 9.15224 21.9738C9.4629 22.285 9.83171 22.5319 10.2376 22.7004C10.6435 22.8688 11.0785 22.9555 11.5179 22.9555C11.9572 22.9555 12.3922 22.8688 12.7981 22.7004C13.204 22.5319 13.5728 22.285 13.8835 21.9738C14.1942 21.6625 14.4406 21.293 14.6087 20.8863C14.7768 20.4796 14.8634 20.0437 14.8634 19.6036H12.6363C12.6363 19.8993 12.5191 20.183 12.3104 20.3922C12.1017 20.6014 11.8187 20.7191 11.5234 20.7193Z"
-                                fill="white" />
-                            <path
-                                d="M26.0504 2.26013C25.9897 2.24977 25.9282 2.24464 25.8666 2.24479H8.04992C7.75459 2.24479 7.47135 2.36233 7.26252 2.57157C7.05369 2.7808 6.93637 3.06458 6.93637 3.36048C6.93637 3.65638 7.05369 3.94016 7.26252 4.14939C7.47135 4.35863 7.75459 4.47617 8.04992 4.47617H24.552L24.2576 6.24594L22.6965 15.6331H8.17032L4.38427 6.24594L2.12586 0.69537C2.00643 0.434253 1.79109 0.229345 1.52466 0.123301C1.25824 0.017257 0.961258 0.0182482 0.695545 0.126068C0.429832 0.233888 0.215858 0.440229 0.0981665 0.702138C-0.0195254 0.964047 -0.0318673 1.26134 0.0637099 1.53214L3.66951 10.397L6.13045 16.9322C6.31209 17.4824 6.68722 17.8645 7.22868 17.8645H23.6396C23.9032 17.8646 24.1584 17.771 24.3597 17.6002C24.5609 17.4295 24.6951 17.1928 24.7385 16.9322L26.516 6.24594L26.9656 3.54387C27.0141 3.25205 26.9449 2.95287 26.7733 2.71213C26.6017 2.47139 26.3416 2.30881 26.0504 2.26013Z"
-                                fill="white" />
-                        </svg>
-
-                        <div class="d-flex flex-column justify-content-center lh-1">
-                            <span class="u-icon-label-top">Cart</span>
-                            <span class="u-icon-label-bottom">$590.00</span>
-                        </div>
-                    </a>
-                </nav>
-
-            </div>
-        </div>
     </header>
 
-    <!-- Navbar  -->
+
+    <!-- Header Bottom -->
+    <div class="u-header__bottom ">
+        <div class="container d-flex flex-wrap align-items-center justify-content-between py-3">
+            <!-- Hamburger button (Mobile/Tablet only) -->
+            <button class="navbar-toggler u-hamburger" type="submit" style="color: white;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Logo -->
+            <a href="/" class="u-logo d-inline-block mb-2 mb-md-0">
+                <img src="./img/Logo.png" alt="UMILUX Logo" width="144" height="37" loading="lazy" />
+            </a>
+
+            <!-- Search Bar -->
+            <div class="u-search-bar-wrapper flex-grow-1 d-flex mx-md-4 order-3 order-md-2 w-100 w-md-auto">
+                <form class="u-search-bar d-flex flex-grow-1" role="search" aria-label="Site Search">
+                    <span class="u-search-bar__icon d-flex align-items-center" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398l3.85 3.85a1 1 0 0 0 1.415-1.415l-3.85-3.85zm-5.242 1.156a5 5 0 1 1 0-10 5 5 0 0 1 0 10z" />
+                        </svg>
+                    </span>
+                    <label for="search-input" class="visually-hidden">Search products</label>
+                    <input id="search-input" class="u-search-bar__input" type="search" placeholder="I'm looking for..."
+                        autocomplete="off" required />
+                    <button class="u-search-button" type="submit" aria-label="Search">Search</button>
+                </form>
+            </div>
+
+            <!-- Header Icons -->
+
+            <nav class="u-header-icons d-flex align-items-center gap-3 order-2 order-md-3 text-white"
+                aria-label="Header Tools">
+                <!-- Account -->
+                <a href="./loading.html" class="u-header-icon d-flex align-items-center gap-2 position-relative">
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M22.8548 21.3334C21.6915 19.3656 20.0317 17.7341 18.0398 16.6006C16.0478 15.467 13.7928 14.8708 11.4979 14.8708C9.20304 14.8708 6.94798 15.467 4.95601 16.6006C2.96405 17.7341 1.30427 19.3656 0.141025 21.3334C-0.00138538 21.5886 -0.0376415 21.8892 0.0400248 22.1707C0.0766559 22.314 0.143667 22.448 0.236568 22.5635C0.329469 22.679 0.446115 22.7735 0.578691 22.8405C0.74972 22.9369 0.943214 22.987 1.1398 22.9856C1.33475 22.9938 1.52817 22.9481 1.69855 22.8535C1.86893 22.7589 2.0096 22.6191 2.10491 22.4498C3.06783 20.8199 4.44211 19.4685 6.09163 18.5296C7.74115 17.5906 9.60864 17.0967 11.5091 17.0967C13.4096 17.0967 15.2771 17.5906 16.9266 18.5296C18.5761 19.4685 19.9504 20.8199 20.9133 22.4498C21.0632 22.7032 21.3076 22.8876 21.5934 22.9628C21.8792 23.0381 22.1832 22.9981 22.4396 22.8516C22.5672 22.7839 22.6791 22.6903 22.768 22.5769C22.8569 22.4634 22.9209 22.3326 22.9558 22.193C22.9973 22.0502 23.0098 21.9007 22.9924 21.7531C22.9751 21.6055 22.9283 21.4628 22.8548 21.3334Z"
+                            fill="white" />
+                        <path
+                            d="M11.5 13.8C13.3083 13.8003 15.0444 13.0842 16.3348 11.8057C17.6253 10.5272 18.3668 8.78854 18.4 6.96384C18.4 5.11691 17.673 3.34563 16.379 2.03966C15.085 0.733688 13.33 0 11.5 0C9.66998 0 7.91494 0.733688 6.62094 2.03966C5.32694 3.34563 4.59998 5.11691 4.59998 6.96384C4.63313 8.78854 5.3747 10.5272 6.66512 11.8057C7.95555 13.0842 9.69169 13.8003 11.5 13.8ZM6.89998 6.96384C6.89998 5.73255 7.38462 4.5517 8.24728 3.68105C9.10995 2.8104 10.28 2.32128 11.5 2.32128C12.72 2.32128 13.89 2.8104 14.7527 3.68105C15.6153 4.5517 16.1 5.73255 16.1 6.96384C16.1 8.19512 15.6153 9.37597 14.7527 10.2466C13.89 11.1173 12.72 11.6064 11.5 11.6064C10.28 11.6064 9.10995 11.1173 8.24728 10.2466C7.38462 9.37597 6.89998 8.19512 6.89998 6.96384Z"
+                            fill="white" />
+                    </svg>
+
+                    <span class="visually-hidden">Account</span>
+                    <div class="d-flex flex-column justify-content-center lh-1">
+                        <span class="u-icon-label-top">Login</span>
+                        <span class="u-icon-label-bottom">Account</span>
+                    </div>
+                </a>
+
+                <!-- Wishlist -->
+                <a href="./loading.html" class="u-header-icon d-flex align-items-center position-relative"
+                    aria-label="Wishlist">
+                    <svg width="23" height="23" viewBox="0 0 28 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M25.7442 2.10275C24.2909 0.752316 22.3676 0 20.3687 0C18.3697 0 16.4465 0.752316 14.9931 2.10275L14 3.0345L13.0069 2.10275C11.5572 0.743159 9.62821 -0.0103607 7.62554 0.000636744C5.62664 -0.00860296 3.7019 0.744876 2.25576 2.10275C1.54386 2.75756 0.976298 3.54931 0.588263 4.42889C0.200228 5.30847 0 6.25712 0 7.216C0 8.17488 0.200228 9.12353 0.588263 10.0031C0.976298 10.8827 1.54386 11.6744 2.25576 12.3293L13.2147 22.6921C13.3222 22.7846 13.4428 22.8612 13.5727 22.9194C13.8471 23.0269 14.1529 23.0269 14.4273 22.9194C14.5572 22.8612 14.6778 22.7846 14.7853 22.6921L25.7442 12.3293C26.4561 11.6744 27.0237 10.8827 27.4117 10.0031C27.7998 9.12353 28 8.17488 28 7.216C28 6.25712 27.7998 5.30847 27.4117 4.42889C27.0237 3.54931 26.4561 2.75756 25.7442 2.10275ZM25.7442 7.19327C25.7475 7.86547 25.6121 8.53132 25.3461 9.15048C25.0801 9.76963 24.6891 10.3292 24.1968 10.7953L14 20.4536L3.81473 10.7953C3.31485 10.3331 2.91647 9.77502 2.64415 9.15553C2.37183 8.53604 2.23134 7.86823 2.23134 7.19327C2.23134 6.51832 2.37183 5.85051 2.64415 5.23102C2.91647 4.61153 3.31485 4.05348 3.81473 3.59127C4.84037 2.62701 6.20703 2.09319 7.62554 2.10275C9.05112 2.09206 10.4254 2.62562 11.4595 3.59127L13.2147 5.2616C13.3222 5.3541 13.4428 5.43066 13.5727 5.48886C13.8471 5.59638 14.1529 5.59638 14.4273 5.48886C14.5572 5.43066 14.6778 5.3541 14.7853 5.2616L16.5521 3.59127C17.5777 2.62701 18.9444 2.09319 20.3629 2.10275C21.7885 2.09206 23.1628 2.62562 24.1968 3.59127C24.6933 4.0554 25.0886 4.6141 25.3586 5.23335C25.6286 5.8526 25.7676 6.51944 25.7673 7.19327H25.7442Z"
+                            fill="white" />
+                    </svg>
+
+                </a>
+
+                <!-- Cart -->
+                <a href="./loading.html" class="u-header-icon d-flex align-items-center gap-2 position-relative"
+                    aria-label="Cart">
+                    <svg width="23" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M19.3593 20.7193C19.064 20.7193 18.7807 20.6017 18.5719 20.3925C18.3631 20.1832 18.2458 19.8995 18.2458 19.6036H16.0187C16.0187 20.4913 16.3706 21.3426 16.9971 21.9703C17.6236 22.598 18.4733 22.9506 19.3593 22.9506C20.2453 22.9506 21.095 22.598 21.7215 21.9703C22.348 21.3426 22.7 20.4913 22.7 19.6036H20.4729C20.4729 19.8995 20.3555 20.1832 20.1467 20.3925C19.9379 20.6017 19.6546 20.7193 19.3593 20.7193Z"
+                            fill="white" />
+                        <path
+                            d="M11.5234 20.7193C11.2281 20.7193 10.9449 20.6017 10.736 20.3925C10.5272 20.1832 10.4099 19.8995 10.4099 19.6036H8.17236C8.17236 20.0437 8.2589 20.4796 8.42702 20.8863C8.59515 21.293 8.84158 21.6625 9.15224 21.9738C9.4629 22.285 9.83171 22.5319 10.2376 22.7004C10.6435 22.8688 11.0785 22.9555 11.5179 22.9555C11.9572 22.9555 12.3922 22.8688 12.7981 22.7004C13.204 22.5319 13.5728 22.285 13.8835 21.9738C14.1942 21.6625 14.4406 21.293 14.6087 20.8863C14.7768 20.4796 14.8634 20.0437 14.8634 19.6036H12.6363C12.6363 19.8993 12.5191 20.183 12.3104 20.3922C12.1017 20.6014 11.8187 20.7191 11.5234 20.7193Z"
+                            fill="white" />
+                        <path
+                            d="M26.0504 2.26013C25.9897 2.24977 25.9282 2.24464 25.8666 2.24479H8.04992C7.75459 2.24479 7.47135 2.36233 7.26252 2.57157C7.05369 2.7808 6.93637 3.06458 6.93637 3.36048C6.93637 3.65638 7.05369 3.94016 7.26252 4.14939C7.47135 4.35863 7.75459 4.47617 8.04992 4.47617H24.552L24.2576 6.24594L22.6965 15.6331H8.17032L4.38427 6.24594L2.12586 0.69537C2.00643 0.434253 1.79109 0.229345 1.52466 0.123301C1.25824 0.017257 0.961258 0.0182482 0.695545 0.126068C0.429832 0.233888 0.215858 0.440229 0.0981665 0.702138C-0.0195254 0.964047 -0.0318673 1.26134 0.0637099 1.53214L3.66951 10.397L6.13045 16.9322C6.31209 17.4824 6.68722 17.8645 7.22868 17.8645H23.6396C23.9032 17.8646 24.1584 17.771 24.3597 17.6002C24.5609 17.4295 24.6951 17.1928 24.7385 16.9322L26.516 6.24594L26.9656 3.54387C27.0141 3.25205 26.9449 2.95287 26.7733 2.71213C26.6017 2.47139 26.3416 2.30881 26.0504 2.26013Z"
+                            fill="white" />
+                    </svg>
+
+                    <div class="d-flex flex-column justify-content-center lh-1">
+                        <span class="u-icon-label-top">Cart</span>
+                        <span class="u-icon-label-bottom">$590.00</span>
+                    </div>
+                </a>
+            </nav>
+
+        </div>
+    </div>
+
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg u-navbar u-fade-in">
         <div class="container">
-            <!-- Desktop Menu -->
+            <!-- Main Menu -->
             <div class="collapse navbar-collapse u-main-nav d-flex align-items-center gap-lg-3 u-main-nav__left">
                 <ul class="nav align-items-center gap-3 mb-0">
+                    <!-- All Departments -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href=""
+                        <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="#"
                             id="departmentsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-list"></i>
-                            All Departments
+                            <i class="bi bi-list"></i> All Departments
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="departmentsDropdown">
                             <li><a class="dropdown-item" href="./loading.html">Electronics</a></li>
@@ -167,7 +199,7 @@
                         </ul>
                     </li>
 
-                    <!-- Other dropdown menus -->
+                    <!-- Other Menus -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="./loading.html" id="homeDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false">Home</a>
@@ -220,7 +252,8 @@
                     <li class="nav-item"><a class="nav-link" href="./loading.html">Buy Umino!</a></li>
                 </ul>
             </div>
-            <!-- Right side: Recently Viewed -->
+
+            <!-- Right: Recently Viewed -->
             <div class="u-main-nav__right d-flex align-items-center gap-2 mt-2 mt-lg-0">
                 <i class="bi bi-clock"></i>
                 <span class="u-main-nav__recent-text">Recently Viewed Products</span>
@@ -229,30 +262,30 @@
     </nav>
 
     <!-- Mobile Sidebar -->
-    <div class="u-mobile-menu">
+    <div class="u-mobile-menu" role="dialog" aria-modal="true">
         <div class="u-mobile-menu__content">
-            <button class="u-mobile-menu__close">&times;</button>
-            <ul class="nav align-items-center gap-3 mb-0">
+            <button class="u-mobile-menu__close" aria-label="Close menu">&times;</button>
+            <ul class="nav flex-column gap-3 mb-0">
+                <!-- All Departments -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="" id="departmentsDropdown"
-                        data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="#"
+                        id="departmentsDropdownMobile" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-list"></i>
                         All Departments
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="departmentsDropdown">
+                    <ul class="dropdown-menu" aria-labelledby="departmentsDropdownMobile">
                         <li><a class="dropdown-item" href="./loading.html">Electronics</a></li>
                         <li><a class="dropdown-item" href="./loading.html">Clothing</a></li>
                         <li><a class="dropdown-item" href="./loading.html">Home & Kitchen</a></li>
                     </ul>
                 </li>
 
-                <!-- Other dropdown menus -->
+                <!-- Static Links (có thể thành dropdown sau nếu cần) -->
                 <li class="nav-item"><a class="nav-link" href="./loading.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="./loading.html">Shop</a></li>
                 <li class="nav-item"><a class="nav-link" href="./loading.html">Product</a></li>
                 <li class="nav-item"><a class="nav-link" href="./loading.html">Page</a></li>
                 <li class="nav-item"><a class="nav-link" href="./loading.html">Blog</a></li>
-                <!-- Static Links -->
                 <li class="nav-item"><a class="nav-link" href="./loading.html">Sale</a></li>
                 <li class="nav-item"><a class="nav-link" href="./loading.html">Buy Umino!</a></li>
             </ul>
@@ -275,7 +308,8 @@
                         <div class="carousel-item active">
                             <div class="u-hero-slide">
                                 <div class="u-hero-slide__left">
-                                    <img src="./img/sld1.png" alt="Background Left" class="u-hero-slide__left-img" />
+                                    <img src="./img/sld1.png" alt="Background Left" class="u-hero-slide__left-img"
+                                        width="705px" height="450px" />
                                 </div>
                                 <div class="u-hero-slide__content">
                                     <h2 class="fw-bold mb-1">Speaker<br>Bluetooth SoundCore</h2>
@@ -285,7 +319,8 @@
                                         Now</a>
                                 </div>
                                 <div class="u-hero-slide__right">
-                                    <img src="./img/sld2.png" alt="Product" class="u-hero-slide__product" />
+                                    <img src="./img/sld2.png" alt="Product" class="u-hero-slide__product" width="705px"
+                                        height="450px" />
                                 </div>
                             </div>
                         </div>
@@ -294,7 +329,8 @@
                         <div class="carousel-item">
                             <div class="u-hero-slide">
                                 <div class="u-hero-slide__left">
-                                    <img src="./img/sld1.png" alt="Background Left" class="u-hero-slide__left-img" />
+                                    <img src="./img/sld1.png" alt="Background Left" class="u-hero-slide__left-img"
+                                        width="705px" height="450px" />
                                 </div>
                                 <div class="u-hero-slide__content">
                                     <h2 class="fw-bold mb-1">Speaker</h2>
@@ -305,7 +341,8 @@
                                         Now</a>
                                 </div>
                                 <div class="u-hero-slide__right">
-                                    <img src="./img/sld2.png" alt="Product" class="u-hero-slide__product" />
+                                    <img src="./img/sld2.png" alt="Product" class="u-hero-slide__product" width="705px"
+                                        height="450px" />
                                 </div>
                             </div>
                         </div>
@@ -314,7 +351,8 @@
                         <div class="carousel-item">
                             <div class="u-hero-slide">
                                 <div class="u-hero-slide__left">
-                                    <img src="./img/sld1.png" alt="Background Left" class="u-hero-slide__left-img" />
+                                    <img src="./img/sld1.png" alt="Background Left" class="u-hero-slide__left-img"
+                                        width="705px" height="450px" />
                                 </div>
                                 <div class="u-hero-slide__content">
                                     <h2 class="fw-bold mb-1">Speaker</h2>
@@ -325,7 +363,8 @@
                                         Now</a>
                                 </div>
                                 <div class="u-hero-slide__right">
-                                    <img src="./img/sld2.png" alt="Product" class="u-hero-slide__product" />
+                                    <img src="./img/sld2.png" alt="Product" class="u-hero-slide__product" width="705px"
+                                        height="450px" />
                                 </div>
                             </div>
                         </div>
@@ -367,7 +406,8 @@
                 <div class="col">
                     <a href="./loading.html" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                            <img src="./img/Category1.png" alt="Macbook/PCs" class="img-fluid" loading="lazy">
+                            <img src="./img/Category1.png" alt="Macbook/PCs" class="img-fluid" loading="lazy"
+                                width="110px" height="110px">
                         </div>
                         <p class="u-category__title mb-0 fw-semibold mt-2">Macbook/PCs</p>
                         <small class="u-category__count text-muted">16 Products</small>
@@ -377,7 +417,8 @@
                 <div class="col">
                     <a href="./loading.html" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                            <img src="./img/Category2.png" alt="Macbook/PCs" class="img-fluid" loading="lazy">
+                            <img src="./img/Category2.png" alt="Macbook/PCs" class="img-fluid" loading="lazy"
+                                width="110px" height="110px">
                         </div>
                         <p class="u-category__title mb-0 fw-semibold mt-2">OLED/Smart TVs</p>
                         <small class="u-category__count text-muted">06 Products</small>
@@ -387,7 +428,8 @@
                 <div class="col">
                     <a href="./loading.html" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                            <img src="./img/Category3.png" alt="Phone/Mobile" class="img-fluid" loading="lazy">
+                            <img src="./img/Category3.png" alt="Phone/Mobile" class="img-fluid" loading="lazy"
+                                width="110px" height="110px">
                         </div>
                         <p class="u-category__title mb-0 fw-semibold mt-2">Phone/Mobile</p>
                         <small class="u-category__count text-muted">18 Products</small>
@@ -396,7 +438,8 @@
                 <div class="col">
                     <a href="./loading.html" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                            <img src="./img/Category4.png" alt="Phone/Mobile" class="img-fluid" loading="lazy">
+                            <img src="./img/Category4.png" alt="Phone/Mobile" class="img-fluid" loading="lazy"
+                                width="110px" height="110px">
                         </div>
                         <p class="u-category__title mb-0 fw-semibold mt-2">Tablets/Ipad Pro</p>
                         <small class="u-category__count text-muted">09 Products</small>
@@ -405,7 +448,8 @@
                 <div class="col">
                     <a href="./loading.html" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                            <img src="./img/Category5.png" alt="Phone/Mobile" class="img-fluid" loading="lazy">
+                            <img src="./img/Category5.png" alt="Phone/Mobile" class="img-fluid" loading="lazy"
+                                width="110px" height="110px">
                         </div>
                         <p class="u-category__title mb-0 fw-semibold mt-2">Gamepad/Console</p>
                         <small class="u-category__count text-muted">20 Products</small>
@@ -414,7 +458,8 @@
                 <div class="col">
                     <a href="./loading.html" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                            <img src="./img/Category6.png" alt="Phone/Mobile" class="img-fluid" loading="lazy">
+                            <img src="./img/Category6.png" alt="Phone/Mobile" class="img-fluid" loading="lazy"
+                                width="110px" height="110px">
                         </div>
                         <p class="u-category__title mb-0 fw-semibold mt-2">Camera/Photo</p>
                         <small class="u-category__count text-muted">13 Products</small>
@@ -423,7 +468,8 @@
                 <div class="col">
                     <a href="./loading.html" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                            <img src="./img/Category7.png" alt="Phone/Mobile" class="img-fluid" loading="lazy">
+                            <img src="./img/Category7.png" alt="Phone/Mobile" class="img-fluid" loading="lazy"
+                                width="110px" height="110px">
                         </div>
                         <p class="u-category__title mb-0 fw-semibold mt-2">Heatsink PC</p>
                         <small class="u-category__count text-muted">07 Products</small>
@@ -432,7 +478,8 @@
                 <div class="col">
                     <a href="./loading.html" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                            <img src="./img/Category8.png" alt="Phone/Mobile" class="img-fluid" loading="lazy">
+                            <img src="./img/Category8.png" alt="Phone/Mobile" class="img-fluid" loading="lazy"
+                                width="110px" height="110px">
                         </div>
                         <p class="u-category__title mb-0 fw-semibold mt-2">Home/Electronics</p>
                         <small class="u-category__count text-muted">12 Products</small>
@@ -461,7 +508,7 @@
                     <article class="u-product-card">
                         <figure class="u-product-card__image-wrapper">
                             <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/prd1.png"
-                                    alt="Galaxy S21 Ultra 5G" loading="lazy" /></a>
+                                    alt="Galaxy S21 Ultra 5G" loading="lazy" width="210px" height="210px" /></a>
                         </figure>
                         <div class="u-product-card__info">
                             <div class="u-product-card__brand">TOSHIBA</div>
@@ -476,7 +523,7 @@
                     <article class="u-product-card">
                         <figure class="u-product-card__image-wrapper">
                             <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/prd2.png"
-                                    alt="Galaxy S21 Ultra 5G" loading="lazy" /></a>
+                                    alt="Galaxy S21 Ultra 5G" loading="lazy" width="210px" height="210px" /></a>
                         </figure>
                         <div class="u-product-card__info">
                             <div class="u-product-card__brand">TOSHIBA</div>
@@ -492,7 +539,7 @@
                     <article class="u-product-card">
                         <figure class="u-product-card__image-wrapper">
                             <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/prd3.png"
-                                    alt="Galaxy S21 Ultra 5G" loading="lazy" /></a>
+                                    alt="Galaxy S21 Ultra 5G" loading="lazy" width="210px" height="210px" /></a>
                         </figure>
                         <div class="u-product-card__info">
                             <div class="u-product-card__brand">TOSHIBA</div>
@@ -507,7 +554,7 @@
                     <article class="u-product-card">
                         <figure class="u-product-card__image-wrapper">
                             <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/prd4.png"
-                                    alt="Galaxy S21 Ultra 5G" loading="lazy" /></a>
+                                    alt="Galaxy S21 Ultra 5G" loading="lazy" width="210px" height="210px" /></a>
                         </figure>
                         <div class="u-product-card__info">
                             <div class="u-product-card__brand">TOSHIBA</div>
@@ -523,7 +570,7 @@
                     <article class="u-product-card">
                         <figure class="u-product-card__image-wrapper">
                             <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/prd5.png"
-                                    alt="Galaxy S21 Ultra 5G" loading="lazy" /></a>
+                                    alt="Galaxy S21 Ultra 5G" loading="lazy" width="210px" height="210px" /></a>
                         </figure>
                         <div class="u-product-card__info">
                             <div class="u-product-card__brand">TOSHIBA</div>
@@ -538,7 +585,7 @@
                     <article class="u-product-card">
                         <figure class="u-product-card__image-wrapper">
                             <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/prd6.png"
-                                    alt="Galaxy S21 Ultra 5G" loading="lazy" /></a>
+                                    alt="Galaxy S21 Ultra 5G" loading="lazy" width="210px" height="210px" /></a>
                         </figure>
                         <div class="u-product-card__info">
                             <div class="u-product-card__brand">TOSHIBA</div>
@@ -622,7 +669,7 @@
                     </div>
                     <div class="section-bn-img">
                         <a href="./loading.html"><img src="./img/tsp1.png" alt="Laptop" class="img-fluid w-100"
-                                loading="lazy" /></a>
+                                loading="lazy" width="603px" height="477px" /></a>
                     </div>
                 </div>
             </div>
@@ -635,7 +682,7 @@
                     <div class="col">
                         <div class="card product-card h-100 border-0 shadow-sm">
                             <a href="./loading.html"><img src="./img/tsp2.png" class="card-img-top" alt="Product"
-                                    loading="lazy"></a>
+                                    loading="lazy" width="210px" height="210px"></a>
                             <div class="card-body p-2">
                                 <p class="text-muted small mb-1">Toshiba</p>
                                 <h6 class="card-title small">Galaxy S21 Ultra 5G 128GB Unlocked International Version
@@ -652,7 +699,7 @@
                     <div class="col">
                         <div class="card product-card h-100 border-0 shadow-sm">
                             <a href="./loading.html"><img src="./img/tsp3.png" class="card-img-top" alt="Product"
-                                    loading="lazy"></a>
+                                    loading="lazy" width="210px" height="210px"></a>
                             <div class="card-body p-2">
                                 <p class="text-muted small mb-1">Toshiba</p>
                                 <h6 class="card-title small">Galaxy S21 Ultra 5G 128GB Unlocked International Version
@@ -670,7 +717,7 @@
                     <div class="col">
                         <div class="card product-card h-100 border-0 shadow-sm">
                             <a href="./loading.html"><img src="./img/tsp4.png" class="card-img-top" alt="Product"
-                                    loading="lazy"></a>
+                                    loading="lazy" width="210px" height="210px"></a>
                             <div class="card-body p-2">
                                 <p class="text-muted small mb-1">Toshiba</p>
                                 <h6 class="card-title small">Galaxy S21 Ultra 5G 128GB Unlocked International Version
@@ -687,7 +734,7 @@
                     <div class="col">
                         <div class="card product-card h-100 border-0 shadow-sm">
                             <a href="./loading.html"><img src="./img/tsp5.png" class="card-img-top" alt="Product"
-                                    loading="lazy"></a>
+                                    loading="lazy" width="210px" height="210px"></a>
                             <div class="card-body p-2">
                                 <p class="text-muted small mb-1">Toshiba</p>
                                 <h6 class="card-title small">Galaxy S21 Ultra 5G 128GB Unlocked International Version
@@ -705,7 +752,7 @@
                     <div class="col">
                         <div class="card product-card h-100 border-0 shadow-sm">
                             <a href="./loading.html"><img src="./img/tsp6.png" class="card-img-top" alt="Product"
-                                    loading="lazy"></a>
+                                    loading="lazy" width="210px" height="210px"></a>
                             <div class="card-body p-2">
                                 <p class="text-muted small mb-1">Toshiba</p>
                                 <h6 class="card-title small">Galaxy S21 Ultra 5G 128GB Unlocked International Version
@@ -722,7 +769,7 @@
                     <div class="col">
                         <div class="card product-card h-100 border-0 shadow-sm">
                             <a href="./loading.html"><img src="./img/tsp7.png" class="card-img-top" alt="Product"
-                                    loading="lazy"></a>
+                                    loading="lazy" width="210px" height="210px"></a>
                             <div class="card-body p-2">
                                 <p class="text-muted small mb-1">Toshiba</p>
                                 <h6 class="card-title small">Galaxy S21 Ultra 5G 128GB Unlocked International Version
@@ -740,7 +787,7 @@
                     <div class="col">
                         <div class="card product-card h-100 border-0 shadow-sm">
                             <a href="./loading.html"><img src="./img/tsp8.png" class="card-img-top" alt="Product"
-                                    loading="lazy"></a>
+                                    loading="lazy" width="210px" height="210px"></a>
                             <div class="card-body p-2">
                                 <p class="text-muted small mb-1">Toshiba</p>
                                 <h6 class="card-title small">Galaxy S21 Ultra 5G 128GB Unlocked International Version
@@ -757,7 +804,7 @@
                     <div class="col">
                         <div class="card product-card h-100 border-0 shadow-sm">
                             <a href="./loading.html"><img src="./img/tsp9.png" class="card-img-top" alt="Product"
-                                    loading="lazy"></a>
+                                    loading="lazy" width="210px" height="210px"></a>
                             <div class="card-body p-2">
                                 <p class="text-muted small mb-1">Toshiba</p>
                                 <h6 class="card-title small">Galaxy S21 Ultra 5G 128GB Unlocked International Version
@@ -794,7 +841,7 @@
                     <article class="u-product-card">
                         <figure class="u-product-card__image-wrapper">
                             <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/rfy1.jpg"
-                                    alt="Galaxy S21 Ultra 5G" loading="lazy" /></a>
+                                    alt="Galaxy S21 Ultra 5G" loading="lazy" width="210px" height="210px" /></a>
                         </figure>
                         <div class="u-product-card__info">
                             <div class="u-product-card__brand">TOSHIBA</div>
@@ -810,7 +857,7 @@
                     <article class="u-product-card">
                         <figure class="u-product-card__image-wrapper">
                             <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/rfy2.jpg"
-                                    alt="Galaxy S21 Ultra 5G" loading="lazy" /></a>
+                                    alt="Galaxy S21 Ultra 5G" loading="lazy" width="210px" height="210px" /></a>
                         </figure>
                         <div class="u-product-card__info">
                             <div class="u-product-card__brand">TOSHIBA</div>
@@ -825,7 +872,7 @@
                     <article class="u-product-card">
                         <figure class="u-product-card__image-wrapper">
                             <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/rfy3.jpg"
-                                    alt="Galaxy S21 Ultra 5G" loading="lazy" /></a>
+                                    alt="Galaxy S21 Ultra 5G" loading="lazy" width="210px" height="210px" /></a>
                         </figure>
                         <div class="u-product-card__info">
                             <div class="u-product-card__brand">TOSHIBA</div>
@@ -841,7 +888,7 @@
                     <article class="u-product-card">
                         <figure class="u-product-card__image-wrapper">
                             <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/rfy4.jpg"
-                                    alt="Galaxy S21 Ultra 5G" loading="lazy" /></a>
+                                    alt="Galaxy S21 Ultra 5G" loading="lazy" width="210px" height="210px" /></a>
                         </figure>
                         <div class="u-product-card__info">
                             <div class="u-product-card__brand">TOSHIBA</div>
@@ -856,7 +903,7 @@
                     <article class="u-product-card">
                         <figure class="u-product-card__image-wrapper">
                             <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/rfy5.jpg"
-                                    alt="Galaxy S21 Ultra 5G" loading="lazy" /></a>
+                                    alt="Galaxy S21 Ultra 5G" loading="lazy" width="210px" height="210px" /></a>
                         </figure>
                         <div class="u-product-card__info">
                             <div class="u-product-card__brand">TOSHIBA</div>
@@ -872,7 +919,7 @@
                     <article class="u-product-card">
                         <figure class="u-product-card__image-wrapper">
                             <a href="./loading.html"><img class="u-product-card__image img-fluid" src="./img/rfy6.jpg"
-                                    alt="Galaxy S21 Ultra 5G" loading="lazy" /></a>
+                                    alt="Galaxy S21 Ultra 5G" loading="lazy" width="210px" height="210px" /></a>
                         </figure>
                         <div class="u-product-card__info">
                             <div class="u-product-card__brand">TOSHIBA</div>
@@ -906,7 +953,7 @@
                     <div class="deal-card__inner">
                         <div class="deal-card__image-wrapper">
                             <a href="./loading.html"><img src="./img/cyber.png" alt="Cyber Monday Speaker Deal"
-                                    class="deal-card__image">
+                                    class="deal-card__image" loading="lazy" width="405px" height="250px">
                         </div></a>
                         <div class="deal-card__content text-center">
                             <h3 class="deal-card__title">Cyber Monday - Save $599 On Speaker</h3>
@@ -923,12 +970,12 @@
                     <div class="deal-card__inner position-relative">
                         <div class="deal-card__image-wrapper">
                             <a href="./loading.html"><img src="./img/bgsaleoff.png" alt="Black Friday Sale Banner"
-                                    class="deal-card__image"></a>
+                                    class="deal-card__image" loading="lazy" width="450px" height="450px"></a>
                             <div class="deal-card__banner-text ">
                                 <strong class="deal-card__black-text">Black</strong>
                                 <strong class="deal-card__friday-text">Friday</strong>
                                 <span>FROM SEPTEMBER 08/28/2023</span>
-                                <img src="./img/Vector.png" alt="" width="18" height="18">
+                                <img src="./img/Vector.png" alt="icon_vector" loading="lazy" width="42px" height="49px">
                             </div>
                         </div>
                         <div class="deal-card__content text-center">
@@ -946,7 +993,7 @@
                     <div class="deal-card__inner">
                         <div class="deal-card__image-wrapper">
                             <a href="./loading.html"><img src="./img/smartphone.png" alt="Smartphone Deal"
-                                    class="deal-card__image"></a>
+                                    class="deal-card__image" loading="lazy" width="450px" height="450px" ></a>
                         </div>
                         <div class="deal-card__content text-center">
                             <h3 class="deal-card__title">Hurry Up - Smartphone Only $299</h3>
@@ -1206,7 +1253,7 @@
             <div class="footer__copyright">
                 © 2023 Umino Store. All Rights Reserved.
             </div>
-            
+
             <div class="footer__payments">
                 <svg width="35" height="18" viewBox="0 0 35 18" fill="none" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -1306,9 +1353,9 @@
 
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 
-    <script src="Function.js"></script>
+    <script src="Function.js" defer></script>
 </body>
 
 </html>
