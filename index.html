@@ -40,13 +40,18 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Geostar+Fill&display=swap" rel="stylesheet">
 
-    <!-- Custom CSS (Lazy-loaded) -->
-    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="reponsive.css" media="print" onload="this.media='all'">
+    <!-- Tối ưu: Lazy load main CSS -->
+    <link rel="preload" as="style" href="styles.css" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="styles.css">
+    </noscript>
+
+    <!-- Tối ưu: Lazy load responsive CSS -->
+    <link rel="stylesheet" href="reponsive.css" media="print" onload="this.onload=null;this.media='all'">
+    <noscript>
         <link rel="stylesheet" href="reponsive.css">
     </noscript>
+
 </head>
 
 
@@ -428,7 +433,7 @@
                     <a href="./loading.html" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
                             <picture>
-                                <!-- <source srcset="./img/Category1.webp" type="image/webp"> -->
+
                                 <img src="./img/category1.webp" alt="Macbook/PCs" class="img-fluid" loading="lazy"
                                     width="110px" height="110px">
                             </picture>
@@ -442,7 +447,7 @@
                     <a href="./loading.html" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
                             <picture>
-                                <!-- <source srcset="./img/Category2.webp" type="image/webp"> -->
+
                                 <img src="./img/category2.webp" alt="Macbook/PCs" class="img-fluid" loading="lazy"
                                     width="110px" height="110px">
                             </picture>
@@ -456,7 +461,7 @@
                     <a href="./loading.html" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
                             <picture>
-                                <!-- <source srcset="./img/Category3.webp" type="image/webp"> -->
+
                                 <img src="./img/category3.webp" alt="Macbook/PCs" class="img-fluid" loading="lazy"
                                     width="110px" height="110px">
                             </picture>
@@ -469,7 +474,7 @@
                     <a href="./loading.html" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
                             <picture>
-                                <!-- <source srcset="./img/Category4.webp" type="image/webp"> -->
+
                                 <img src="./img/category4.webp" alt="Macbook/PCs" class="img-fluid" loading="lazy"
                                     width="110px" height="110px">
                             </picture>
@@ -482,7 +487,7 @@
                     <a href="./loading.html" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
                             <picture>
-                                <!-- <source srcset="./img/Category5.webp" type="image/webp"> -->
+
                                 <img src="./img/category5.webp" alt="Macbook/PCs" class="img-fluid" loading="lazy"
                                     width="110px" height="110px">
                             </picture>
@@ -495,7 +500,7 @@
                     <a href="./loading.html" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
                             <picture>
-                                <!-- <source srcset="./img/Category6.webp" type="image/webp"> -->
+
                                 <img src="./img/category6.webp" alt="Macbook/PCs" class="img-fluid" loading="lazy"
                                     width="110px" height="110px">
                             </picture>
@@ -508,7 +513,7 @@
                     <a href="./loading.html" class="u-category__item text-decoration-none">
                         <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
                             <picture>
-                                <!-- <source srcset="./img/category7.webp" type="image/webp"> -->
+
                                 <img src="./img/category7.webp" alt="Macbook/PCs" class="img-fluid" loading="lazy"
                                     width="110px" height="110px">
                             </picture>
@@ -684,7 +689,7 @@
                             Headphone</a>
                     </div>
                     <figure class="promo-banners__image-wrapper ms-md-4 mt-4 mt-md-0 mb-0">
-                        <img src="./img/hp.web" alt="Headphone Promo" class="promo-banners__image img-fluid"
+                        <img src="./img/hp.webp" alt="Headphone Promo" class="promo-banners__image img-fluid"
                             loading="lazy" width="220" height="auto">
                     </figure>
                 </div>
@@ -1023,7 +1028,8 @@
                                 <strong class="deal-card__black-text">Black</strong>
                                 <strong class="deal-card__friday-text">Friday</strong>
                                 <span>FROM SEPTEMBER 08/28/2023</span>
-                                <img src="./img/Vector.webp" alt="icon_vector" loading="lazy" width="42px" height="49px">
+                                <img src="./img/Vector.webp" alt="icon_vector" loading="lazy" width="42px"
+                                    height="49px">
                             </div>
                         </div>
                         <div class="deal-card__content text-center">
