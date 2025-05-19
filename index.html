@@ -67,8 +67,6 @@
     </noscript>
 </head>
 
-
-
 <body>
     <div class="loader"></div>
     <header class="u-header">
@@ -117,13 +115,15 @@
     <div class="u-header__bottom ">
         <div class="container d-flex flex-wrap align-items-center justify-content-between py-3">
             <!-- Hamburger button (Mobile/Tablet only) -->
-            <button class="navbar-toggler u-hamburger" type="submit" style="color: white;">
+            <button class="navbar-toggler u-hamburger" type="button" aria-label="Open navigation menu"
+                style="color: white;">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <!-- Logo -->
             <picture>
                 <source srcset="./img/Logo.webp" type="image/webp">
-                <img src="./img/Logo.png" alt="UMILUX Logo" width="144" height="37" loading="lazy">
+                <img src="./img/Logo.png" alt="UMILUX Logo" width="144" height="37">
             </picture>
 
 
@@ -284,9 +284,13 @@
     </nav>
 
     <!-- Mobile Sidebar -->
-    <div class="u-mobile-menu" role="dialog" aria-modal="true">
+    <div class="u-mobile-menu" role="dialog" aria-modal="true" aria-labelledby="mobileMenuTitle">
+        <!-- Accessible heading (ẩn đi nếu bạn không muốn hiện thị ra giao diện) -->
+        <h2 id="mobileMenuTitle" class="visually-hidden">Main Mobile Navigation Menu</h2>
+
         <div class="u-mobile-menu__content">
-            <button class="u-mobile-menu__close" aria-label="Close menu">&times;</button>
+            <button class="u-mobile-menu__close" aria-label="Close menu" type="button">&times;</button>
+
             <ul class="nav flex-column gap-3 mb-0">
                 <!-- All Departments -->
                 <li class="nav-item dropdown">
@@ -302,7 +306,7 @@
                     </ul>
                 </li>
 
-                <!-- Static Links (có thể thành dropdown sau nếu cần) -->
+                <!-- Static Links -->
                 <li class="nav-item"><a class="nav-link" href="./loading.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="./loading.html">Shop</a></li>
                 <li class="nav-item"><a class="nav-link" href="./loading.html">Product</a></li>
@@ -313,6 +317,7 @@
             </ul>
         </div>
     </div>
+
 
     <!-- Overlay -->
     <div class="u-overlay"></div>
@@ -752,8 +757,8 @@
                                     loading="lazy" width="210" height="210"></a>
                             <div class="card-body p-2">
                                 <p class="text-muted small mb-1">Toshiba</p>
-                                <h6 class="card-title small">Galaxy S21 Ultra 5G 128GB Unlocked International Version
-                                </h6>
+                                <h5 class="card-title small">Galaxy S21 Ultra 5G 128GB Unlocked International Version
+                                </h5>
                                 <div class="mb-1 text-warning small">
                                     ★★★★★
                                 </div>
