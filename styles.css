@@ -1,7 +1,6 @@
 :root {
   /* Typography */
-  --font-family-base: 'General Sans';
-  --font-size-base: 16px;
+  --font-family-base:  'General Sans';
   --font-size-medium: 15px;
   --font-size-small: 14px;
   --font-size-smaller: 12px;
@@ -88,19 +87,11 @@
 }
 @font-face {
   font-family: 'General Sans';
-  src: url('/fonts/GeneralSans-Regular.woff2') format('woff2'),
-       url('/fonts/GeneralSans-Regular.woff') format('woff');
- 
+  src: url('/fonts/general-sans-regular.woff2') format('woff2');
+  font-weight: 600;
   font-style: normal;
-  font-display: swap;
+  font-display: swap;  
 }
-
-body {
-  font-family: var(--font-family-base), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: var(--font-size-base);
-}
-
 /* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
@@ -127,6 +118,11 @@ html {
 }
 
 
+/* ===== Body ===== */
+body {
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-base);
+}
 /* loader */
 .loader {
   position: fixed; 
@@ -602,8 +598,7 @@ html {
 }
 
 .carousel-inner {
-  width: 1410px;
-  height: 450px ;
+  max-width: 1410px;
   margin-inline: auto;
   overflow: hidden;
   position: relative;
@@ -810,10 +805,6 @@ html {
 }
 
 /* transition 2 */
-.u-fade-in {
-  min-height: 30px; 
-}
-
 .u-top-bar__link {
   transition: color 0.3s ease;
 }
@@ -901,14 +892,8 @@ a {
 }
 
 .u-category__icon {
-  width: 130px; 
-  height: 130px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 1 / 1;
-  width: 110px;
-  height: 110px;
+  width: 100px;
+  height: 100px;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
@@ -1024,16 +1009,7 @@ a {
   color: var(--u-color-price-old);
   font-size: var(--font-size-smaller);
 }
-.u-category__icon picture,
-.u-category__icon img {
-  display: block;
-  width: 110px;
-  height: 110px;
-  object-fit: contain;
-}
-.u-category__item {
-  min-height: 110px; 
-}
+
 /* Section: promotional-banners - includes cellphone and headphone promo cards  */
 
 .promo-banners__title {
@@ -1065,9 +1041,6 @@ a {
 
 .promo-banners__image-wrapper {
   flex-shrink: 0;
-  aspect-ratio: 11 / 6;
-  width: 220px;
-  height: 94px;
 }
 
 /* Top Selling Products Section */
@@ -1334,8 +1307,6 @@ a {
   position: absolute;
   left: 170px;
   bottom: 130px;
-  width: 42px;
-  height: 49px;
 }
 
 .deal-card__black-text {
