@@ -899,10 +899,6 @@ a {
   src: url('General Sans.woff2') format('woff2');
   font-display: swap;
 }
-.u-category{
-  width: 1410px;
-  height: 172px;
-}
 
 .u-category__icon img {
   width: 110px;
