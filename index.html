@@ -20,6 +20,8 @@
     <!-- Preload hình ảnh LCP và logo -->
     <link rel="preload" as="image" href="./img/Logo.webp" type="image/webp">
     <link rel="preload" as="image" href="./img/sld1.webp" type="image/webp" fetchpriority="high">
+    <link rel="preload" as="image" href="./img/sld2.webp" type="image/webp" fetchpriority="high">
+    <link rel="preload" as="image" href="./img/sld3.webp" type="image/webp" fetchpriority="high">
     <link rel="preload" as="image" href="./img/cp.webp" type="image/webp">
     <link rel="preload" as="image" href="./img/hp.webp" type="image/webp">
     <link rel="preload" as="image" href="./img/tsp1.webp" type="image/webp">
@@ -326,115 +328,119 @@
                 data-bs-ride="carousel" data-bs-interval="5000">
 
                 <!-- Slides -->
-                <div class="carousel-inner">
-                    <!-- Slide 1 -->
-                    <div class="carousel-item active">
-                        <div class="u-hero-slide">
-                            <div class="u-hero-slide__left">
-                                <picture>
-                                    <source srcset="./img/sld1.webp" type="image/webp">
-                                    <img src="./img/sld1.webp" alt="Background Left" class="u-hero-slide__left-img"
-                                        width="705" height="450" />
-                                </picture>
-                            </div>
-                            <div class="u-hero-slide__content">
-                                <h2 class="fw-bold mb-1">Speaker<br>Bluetooth SoundCore</h2>
-                                <p class="text-white-50 mt-2 mb-4">Limited Time: Online Only!</p>
-                                <a href="./loading.html" class="btn btn-light rounded-pill px-4 py-2 fw-semibold">Shop
-                                    Now</a>
-                            </div>
-                            <div class="u-hero-slide__right">
-                                <picture>
-                                    <source srcset="./img/sld2.webp" type="image/webp">
-                                    <img src="./img/sld2.webp" alt="Product" class="u-hero-slide__product" width="705"
-                                        height="450" />
-                                </picture>
+                <div id="u-hero-carousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <div class="u-hero-slide">
+                                <div class="u-hero-slide__left">
+                                    <picture>
+                                        <source srcset="./img/sld1.webp" type="image/webp">
+                                        <img src="./img/sld1.webp" alt="Background Left" class="u-hero-slide__left-img"
+                                            width="705" height="450" />
+                                    </picture>
+                                </div>
+                                <div class="u-hero-slide__content">
+                                    <h2 class="fw-bold mb-1">Speaker<br>Bluetooth SoundCore</h2>
+                                    <p class="text-white-50 mt-2 mb-4">Limited Time: Online Only!</p>
+                                    <a href="./loading.html" class="btn btn-light rounded-pill px-4 py-2 fw-semibold">
+                                        Shop Now
+                                    </a>
+                                </div>
+                                <div class="u-hero-slide__right">
+                                    <picture>
+                                        <source srcset="./img/sld2.webp" type="image/webp">
+                                        <img src="./img/sld2.webp" alt="Product" class="u-hero-slide__product"
+                                            width="705" height="450" />
+                                    </picture>
+                                </div>
                             </div>
                         </div>
+
+                        <!-- Slide 2 -->
+                        <div class="carousel-item">
+                            <div class="u-hero-slide">
+                                <div class="u-hero-slide__left">
+                                    <picture>
+                                        <source srcset="./img/sld1.webp" type="image/webp">
+                                        <img src="./img/sld1.webp" alt="Background Left" class="u-hero-slide__left-img"
+                                            width="705" height="450" />
+                                    </picture>
+                                </div>
+                                <div class="u-hero-slide__content">
+                                    <h2 class="fw-bold mb-1">Speaker</h2>
+                                    <h2 class="fw-bold">Bluetooth SoundCore</h2>
+                                    <p class="text-white-50 mt-2 mb-4">Limited Time: Online Only!</p>
+                                    <a href="./loading.html" class="btn btn-light rounded-pill px-4 py-2 fw-semibold">
+                                        Shop Now
+                                    </a>
+                                </div>
+                                <div class="u-hero-slide__right">
+                                    <picture>
+                                        <source srcset="./img/sld2.webp" type="image/webp">
+                                        <img src="./img/sld2.webp" alt="Product" class="u-hero-slide__product"
+                                            width="705" height="450" />
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="carousel-item">
+                            <div class="u-hero-slide">
+                                <div class="u-hero-slide__left">
+                                    <picture>
+                                        <source srcset="./img/sld1.webp" type="image/webp">
+                                        <img src="./img/sld1.webp" alt="Background Left" class="u-hero-slide__left-img"
+                                            width="705" height="450" />
+                                    </picture>
+                                </div>
+                                <div class="u-hero-slide__content">
+                                    <h2 class="fw-bold mb-1">Speaker</h2>
+                                    <h2 class="fw-bold">Bluetooth SoundCore</h2>
+                                    <p class="text-white-50 mt-2 mb-4">Limited Time: Online Only!</p>
+                                    <a href="./loading.html" class="btn btn-light rounded-pill px-4 py-2 fw-semibold">
+                                        Shop Now
+                                    </a>
+                                </div>
+                                <div class="u-hero-slide__right">
+                                    <picture>
+                                        <source srcset="./img/sld2.webp" type="image/webp">
+                                        <img src="./img/sld2.webp" alt="Product" class="u-hero-slide__product"
+                                            width="705" height="450" />
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <!-- Slide 2 -->
-                    <div class="carousel-item">
-                        <div class="u-hero-slide">
-                            <div class="u-hero-slide__left">
-                                <picture>
-                                    <source srcset="./img/sld1.webp" type="image/webp">
-                                    <img src="./img/sld1.webp" alt="Background Left" class="u-hero-slide__left-img"
-                                        width="705" height="450" />
-                                </picture>
-                            </div>
-                            <div class="u-hero-slide__content">
-                                <h2 class="fw-bold mb-1">Speaker</h2>
-                                <h2 class="fw-bold">Bluetooth SoundCore</h2>
-                                <p class="text-white-50 mt-2 mb-4">Limited Time: Online Only!</p>
-                                <a href="./loading.html" class="btn btn-light rounded-pill px-4 py-2 fw-semibold">Shop
-                                    Now</a>
-                            </div>
-                            <div class="u-hero-slide__right">
-                                <picture>
-                                    <source srcset="./img/sld2.webp" type="image/webp">
-                                    <img src="./img/sld2.webp" alt="Product" class="u-hero-slide__product" width="705"
-                                        height="450" />
-                                </picture>
-                            </div>
-                        </div>
+                    <!-- Custom Indicators -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#u-hero-slider" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#u-hero-slider" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#u-hero-slider" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
                     </div>
 
-                    <!-- Slide 3 -->
-                    <div class="carousel-item">
-                        <div class="u-hero-slide">
-                            <div class="u-hero-slide__left">
-                                <picture>
-                                    <source srcset="./img/sld1.webp" type="image/webp">
-                                    <img src="./img/sld1.webp" alt="Background Left" class="u-hero-slide__left-img"
-                                        width="705" height="450" />
-                                </picture>
-                            </div>
-                            <div class="u-hero-slide__content">
-                                <h2 class="fw-bold mb-1">Speaker</h2>
-                                <h2 class="fw-bold">Bluetooth SoundCore</h2>
-                                <p class="text-white-50 mt-2 mb-4">Limited Time: Online Only!</p>
-                                <a href="./loading.html" class="btn btn-light rounded-pill px-4 py-2 fw-semibold">Shop
-                                    Now</a>
-                            </div>
-                            <div class="u-hero-slide__right">
-                                <picture>
-                                    <source srcset="./img/sld2.webp" type="image/webp">
-                                    <img src="./img/sld2.webp" alt="Product" class="u-hero-slide__product" width="705"
-                                        height="450" />
-                                </picture>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Prev/Next Buttons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#u-hero-slider"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#u-hero-slider"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-
-                <!-- Indicators -->
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#u-hero-slider" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#u-hero-slider" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#u-hero-slider" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
-
-                <!-- Controls -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#u-hero-slider"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#u-hero-slider"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-
             </div>
         </div>
     </div>
-
-
 
 
     <!-- Categories Section -->
