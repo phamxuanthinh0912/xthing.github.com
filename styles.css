@@ -809,6 +809,10 @@ html {
 }
 
 /* transition 2 */
+.u-fade-in {
+  min-height: 30px; 
+}
+
 .u-top-bar__link {
   transition: color 0.3s ease;
 }
@@ -896,6 +900,11 @@ a {
 }
 
 .u-category__icon {
+  width: 130px; 
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   aspect-ratio: 1 / 1;
   width: 110px;
   height: 110px;
@@ -1017,8 +1026,8 @@ a {
 .u-category__icon picture,
 .u-category__icon img {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 110px;
+  height: 110px;
   object-fit: contain;
 }
 .u-category__item {
