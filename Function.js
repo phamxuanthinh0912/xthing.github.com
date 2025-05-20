@@ -79,3 +79,8 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 // slide 
+ window.addEventListener("load", function () {
+    document.querySelectorAll(".u-slide-in-left").forEach(el => {
+      el.classList.add("active");
+    });
+  });
