@@ -639,7 +639,6 @@ body {
   top: 50%;
   left: 200px;
   transform: translateY(-50%);
-  max-width: 420px;
   color: var(--color-white);
 }
 
