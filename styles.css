@@ -599,20 +599,13 @@ body {
 
 /* slider  */
 /* Wrapper & Carousel */
-@font-face {
-  font-family: '--font-family-base';
-  src: url('--font-family-base.woff2') format('woff2');
-  font-display: swap;
-}
 .u-hero-wrapper {
   width: 100%;
   padding-inline: 15px;
-  min-height: 450px ;
 }
 
 .carousel-inner {
   max-width: 1410px;
-  min-height: 450px;
   margin-inline: auto;
   overflow: hidden;
   position: relative;
