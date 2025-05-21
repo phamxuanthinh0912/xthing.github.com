@@ -453,6 +453,7 @@ nav .u-navbar {
   width: 24px;
 }
 
+
 .u-main-nav__recent-text {
   font-weight: 500;
 }
@@ -656,7 +657,7 @@ nav .u-navbar {
 
 /* slider  */
 /* Wrapper & Carousel */
- .u-hero-slider {
+ #u-hero-slider {
     aspect-ratio: 1410 / 450;
     min-height: 450px;
   }
