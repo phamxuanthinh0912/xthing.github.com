@@ -86,16 +86,11 @@
   --z-index-modal: 2000;
   --z-index-Language: 3000;
 }
-@font-face {
-  font-family: 'bootstrap-icons';
-  src: url('path/to/bootstrap-icons.woff2') format('woff2');
-  font-display: optional;
-}
-
 
 @font-face {
   font-family: 'General Sans', 'sans-serif';
   src: url('/fonts/general-sans-regular.woff2') format('woff2');
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
@@ -158,6 +153,7 @@ body {
   width: 50px;
   height: 50px;
   z-index: 9999;
+
   background: transparent;
   transition: opacity 0.5s ease;
   opacity: 1;
@@ -414,6 +410,7 @@ body {
 @font-face {
   font-family: 'General Sans', sans-serif;
   src: url('/fonts/general-sans-regular.woff2') format('woff2');
+  font-weight: 600;
   font-style: normal;
   font-display: optional; /* Giúp tránh nhảy chữ */
 }
@@ -448,11 +445,6 @@ nav .u-navbar {
   display: flex;
   align-items: center;
 }
-.u-main-nav__right .bi{
-  display: inline-block;
-  width: 24px;
-}
-
 
 .u-main-nav__recent-text {
   font-weight: 500;
@@ -657,11 +649,9 @@ nav .u-navbar {
 
 /* slider  */
 /* Wrapper & Carousel */
- #u-hero-slider {
-    aspect-ratio: 1410 / 450;
-    min-height: 450px;
-  }
-
+#u-hero-slider {
+  min-height: 450px;
+}
 .u-hero-slide__left-img,
 .u-hero-slide__product {
   aspect-ratio: 750 / 450;
