@@ -644,7 +644,7 @@ nav .u-navbar {
 .u-hero-slide__product {
   aspect-ratio: 705 / 450;
   width: 100%;
-  height: auto;
+  height: 450px;
   display: block;
 }
 
