@@ -103,7 +103,7 @@ html {
 .u-fade-in {
   opacity: 0;
   transition: opacity 0.5s ease;
-  min-height: 100px;
+  min-height: 50px;
 }
 
 .u-fade-in.active {
