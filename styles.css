@@ -104,10 +104,9 @@ html {
 .u-slide-in-left {
   min-height: 50px;
   opacity: 0;
-  transform: translateY(30px);
   transition: opacity 1s ease-out, transform 1s ease-out;
   overflow: hidden;
-    will-change: transform, opacity;
+  will-change: transform, opacity;
 }
 
 .u-fade-in.active {
@@ -124,6 +123,7 @@ html {
 body {
   font-size: var(--font-size-base);
   font-family: var(--font-family-base);
+    min-height: 100vh;
 }
 
 /* loader */
@@ -609,6 +609,11 @@ body {
 
 /* slider  */
 /* Wrapper & Carousel */
+.container-xl .u-slide-in-left {
+  min-height: 500px; 
+}
+
+
 .u-hero-wrapper {
   width: 100%;
   padding-inline: 15px;

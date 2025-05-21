@@ -26,17 +26,16 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-
+// loader
 window.addEventListener("load", function () {
-  // Loader ẩn
   document.querySelector('.loader').style.display = 'none';
-  document.querySelector('.content').style.display = 'block';
+  document.querySelector('.content').classList.add('active');
 
-  // Kích hoạt các animation viewport
   document.querySelectorAll(".u-slide-in-left").forEach(el => {
     el.classList.add("active");
   });
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
   // Menu mobile toggle
