@@ -625,6 +625,7 @@ body {
   display: flex;
   width: 100%;
   aspect-ratio: 1410 / 450;
+  min-height: 450px;
   overflow: hidden;
 }
 
