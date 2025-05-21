@@ -99,11 +99,15 @@
 html {
   scroll-behavior: smooth;
 }
-.u-fade-in,
-.u-slide-in-left {
-  opacity: 1 !important;
-  transform: none !important;
-   min-height: 60px;
+
+.u-fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  min-height: 100px;
+}
+
+.u-fade-in.active {
+  opacity: 1;
 }
 
 
@@ -121,12 +125,16 @@ html {
 
 .u-slide-in-left {
   opacity: 0;
-  animation: none;
+  transform: translateX(-50px);
+  min-height: 450px; 
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .u-slide-in-left.active {
-  animation: fadeSlideIn 0.8s ease-out forwards;
+  opacity: 1;
+  transform: none;
 }
+
 
 /* ===== Body ===== */
 body {
@@ -139,7 +147,8 @@ body {
 
 .loader {
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   z-index: 9999;
@@ -393,7 +402,7 @@ body {
 
 /* nav bar */
 nav .u-navbar {
-   min-height: 50px;
+  min-height: 50px;
 }
 
 .u-main-nav {
@@ -624,8 +633,8 @@ nav .u-navbar {
 
 /* slider  */
 /* Wrapper & Carousel */
-.container-xl .u-slide-in-left {
-  min-height: 500px;
+.u-slide-in-left {
+  min-height: 450px;
 }
 
 
