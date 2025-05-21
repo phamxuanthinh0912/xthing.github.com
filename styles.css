@@ -1,6 +1,7 @@
 :root {
   /* Typography */
-  --font-family-base:  'General Sans'
+  --font-family-base:  'General Sans';
+  --fon-size-slide: 40px;
   --font-size-medium: 15px;
   --font-size-small: 14px;
   --font-size-smaller: 12px;
@@ -637,6 +638,11 @@ body {
   transform: translateY(-50%);
   max-width: 420px;
   color: var(--color-white);
+}
+
+.u-hero-slide__content {
+  font-size: var(--fon-size-slide);
+  font-weight: var(--font-weight-bold);
 }
 
 .u-hero-slide__right {

@@ -28,24 +28,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // loader
-// window.onload = function () {
+window.onload = function () {
 
-//   document.querySelector('.loader').style.display = 'none';
+  document.querySelector('.loader').style.display = 'none';
 
-//   document.querySelector('.content').style.display = 'block';
-// };
+  document.querySelector('.content').style.display = 'block';
+};
 
 // Smooth Scrolling
+const elements = document.querySelectorAll('.u-fade-in, .u-slide-in-left');
 
-// const elements = document.querySelectorAll('.u-fade-in, .u-slide-in-left');
-
-// const observer = new IntersectionObserver((entries) => {
-//   entries.forEach(entry => {
-//     if (entry.isIntersecting) {
-//       entry.target.classList.add('active');
-//     }
-//   });
-// }, { threshold: 0.1 });
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    }
+  });
+}, { threshold: 0.1 });
 
 elements.forEach(el => observer.observe(el));
 // menu 
@@ -80,8 +79,8 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 // slide 
-//  window.addEventListener("load", function () {
-//     document.querySelectorAll(".u-slide-in-left").forEach(el => {
-//       el.classList.add("active");
-//     });
-//   });
+ window.addEventListener("load", function () {
+    document.querySelectorAll(".u-slide-in-left").forEach(el => {
+      el.classList.add("active");
+    });
+  });
