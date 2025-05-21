@@ -103,6 +103,7 @@ html {
 .u-slide-in-left {
   opacity: 1 !important;
   transform: none !important;
+   min-height: 60px;
 }
 
 
@@ -135,14 +136,22 @@ body {
 
 
 /* loader */
+
 .loader {
   position: fixed;
   top: 0; left: 0;
   width: 100vw;
   height: 100vh;
   z-index: 9999;
-  pointer-events: none;
   background-color: white;
+  transition: opacity 0.5s ease;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.loader.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 
@@ -383,6 +392,9 @@ body {
 }
 
 /* nav bar */
+nav .u-navbar {
+   min-height: 50px;
+}
 
 .u-main-nav {
   background-color: var(--color-white);
@@ -702,7 +714,7 @@ body {
 }
 
 .carousel-control-prev {
-  left: 60px;
+  left: 50px;
 }
 
 .carousel-control-next {

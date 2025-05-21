@@ -27,16 +27,22 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 window.addEventListener("load", function () {
-  // loader 
   const loader = document.querySelector('.loader');
-  if (loader) loader.remove();
   const content = document.querySelector('.content');
-  if (content) content.classList.add('active');
+
+  if (loader) {
+    loader.classList.add('hidden'); // dùng transition
+    setTimeout(() => loader.style.display = 'none', 500); // ẩn hoàn toàn sau khi fade out
+  }
+
+  if (content) {
+    content.classList.add('active'); // hiện nội dung
+  }
+
   document.querySelectorAll(".u-slide-in-left").forEach(el => {
     el.classList.add("active");
   });
 });
-
 
 
 document.addEventListener("DOMContentLoaded", function () {
