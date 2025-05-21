@@ -26,15 +26,17 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-// loader
 window.addEventListener("load", function () {
-  document.querySelector('.loader').style.display = 'none';
-  document.querySelector('.content').classList.add('active');
-
+  // loader 
+  const loader = document.querySelector('.loader');
+  if (loader) loader.remove();
+  const content = document.querySelector('.content');
+  if (content) content.classList.add('active');
   document.querySelectorAll(".u-slide-in-left").forEach(el => {
     el.classList.add("active");
   });
 });
+
 
 
 document.addEventListener("DOMContentLoaded", function () {

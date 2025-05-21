@@ -100,30 +100,32 @@ html {
   scroll-behavior: smooth;
 }
 
-.u-fade-in,
-.u-slide-in-left {
-  min-height: 50px;
-  opacity: 0;
-  transition: opacity 1s ease-out, transform 1s ease-out;
-  overflow: hidden;
-  will-change: transform, opacity;
+@keyframes fadeSlideIn {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
-.u-fade-in.active {
-  opacity: 1;
-  transform: translateY(0);
+.u-slide-in-left {
+  opacity: 0;
+  animation: none;
 }
 
 .u-slide-in-left.active {
-  opacity: 1;
-  transform: translateX(0);
+  animation: fadeSlideIn 0.8s ease-out forwards;
 }
 
 /* ===== Body ===== */
 body {
   font-size: var(--font-size-base);
   font-family: var(--font-family-base);
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 /* loader */
@@ -610,7 +612,7 @@ body {
 /* slider  */
 /* Wrapper & Carousel */
 .container-xl .u-slide-in-left {
-  min-height: 500px; 
+  min-height: 500px;
 }
 
 
@@ -636,7 +638,7 @@ body {
 }
 
 
-.u-hero-slide__left{
+.u-hero-slide__left {
   width: 750px;
   height: 450px;
   position: relative;
@@ -926,7 +928,8 @@ body {
   transform: scale(0.95);
 }
 
-button, a {
+button,
+a {
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
