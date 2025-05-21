@@ -103,7 +103,7 @@ html {
 .u-fade-in {
   opacity: 0;
   transition: opacity 0.5s ease;
-  min-height: 50px;
+  min-height: 100px;
 }
 
 .u-fade-in.active {
@@ -157,7 +157,7 @@ body {
   background: transparent;
   transition: opacity 0.5s ease;
   opacity: 1;
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 .spinner {
@@ -171,8 +171,13 @@ body {
 }
 
 @keyframes spin {
-  0%   { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .loader.hidden {
@@ -183,9 +188,13 @@ body {
 .content {
   transition: opacity 0.3s ease;
   opacity: 0;
+  visibility: hidden;
+  min-height: 100vh;
 }
+
 .content.active {
   opacity: 1;
+  visibility: visible;
 }
 
 
@@ -412,8 +421,10 @@ body {
   src: url('/fonts/general-sans-regular.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
-  font-display: optional; /* Giúp tránh nhảy chữ */
+  font-display: optional;
+  /* Giúp tránh nhảy chữ */
 }
+
 nav .u-navbar {
   min-height: 50px;
 }
@@ -454,6 +465,7 @@ nav .u-navbar {
 .dropdown-menu {
   min-height: 40px;
 }
+
 .u-main-nav .dropdown-menu {
   font-size: var(--font-size-small);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -652,12 +664,14 @@ nav .u-navbar {
 #u-hero-slider {
   min-height: 450px;
 }
+
 .u-hero-slide__left-img,
 .u-hero-slide__product {
-  aspect-ratio: 750 / 450;
+  /* aspect-ratio: 750 / 450; */
   width: 100%;
   height: 450px;
   display: block;
+  object-fit: cover;
 }
 
 .u-slide-in-left {
@@ -967,6 +981,7 @@ button,
 a {
   transition: color 0.3s ease, transform 0.3s ease;
 }
+
 img {
   display: block;
   aspect-ratio: attr(width) / attr(height);
