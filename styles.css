@@ -1649,15 +1649,3 @@ a {
   align-items: center;
   gap: var(--space-xs);
 }
-
-.d-block {
-  display: block;
-}
-
-.w-full {
-  width: 100%;
-}
-
-.h-full {
-  height: 100%;
-}
