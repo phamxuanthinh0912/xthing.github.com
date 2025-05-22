@@ -88,14 +88,6 @@
   --z-index-Language: 3000;
 }
 
-@font-face {
-  font-family: 'General Sans';
-  src: url('/fonts/general-sans-regular.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
 /* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
@@ -419,14 +411,6 @@ body {
 }
 
 /* nav bar */
-@font-face {
-  font-family: 'General Sans';
-  src: url('/fonts/general-sans-regular.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
 
 nav .u-navbar {
   /* min-height: 50px; */
@@ -1833,15 +1817,47 @@ nav.u-navbar.u-fade-in.active {
   opacity: 1;
 }
 
-/* 4. Fix shift do font web icon load sau */
-@font-face {
-  font-family: 'Bootstrap Icons';
-  src: url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff2') format('woff2');
-  font-display: swap;
-}
-
-/* 5. Fix shift toàn thân body do chưa có nội dung */
 body {
   min-height: 100vh;
   overflow-x: hidden;
+}
+
+@font-face {
+    font-family: 'GeneralSans';
+    src: url('../fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Regular.woff2') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GeneralSans';
+    src: url('../fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Bold.woff2') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GeneralSans';
+    src: url('../fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Italic.woff2') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GeneralSans';
+    src: url('../fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-BoldItalic.woff2') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Geostar Fill";
+    src: url(../fonts/Geostar_Fill/GeostarFill-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
