@@ -18,7 +18,7 @@
 
     <!-- Preload hình ảnh LCP và logo -->
 
-    <link rel="preload" as="image" href="./img/Logo.png" type="image/png" fetchpriority="high">
+    <link rel="preload" as="image" href="./img/Logo.webp" type="image/png" fetchpriority="high">
     <link rel="preload" as="image" href="./img/sld2.webp" fetchpriority="high" type="image/webp">
 
     <!-- Font Awesome -->
@@ -57,7 +57,6 @@
     <noscript>
         <link rel="stylesheet" href="reponsive.css">
     </noscript>
-    <link rel="preload" as="image" href="./img/sld2.webp" type="image/webp" fetchpriority="high">
 </head>
 
 <body>
@@ -119,7 +118,8 @@
             <!-- Logo -->
             <picture>
                 <source srcset="./img/Logo.webp" type="image/webp">
-                <img src="./img/Logo.png" alt="UMILUX Logo" width="144" height="37">
+                <img src="./img/Logo.png" alt="UMILUX Logo" width="144" height="37" fetchpriority="high"
+                    decoding="async">
             </picture>
 
 
