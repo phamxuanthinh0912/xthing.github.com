@@ -685,6 +685,7 @@ nav.u-navbar.u-fade-in {
 .u-hero-wrapper {
   width: 100%;
   padding-inline: 15px;
+  min-height: 500px
 }
 
 .carousel-inner {
@@ -1862,4 +1863,9 @@ body {
   font-weight: bold;
   font-style: italic;
   font-display: swap;
+}
+.u-no-animation{
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
 }
