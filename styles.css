@@ -658,23 +658,25 @@ nav.u-navbar.u-fade-in {
 #u-hero-slider {
   min-height: 450px;
 }
-.u-hero-slide{
+
+.u-hero-slide {
   min-height: 450px;
 }
 
 .u-hero-slide__left-img,
 .u-hero-slide__product {
-  /* aspect-ratio: 750 / 450; */
   width: 100%;
   max-height: 450px;
   display: block;
   object-fit: cover;
+  aspect-ratio: 750 / 450;
 }
 
 .u-hero-slide__product {
   animation: none !important;
   transition: none !important;
 }
+
 
 .u-slide-in-left {
   min-height: 450px;
@@ -1864,20 +1866,23 @@ body {
   font-style: italic;
   font-display: swap;
 }
-.u-no-animation{
+
+.u-no-animation {
   opacity: 1 !important;
   transform: none !important;
   transition: none !important;
 }
+
 @font-face {
   font-family: 'bootstrap-icons';
   src: url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff2') format('woff2');
   font-display: swap;
 }
+
 .content {
   opacity: 0;
   visibility: hidden;
-  min-height: 100vh; 
+  min-height: 100vh;
 }
 
 .content.active {
