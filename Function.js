@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // $
+  // $ currency
   const currencyButton = document.getElementById('currencyDropdown');
   const currencyMenu = document.querySelector('#currencyDropdown + .dropdown-menu');
 
@@ -24,30 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
-});
 
-// loader
-window.addEventListener("load", function () {
-  const loader = document.querySelector('.loader');
-  const content = document.querySelector('.content');
-
-  if (loader) {
-    // Giữ spinner ít nhất 1 giây trước khi ẩn
-    setTimeout(() => {
-      loader.classList.add('hidden');
-      setTimeout(() => {
-        loader.style.display = 'none';
-      }, 300);
-    }, 300);
-  }
-
-  if (content) {
-    content.classList.add('active');             // Hiện nội dung chính
-  }
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
   // Menu mobile toggle
   const hamburger = document.querySelector('.u-hamburger');
   const mobileMenu = document.querySelector('.u-mobile-menu');
@@ -77,9 +54,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Scroll-based animation
-  const elements = document.querySelectorAll('.u-fade-in, .u-slide-in-left');
+  // Scroll-based animation with immediate activation for LCP
+  const heroSection = document.querySelector(".u-slide-in-left");
+  if (heroSection) {
+    heroSection.classList.add("active");
+  }
 
+  const elements = document.querySelectorAll('.u-fade-in, .u-slide-in-left');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -88,5 +69,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }, { threshold: 0.1 });
 
-  elements.forEach(el => observer.observe(el));
+  elements.forEach(el => {
+    if (el !== heroSection) observer.observe(el);
+  });
+});
+
+
+// loader
+window.addEventListener("load", function () {
+  const loader = document.querySelector('.loader');
+  const content = document.querySelector('.content');
+
+  if (loader) {
+    // Giữ spinner ít nhất 1 giây trước khi ẩn
+    setTimeout(() => {
+      loader.classList.add('hidden');
+      setTimeout(() => {
+        loader.style.display = 'none';
+      }, 300);
+    }, 300);
+  }
+
+  if (content) {
+    content.classList.add('active');
+  }
 });
