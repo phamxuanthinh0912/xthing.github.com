@@ -34,11 +34,11 @@ window.addEventListener("load", function () {
   if (loader) {
     // Giữ spinner ít nhất 1 giây trước khi ẩn
     setTimeout(() => {
-      loader.classList.add('hidden');             // Bắt đầu fade out (0.5s)
+      loader.classList.add('hidden');
       setTimeout(() => {
-        loader.style.display = 'none';           // Ẩn hoàn toàn sau fade out
-      }, 500);
-    }, 1000);
+        loader.style.display = 'none';
+      }, 300);
+    }, 300);
   }
 
   if (content) {
