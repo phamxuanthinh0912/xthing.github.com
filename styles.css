@@ -296,11 +296,13 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  min-height: 90px;
 }
 
 .u-logo img {
-  max-height: 52px;
-  max-width: 100%;
+  width: 144px;
+  height: 37px;
+  display: block;
 }
 
 /* ===== Component: Search Bar ===== */
@@ -654,6 +656,9 @@ nav.u-navbar.u-fade-in {
 /* slider  */
 /* Wrapper & Carousel */
 #u-hero-slider {
+  min-height: 450px;
+}
+.u-hero-slide{
   min-height: 450px;
 }
 
@@ -1784,6 +1789,7 @@ img {
   opacity: 1;
   position: fixed;
 }
+
 /* === CLS FIX toàn diện === */
 
 /* 1. Giữ layout ổn định cho navbar đang bị shift */
@@ -1823,34 +1829,33 @@ body {
 }
 
 @font-face {
-    font-family: 'GeneralSans';
-    src: url('../fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Regular.woff2') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'GeneralSans';
+  src: url('../fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Regular.woff2') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'GeneralSans';
-    src: url('../fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Bold.woff2') format('opentype');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'GeneralSans';
+  src: url('../fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Bold.woff2') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'GeneralSans';
-    src: url('../fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Italic.woff2') format('opentype');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
+  font-family: 'GeneralSans';
+  src: url('../fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Italic.woff2') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'GeneralSans';
-    src: url('../fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-BoldItalic.woff2') format('opentype');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
+  font-family: 'GeneralSans';
+  src: url('../fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-BoldItalic.woff2') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
 }
-
