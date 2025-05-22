@@ -119,10 +119,11 @@ html {
 .u-slide-in-left {
   opacity: 0;
   transform: translateX(-50px);
-  min-height: 450px;
+  min-height: 500px;
   /* transition: opacity 0.5s ease, transform 0.5s ease; */
   transition: all 0.5s ease;
 }
+
 
 .u-slide-in-left.active {
   opacity: 1;
@@ -666,7 +667,7 @@ nav.u-navbar.u-fade-in {
 .u-hero-slide__product {
   /* aspect-ratio: 750 / 450; */
   width: 100%;
-  height: 450px;
+  max-height: 450px;
   display: block;
   object-fit: cover;
 }
@@ -1782,6 +1783,9 @@ img {
   opacity: 0;
   transition: opacity 0.5s ease;
   position: absolute;
+  min-height: 100px;
+  height: 100px;
+  transition: opacity 0.5s ease;
 }
 
 .loader.active {
