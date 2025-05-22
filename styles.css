@@ -676,7 +676,7 @@ nav.u-navbar.u-fade-in {
   height: 450px;
   aspect-ratio: 750 / 450;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   animation: none !important;
   transition: none !important;
 }
