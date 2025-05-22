@@ -420,7 +420,7 @@ body {
 /* nav bar */
 @font-face {
   font-family: 'General Sans';
-  src: url('/fonts/general-sans-regular.woff2') format('woff2');
+  src: url('/fonts/generalSans_Complete.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
   font-display: optional;
