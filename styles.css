@@ -1691,6 +1691,7 @@ img {
 .footer__icon-circle:hover:nth-child(1) {
   background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
   fill: var(--color-white);
+  /* Nếu icon là SVG inline */
   transition: background 0.3s ease, color 0.3s ease, fill 0.3s ease;
 }
 
@@ -1772,7 +1773,30 @@ img {
 }
 
 
-/* Fix CLS */
+/* Fix CLS cho layout shift lớn */
 .container-xl.my-4 {
   min-height: 500px;
+}
+
+
+/* === CLS FIX bổ sung === */
+
+/* Tránh layout shift tại phần Recently Viewed Products */
+.u-main-nav__right {
+  min-height: 32px;
+  white-space: nowrap;
+}
+
+/* Loader không gây shift khi ẩn đi */
+.loader {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  position: absolute;
+}
+
+.loader.active {
+  visibility: visible;
+  opacity: 1;
+  position: fixed;
 }
