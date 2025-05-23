@@ -15,6 +15,13 @@
     <link rel="preload" as="font"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff2" type="font/woff2"
         crossorigin="anonymous">
+    <!-- Swiper CSS (tối ưu preload và fallback) -->
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    </noscript>
+
 
     <!-- Preload hình ảnh LCP và logo -->
     <link rel="preload" as="image" href="./img/Logo.webp" type="image/webp" fetchpriority="high">
@@ -255,7 +262,11 @@
 
                 <!-- Right: Recently Viewed -->
                 <div class="u-main-nav__right d-flex align-items-center gap-2 mt-2 mt-lg-0">
-                    <i class="bi bi-clock"></i>
+                    <picture>
+                        <source srcset="./img/oclock.webp" type="image/webp">
+                        <img src="./img/oclock.webp" alt="icon oclock" width="22" height="22" fetchpriority="high"
+                            decoding="async" loading="eager" />
+                    </picture>
                     <span class="u-main-nav__recent-text">Recently Viewed Products</span>
                 </div>
             </div>
@@ -297,127 +308,126 @@
 
         <div class="container-xl my-4  u-no-animation">
             <div class="u-slide-in-left">
-                <div id="u-hero-slider" class="carousel slide rounded-4 overflow-hidden position-relative"
-                    data-bs-ride="carousel" data-bs-interval="5000">
+                <div id="u-hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
 
                     <!-- Slides -->
                     <div class="u-hero-wrapper">
-                        <div id="u-hero-carousel" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
+                        <div class="carousel-inner rounded-4 ">
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active">
+                                <div class="u-hero-slide">
+                                    <div class="u-hero-slide__left">
+                                        <picture>
+                                            <source srcset="./img/sld1.webp" type="image/webp">
+                                            <img src="./img/sld1.webp" alt="Background Left"
+                                                class="u-hero-slide__left-img" width="750" height="450"
+                                                fetchpriority="high" decoding="async" loading="eager" />
+                                        </picture>
+                                    </div>
+                                    <div class="u-hero-slide__content">
+                                        <p class="fw-bold mb-1">Speaker<br>Bluetooth SoundCore</p>
+                                        <p class="text-white-50 mt-2 mb-4 fw-bold" style="font-size: 20px;">
+                                            Limited Time: Online Only!</p>
+                                        <a href="./loading.html"
+                                            class="btn btn-light rounded-pill px-4 py-2 fw-semibold">Shop
+                                            Now</a>
+                                    </div>
+                                    <div class="u-hero-slide__right">
+                                        <picture>
+                                            <source srcset="./img/sld2.webp" type="image/webp">
+                                            <img src="./img/sld2.webp" alt="Product" class="u-hero-slide__product"
+                                                width="750" height="450" fetchpriority="high" decoding="async"
+                                                loading="eager" />
+                                        </picture>
 
-                                <!-- Slide 1 -->
-                                <div class="carousel-item active">
-                                    <div class="u-hero-slide">
-                                        <div class="u-hero-slide__left">
-                                            <picture>
-                                                <source srcset="./img/sld1.webp" type="image/webp">
-                                                <img src="./img/sld1.webp" alt="Background Left"
-                                                    class="u-hero-slide__left-img" width="750" height="450" />
-                                            </picture>
-                                        </div>
-                                        <div class="u-hero-slide__content">
-                                            <p class="fw-bold mb-1">Speaker<br>Bluetooth SoundCore</p>
-                                            <p class="text-white-50 mt-2 mb-4 fw-bold" style="font-size: 20px;">
-                                                Limited Time: Online Only!</p>
-                                            <a href="./loading.html"
-                                                class="btn btn-light rounded-pill px-4 py-2 fw-semibold">Shop
-                                                Now</a>
-                                        </div>
-                                        <div class="u-hero-slide__right">
-                                            <picture>
-                                                <source srcset="./img/sld2.webp" type="image/webp">
-                                                <img src="./img/sld2.webp" alt="Product" class="u-hero-slide__product"
-                                                    width="750" height="450" fetchpriority="high" decoding="async"
-                                                    loading="eager" />
-                                            </picture>
-
-                                        </div>
                                     </div>
                                 </div>
-
-                                <!-- Slide 2 -->
-                                <div class="carousel-item">
-                                    <div class="u-hero-slide">
-                                        <div class="u-hero-slide__left">
-                                            <picture>
-                                                <source srcset="./img/sld1.webp" type="image/webp">
-                                                <img src="./img/sld1.webp" alt="Background Left"
-                                                    class="u-hero-slide__left-img" width="750" height="450" />
-                                            </picture>
-                                        </div>
-                                        <div class="u-hero-slide__content">
-                                            <p class="fw-bold mb-1">Speaker</p>
-                                            <p class="fw-bold">Bluetooth SoundCore</p>
-                                            <p class="text-white-50 mt-2 mb-4 fw-bold" style="font-size: 20px;">
-                                                Limited Time: Online Only!</p>
-                                            <a href="./loading.html"
-                                                class="btn btn-light rounded-pill px-4 py-2 fw-semibold">Shop
-                                                Now</a>
-                                        </div>
-                                        <div class="u-hero-slide__right">
-                                            <picture>
-                                                <source srcset="./img/sld2.webp" type="image/webp">
-                                                <img src="./img/sld2.webp" alt="Product" class="u-hero-slide__product"
-                                                    width="750" height="450" fetchpriority="high" decoding="async"
-                                                    loading="eager" />
-                                            </picture>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Slide 3 -->
-                                <div class="carousel-item">
-                                    <div class="u-hero-slide">
-                                        <div class="u-hero-slide__left">
-                                            <picture>
-                                                <source srcset="./img/sld1.webp" type="image/webp">
-                                                <img src="./img/sld2.webp" alt="Background Left"
-                                                    class="u-hero-slide__left-img" width="750" height="450" />
-                                            </picture>
-                                        </div>
-                                        <div class="u-hero-slide__content">
-                                            <p class="fw-bold mb-1">Speaker</p>
-                                            <p class="fw-bold">Bluetooth SoundCore</p>
-                                            <p class="text-white-50 mt-2 mb-4 fw-bold" style="font-size: 20px;">
-                                                Limited Time: Online Only!</p>
-                                            <a href="./loading.html"
-                                                class="btn btn-light rounded-pill px-4 py-2 fw-semibold">Shop
-                                                Now</a>
-                                        </div>
-                                        <div class="u-hero-slide__right">
-                                            <picture>
-                                                <source srcset="./img/sld2.webp" type="image/webp">
-                                                <img src="./img/sld2.webp" alt="Product" class="u-hero-slide__product"
-                                                    width="750" height="450" fetchpriority="high" decoding="async"
-                                                    loading="eager" />
-                                            </picture>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
 
-                            <!-- Custom Indicators -->
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#u-hero-slider" data-bs-slide-to="0"
-                                    class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#u-hero-slider" data-bs-slide-to="1"
-                                    aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#u-hero-slider" data-bs-slide-to="2"
-                                    aria-label="Slide 3"></button>
+                            <!-- Slide 2 -->
+                            <div class="carousel-item">
+                                <div class="u-hero-slide">
+                                    <div class="u-hero-slide__left">
+                                        <picture>
+                                            <source srcset="./img/sld1.webp" type="image/webp">
+                                            <img src="./img/sld1.webp" alt="Background Left"
+                                                class="u-hero-slide__left-img" width="750" height="450"
+                                                fetchpriority="high" decoding="async" loading="eager" />
+                                        </picture>
+                                    </div>
+                                    <div class="u-hero-slide__content">
+                                        <p class="fw-bold mb-1">Speaker</p>
+                                        <p class="fw-bold">Bluetooth SoundCore</p>
+                                        <p class="text-white-50 mt-2 mb-4 fw-bold" style="font-size: 20px;">
+                                            Limited Time: Online Only!</p>
+                                        <a href="./loading.html"
+                                            class="btn btn-light rounded-pill px-4 py-2 fw-semibold">Shop
+                                            Now</a>
+                                    </div>
+                                    <div class="u-hero-slide__right">
+                                        <picture>
+                                            <source srcset="./img/sld2.webp" type="image/webp">
+                                            <img src="./img/sld2.webp" alt="Product" class="u-hero-slide__product"
+                                                width="750" height="450" fetchpriority="high" decoding="async"
+                                                loading="eager" />
+                                        </picture>
+                                    </div>
+                                </div>
                             </div>
-                            <!-- Prev/Next Buttons -->
-                            <button class="carousel-control-prev" type="button" data-bs-target="#u-hero-slider"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#u-hero-slider"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
+
+                            <!-- Slide 3 -->
+                            <div class="carousel-item">
+                                <div class="u-hero-slide">
+                                    <div class="u-hero-slide__left">
+                                        <picture>
+                                            <source srcset="./img/sld1.webp" type="image/webp">
+                                            <img src="./img/sld2.webp" alt="Background Left"
+                                                class="u-hero-slide__left-img" width="750" height="450"
+                                                fetchpriority="high" decoding="async" loading="eager" />
+                                        </picture>
+                                    </div>
+                                    <div class="u-hero-slide__content">
+                                        <p class="fw-bold mb-1">Speaker</p>
+                                        <p class="fw-bold">Bluetooth SoundCore</p>
+                                        <p class="text-white-50 mt-2 mb-4 fw-bold" style="font-size: 20px;">
+                                            Limited Time: Online Only!</p>
+                                        <a href="./loading.html"
+                                            class="btn btn-light rounded-pill px-4 py-2 fw-semibold">Shop
+                                            Now</a>
+                                    </div>
+                                    <div class="u-hero-slide__right">
+                                        <picture>
+                                            <source srcset="./img/sld2.webp" type="image/webp">
+                                            <img src="./img/sld2.webp" alt="Product" class="u-hero-slide__product"
+                                                width="750" height="450" fetchpriority="high" decoding="async"
+                                                loading="eager" />
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
+
+                        <!-- Custom Indicators -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#u-hero-carousel" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#u-hero-carousel" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#u-hero-carousel" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <!-- Prev/Next Buttons -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#u-hero-carousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#u-hero-carousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
 
                 </div>
@@ -427,118 +437,107 @@
         <!-- Categories Section -->
         <section class="u-category py-5 bg-white">
             <div class="container u-fade-in">
-                <div class="row row-cols-auto justify-content-center text-center g-4">
+                <div class="swiper my-category-swiper">
+                    <div class="swiper-wrapper">
 
-                    <!-- Category Item -->
-                    <div class="col">
-                        <a href="./loading.html" class="u-category__item text-decoration-none">
-                            <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                                <picture>
+                        <!-- Category Item 1 -->
+                        <div class="swiper-slide">
+                            <a href="./loading.html" class="u-category__item text-decoration-none">
+                                <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
                                     <img src="./img/category1.webp" alt="Macbook/PCs" class="img-fluid" loading="lazy"
                                         width="110" height="110">
-                                </picture>
-                            </div>
-                            <p class="u-category__title mb-0 fw-semibold mt-2">Macbook/PCs</p>
-                            <small class="u-category__count text-muted">16 Products</small>
-                        </a>
+                                </div>
+                                <p class="u-category__title mb-0 fw-semibold mt-2">Macbook/PCs</p>
+                                <small class="u-category__count text-muted">16 Products</small>
+                            </a>
+                        </div>
+                        <!-- Category Item 2  -->
+                        <div class="swiper-slide">
+                            <a href="./loading.html" class="u-category__item text-decoration-none">
+                                <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
+                                    <img src="./img/category2.webp" alt="OLED/Smart TVs" class="img-fluid"
+                                        loading="lazy" width="110" height="110">
+                                </div>
+                                <p class="u-category__title mb-0 fw-semibold mt-2">OLED/Smart TVs</p>
+                                <small class="u-category__count text-muted">06 Products</small>
+                            </a>
+                        </div>
+
+                        <!-- Category Item 3  -->
+                        <div class="swiper-slide">
+                            <a href="./loading.html" class="u-category__item text-decoration-none">
+                                <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
+                                    <img src="./img/category3.webp" alt="OLED/Smart TVs" class="img-fluid"
+                                        loading="lazy" width="110" height="110">
+                                </div>
+                                <p class="u-category__title mb-0 fw-semibold mt-2">OLED/Smart TVs</p>
+                                <small class="u-category__count text-muted">06 Products</small>
+                            </a>
+                        </div>
+
+                        <!-- Category Item 4  -->
+                        <div class="swiper-slide">
+                            <a href="./loading.html" class="u-category__item text-decoration-none">
+                                <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
+                                    <img src="./img/category4.webp" alt="OLED/Smart TVs" class="img-fluid"
+                                        loading="lazy" width="110" height="110">
+                                </div>
+                                <p class="u-category__title mb-0 fw-semibold mt-2">OLED/Smart TVs</p>
+                                <small class="u-category__count text-muted">06 Products</small>
+                            </a>
+                        </div>
+
+                        <!-- Category Item 5 -->
+                        <div class="swiper-slide">
+                            <a href="./loading.html" class="u-category__item text-decoration-none">
+                                <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
+                                    <img src="./img/category5.webp" alt="OLED/Smart TVs" class="img-fluid"
+                                        loading="lazy" width="110" height="110">
+                                </div>
+                                <p class="u-category__title mb-0 fw-semibold mt-2">OLED/Smart TVs</p>
+                                <small class="u-category__count text-muted">06 Products</small>
+                            </a>
+                        </div>
+                    
+                        <!-- Category Item 6  -->
+                         <div class="swiper-slide">
+                            <a href="./loading.html" class="u-category__item text-decoration-none">
+                                <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
+                                    <img src="./img/category6.webp" alt="OLED/Smart TVs" class="img-fluid"
+                                        loading="lazy" width="110" height="110">
+                                </div>
+                                <p class="u-category__title mb-0 fw-semibold mt-2">OLED/Smart TVs</p>
+                                <small class="u-category__count text-muted">06 Products</small>
+                            </a>
+                        </div>
+
+                        <!-- Category Item 7  -->
+                        <div class="swiper-slide">
+                            <a href="./loading.html" class="u-category__item text-decoration-none">
+                                <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
+                                    <img src="./img/category7.webp" alt="OLED/Smart TVs" class="img-fluid"
+                                        loading="lazy" width="110" height="110">
+                                </div>
+                                <p class="u-category__title mb-0 fw-semibold mt-2">OLED/Smart TVs</p>
+                                <small class="u-category__count text-muted">06 Products</small>
+                            </a>
+                        </div>
+                         <!-- Category Item 8 -->
+                        <div class="swiper-slide">
+                            <a href="./loading.html" class="u-category__item text-decoration-none">
+                                <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
+                                    <img src="./img/category8.webp" alt="OLED/Smart TVs" class="img-fluid"
+                                        loading="lazy" width="110" height="110">
+                                </div>
+                                <p class="u-category__title mb-0 fw-semibold mt-2">OLED/Smart TVs</p>
+                                <small class="u-category__count text-muted">06 Products</small>
+                            </a>
+                        </div>
                     </div>
-
-                    <div class="col">
-                        <a href="./loading.html" class="u-category__item text-decoration-none">
-                            <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                                <picture>
-
-                                    <img src="./img/category2.webp" alt="Macbook/PCs" class="img-fluid" loading="lazy"
-                                        width="110" height="110">
-                                </picture>
-                            </div>
-                            <p class="u-category__title mb-0 fw-semibold mt-2">OLED/Smart TVs</p>
-                            <small class="u-category__count text-muted">06 Products</small>
-                        </a>
-                    </div>
-
-                    <div class="col">
-                        <a href="./loading.html" class="u-category__item text-decoration-none">
-                            <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                                <picture>
-
-                                    <img src="./img/category3.webp" alt="Macbook/PCs" class="img-fluid" loading="lazy"
-                                        width="110" height="110">
-                                </picture>
-                            </div>
-                            <p class="u-category__title mb-0 fw-semibold mt-2">Phone/Mobile</p>
-                            <small class="u-category__count text-muted">18 Products</small>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="./loading.html" class="u-category__item text-decoration-none">
-                            <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                                <picture>
-
-                                    <img src="./img/category4.webp" alt="Macbook/PCs" class="img-fluid" loading="lazy"
-                                        width="110" height="110">
-                                </picture>
-                            </div>
-                            <p class="u-category__title mb-0 fw-semibold mt-2">Tablets/Ipad Pro</p>
-                            <small class="u-category__count text-muted">09 Products</small>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="./loading.html" class="u-category__item text-decoration-none">
-                            <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                                <picture>
-
-                                    <img src="./img/category5.webp" alt="Macbook/PCs" class="img-fluid" loading="lazy"
-                                        width="110" height="110">
-                                </picture>
-                            </div>
-                            <p class="u-category__title mb-0 fw-semibold mt-2">Gamepad/Console</p>
-                            <small class="u-category__count text-muted">20 Products</small>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="./loading.html" class="u-category__item text-decoration-none">
-                            <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                                <picture>
-
-                                    <img src="./img/category6.webp" alt="Macbook/PCs" class="img-fluid" loading="lazy"
-                                        width="110" height="110">
-                                </picture>
-                            </div>
-                            <p class="u-category__title mb-0 fw-semibold mt-2">Camera/Photo</p>
-                            <small class="u-category__count text-muted">13 Products</small>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="./loading.html" class="u-category__item text-decoration-none">
-                            <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                                <picture>
-
-                                    <img src="./img/category7.webp" alt="Macbook/PCs" class="img-fluid" loading="lazy"
-                                        width="110" height="110">
-                                </picture>
-                            </div>
-                            <p class="u-category__title mb-0 fw-semibold mt-2">Heatsink PC</p>
-                            <small class="u-category__count text-muted">07 Products</small>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="./loading.html" class="u-category__item text-decoration-none">
-                            <div class="u-category__icon rounded-circle bg-light p-3 mx-auto">
-                                <picture>
-                                    <!-- <source srcset="./img/Category8.webp" type="image/webp"> -->
-                                    <img src="./img/category8.webp" alt="Macbook/PCs" class="img-fluid" loading="lazy"
-                                        width="110" height="110">
-                                </picture>
-                            </div>
-                            <p class="u-category__title mb-0 fw-semibold mt-2">Home/Electronics</p>
-                            <small class="u-category__count text-muted">12 Products</small>
-                        </a>
-                    </div>
-
                 </div>
             </div>
         </section>
+
 
 
         <!-- Trending Products Section -->
@@ -680,7 +679,7 @@
                             <h2 class="promo-banners__title h5 fw-bold mb-2">Super Sale</h2>
                             <p class="promo-banners__subtitle mb-3">Cellphone Ultra. Save $199.00</p>
                             <a href="./loading.html"
-                                class="promo-banners__link text-decoration-none border-bottom border-dark pb-1 fw-bold">Shop
+                                class="promo-banners__link u-link-underline text-decoration-none pb-1 fw-bold">Shop
                                 Cellphone</a>
                         </div>
                         <figure class="promo-banners__image-wrapper ms-md-4 mt-4 mt-md-0 mb-0">
@@ -698,7 +697,7 @@
                             <h2 class="promo-banners__title h5 fw-bold mb-2">Deals Good</h2>
                             <p class="promo-banners__subtitle mb-3">Headphone Bluetooth 5.0</p>
                             <a href="./loading.html"
-                                class="promo-banners__link text-decoration-none border-bottom border-dark pb-1 fw-bold">Shop
+                                class="promo-banners__link u-link-underline text-decoration-none pb-1 fw-bold">Shop
                                 Headphone</a>
                         </div>
                         <figure class="promo-banners__image-wrapper ms-md-4 mt-4 mt-md-0 mb-0">
@@ -714,9 +713,7 @@
         <section class="container py-5 u-fade-in">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h3 class="u-top-selling__titte fw-bold mb-3 " style="font-size: 28;">Top Selling Products</h3>
-                <a href="./loading.html"
-                    class=" u-top-selling__view-all text-decoration-none text-muted small mt-5">View
-                    All &raquo;</a>
+                <a href="./loading.html" class="u-recommended__view-all">View All <span>&raquo;</span></a>
             </div>
 
             <hr class="section-divider">
@@ -1451,6 +1448,8 @@
 
         </footer>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 

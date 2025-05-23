@@ -76,21 +76,67 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // loader
+// Khi trang load xong, hiện nội dung và ẩn loader
 window.addEventListener("load", function () {
-  const loader = document.querySelector('.loader');
   const content = document.querySelector('.content');
-
-  if (loader) {
-    // Giữ spinner ít nhất 1 giây trước khi ẩn
-    setTimeout(() => {
-      loader.classList.add('hidden');
-      setTimeout(() => {
-        loader.style.display = 'none';
-      }, 300);
-    }, 300);
-  }
-
+  const loader = document.querySelector('.loader');
   if (content) {
     content.classList.add('active');
   }
+  if (loader) {
+    loader.classList.remove('active');
+  }
 });
+
+// Khi click link nội bộ → hiện loader → delay chuyển trang
+document.addEventListener('DOMContentLoaded', function () {
+  const links = document.querySelectorAll('a[href]:not([href^="#"]):not([target="_blank"])');
+  const loader = document.querySelector('.loader');
+  const content = document.querySelector('.content');
+
+  links.forEach(link => {
+    link.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (!href || href.startsWith('javascript:')) return;
+
+      e.preventDefault();
+
+      // Ẩn nội dung cũ
+      if (content) content.classList.remove('active');
+
+      // Hiện loader
+      if (loader) loader.classList.add('active');
+
+      // Chuyển trang sau delay
+      setTimeout(() => {
+        window.location.href = href;
+      }, 500); 
+    });
+  });
+});
+
+//Categories
+new Swiper('.my-category-swiper', {
+  slidesPerView: 2,
+  spaceBetween: 20,
+  breakpoints: {
+    576: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 24,
+    },
+    1024: {
+      slidesPerView: 8,
+      spaceBetween: 24,
+    }
+  },
+  loop: false,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
